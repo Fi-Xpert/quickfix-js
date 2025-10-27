@@ -7,12 +7,7 @@ export class MessageBuilder {
   }
 
   build(message) {
-    const parts = [];
     const bodyParts = [];
-
-    message.getFields().forEach(field => {
-      bodyParts.push(`${field.getTag()}=${field.getValue()}`);
-    });
 
     message.getHeader().getFields()
       .filter(f => f.getTag() !== 8 && f.getTag() !== 9)
@@ -20,9 +15,20 @@ export class MessageBuilder {
         bodyParts.push(`${field.getTag()}=${field.getValue()}`);
       });
 
-    const body = bodyParts.join(Field.SOH);
-    const bodyLength = body.length;
+    message.getFields().forEach(field => {
+      bodyParts.push(`${field.getTag()}=${field.getValue()}`);
+    });
 
+    message.getTrailer().getFields()
+      .filter(f => f.getTag() !== 10)
+      .forEach(field => {
+        bodyParts.push(`${field.getTag()}=${field.getValue()}`);
+      });
+
+    const body = bodyParts.join(Field.SOH);
+    const bodyLength = body.length + 1;
+
+    const parts = [];
     parts.push(`8=${message.getBeginString() || 'FIX.4.2'}`);
     parts.push(`9=${bodyLength}`);
     parts.push(body);
