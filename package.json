@@ -25,16 +25,16 @@
     "session management",
     "financial protocol"
   ],
-  "author": "FIXpert <your.email@example.com>",
+  "author": "FIXpert <go.fixpert@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/quickfix-js.git"
+    "url": "https://github.com/Fi-Xpert/quickfix-js.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/quickfix-js/issues"
+    "url": "https://github.com/Fi-Xpert/quickfix-js/issues"
   },
-  "homepage": "https://github.com/yourusername/quickfix-js#readme",
+  "homepage": "https://github.com/Fi-Xpert/quickfix-js#readme",
   "engines": {
     "node": ">=14.0.0"
   },
