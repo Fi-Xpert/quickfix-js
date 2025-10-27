@@ -1,7 +1,7 @@
 {
   "name": "quickfix-js",
   "version": "1.0.0",
-  "description": "A complete Node.js FIX protocol engine library replicating QuickFIX/J functionality",
+  "description": "A complete Node.js FIX protocol engine library replicating QuickFIX/J functionality with session management, message parsing, and multi-version FIX support",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -11,15 +11,42 @@
   },
   "keywords": [
     "FIX",
-    "protocol",
+    "FIX protocol",
     "quickfix",
     "trading",
     "financial",
-    "messaging"
+    "messaging",
+    "FIX engine",
+    "FIX 4.0",
+    "FIX 4.2",
+    "FIX 4.4",
+    "FIX 5.0",
+    "FIXT 1.1",
+    "session management",
+    "financial protocol"
   ],
-  "author": "",
+  "author": "Your Name <your.email@example.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/quickfix-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/quickfix-js/issues"
+  },
+  "homepage": "https://github.com/yourusername/quickfix-js#readme",
   "engines": {
     "node": ">=14.0.0"
-  }
+  },
+  "files": [
+    "index.js",
+    "core/",
+    "transport/",
+    "store/",
+    "logging/",
+    "config/",
+    "fix/",
+    "README.md",
+    "LICENSE"
+  ]
 }
