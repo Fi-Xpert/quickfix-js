@@ -1,0 +1,92 @@
+{
+  "version": "FIX.4.4",
+  "header": [8, 9, 35, 49, 56, 34, 52, 43, 97, 122, 142, 90, 91, 115, 128, 129, 145],
+  "trailer": [93, 89, 10],
+  "fields": [
+    {"tag": "8", "name": "BeginString", "type": "STRING"},
+    {"tag": "9", "name": "BodyLength", "type": "LENGTH"},
+    {"tag": "10", "name": "CheckSum", "type": "STRING"},
+    {"tag": "35", "name": "MsgType", "type": "STRING"},
+    {"tag": "34", "name": "MsgSeqNum", "type": "SEQNUM"},
+    {"tag": "49", "name": "SenderCompID", "type": "STRING"},
+    {"tag": "56", "name": "TargetCompID", "type": "STRING"},
+    {"tag": "52", "name": "SendingTime", "type": "UTCTIMESTAMP"},
+    {"tag": "98", "name": "EncryptMethod", "type": "INT"},
+    {"tag": "108", "name": "HeartBtInt", "type": "INT"},
+    {"tag": "112", "name": "TestReqID", "type": "STRING"},
+    {"tag": "7", "name": "BeginSeqNo", "type": "SEQNUM"},
+    {"tag": "16", "name": "EndSeqNo", "type": "SEQNUM"},
+    {"tag": "36", "name": "NewSeqNo", "type": "SEQNUM"},
+    {"tag": "123", "name": "GapFillFlag", "type": "BOOLEAN"},
+    {"tag": "58", "name": "Text", "type": "STRING"},
+    {"tag": "11", "name": "ClOrdID", "type": "STRING"},
+    {"tag": "37", "name": "OrderID", "type": "STRING"},
+    {"tag": "38", "name": "OrderQty", "type": "QTY"},
+    {"tag": "40", "name": "OrdType", "type": "CHAR"},
+    {"tag": "44", "name": "Price", "type": "PRICE"},
+    {"tag": "54", "name": "Side", "type": "CHAR"},
+    {"tag": "55", "name": "Symbol", "type": "STRING"},
+    {"tag": "59", "name": "TimeInForce", "type": "CHAR"},
+    {"tag": "60", "name": "TransactTime", "type": "UTCTIMESTAMP"}
+  ],
+  "messages": [
+    {
+      "msgtype": "0",
+      "name": "Heartbeat",
+      "category": "admin",
+      "fields": [{"tag": "112", "name": "TestReqID", "required": false}]
+    },
+    {
+      "msgtype": "1",
+      "name": "TestRequest",
+      "category": "admin",
+      "fields": [{"tag": "112", "name": "TestReqID", "required": true}]
+    },
+    {
+      "msgtype": "2",
+      "name": "ResendRequest",
+      "category": "admin",
+      "fields": [
+        {"tag": "7", "name": "BeginSeqNo", "required": true},
+        {"tag": "16", "name": "EndSeqNo", "required": true}
+      ]
+    },
+    {
+      "msgtype": "4",
+      "name": "SequenceReset",
+      "category": "admin",
+      "fields": [
+        {"tag": "36", "name": "NewSeqNo", "required": true},
+        {"tag": "123", "name": "GapFillFlag", "required": false}
+      ]
+    },
+    {
+      "msgtype": "5",
+      "name": "Logout",
+      "category": "admin",
+      "fields": [{"tag": "58", "name": "Text", "required": false}]
+    },
+    {
+      "msgtype": "A",
+      "name": "Logon",
+      "category": "admin",
+      "fields": [
+        {"tag": "98", "name": "EncryptMethod", "required": true},
+        {"tag": "108", "name": "HeartBtInt", "required": true}
+      ]
+    },
+    {
+      "msgtype": "D",
+      "name": "NewOrderSingle",
+      "category": "app",
+      "fields": [
+        {"tag": "11", "name": "ClOrdID", "required": true},
+        {"tag": "55", "name": "Symbol", "required": true},
+        {"tag": "54", "name": "Side", "required": true},
+        {"tag": "60", "name": "TransactTime", "required": true},
+        {"tag": "38", "name": "OrderQty", "required": true},
+        {"tag": "40", "name": "OrdType", "required": true}
+      ]
+    }
+  ]
+}

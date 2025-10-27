@@ -1,0 +1,9 @@
+node_modules/
+*.log
+*.store
+*.seqnums
+logs/
+store/
+.DS_Store
+.env
+attached_assets/

@@ -1,0 +1,25 @@
+{
+  "name": "quickfix-js",
+  "version": "1.0.0",
+  "description": "A complete Node.js FIX protocol engine library replicating QuickFIX/J functionality",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node examples/simple-test.js",
+    "example:acceptor": "node examples/acceptor.js",
+    "example:initiator": "node examples/initiator.js"
+  },
+  "keywords": [
+    "FIX",
+    "protocol",
+    "quickfix",
+    "trading",
+    "financial",
+    "messaging"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
