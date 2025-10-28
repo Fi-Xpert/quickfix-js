@@ -24,3 +24,7 @@ args = "node examples/simple-test.js"
 
 [workflows.workflow.metadata]
 outputType = "console"
+
+[[ports]]
+localPort = 5001
+externalPort = 80
