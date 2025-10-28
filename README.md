@@ -22,7 +22,7 @@ npm install quickfix-js
 Or clone this repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Fi-Xpert/quickfix-js.git
 cd quickfix-js
 ```
 
