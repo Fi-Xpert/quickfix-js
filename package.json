@@ -1,6 +1,6 @@
 {
   "name": "quickfix-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A complete Node.js FIX protocol engine library replicating QuickFIX/J functionality with session management, message parsing, and multi-version FIX support",
   "main": "index.js",
   "type": "module",
