@@ -44,12 +44,44 @@
     {
       "tag": "4",
       "name": "AdvSide",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "B",
+          "description": "BUY"
+        },
+        {
+          "enum": "S",
+          "description": "SELL"
+        },
+        {
+          "enum": "X",
+          "description": "CROSS"
+        },
+        {
+          "enum": "T",
+          "description": "TRADE"
+        }
+      ]
     },
     {
       "tag": "5",
       "name": "AdvTransType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "N",
+          "description": "NEW"
+        },
+        {
+          "enum": "C",
+          "description": "CANCEL"
+        },
+        {
+          "enum": "R",
+          "description": "REPLACE"
+        }
+      ]
     },
     {
       "tag": "6",
@@ -89,7 +121,21 @@
     {
       "tag": "13",
       "name": "CommType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "PER_SHARE"
+        },
+        {
+          "enum": "2",
+          "description": "PERCENTAGE"
+        },
+        {
+          "enum": "3",
+          "description": "ABSOLUTE"
+        }
+      ]
     },
     {
       "tag": "14",
@@ -114,7 +160,109 @@
     {
       "tag": "18",
       "name": "ExecInst",
-      "type": "MULTIPLEVALUESTRING"
+      "type": "MULTIPLEVALUESTRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "NOT_HELD"
+        },
+        {
+          "enum": "2",
+          "description": "WORK"
+        },
+        {
+          "enum": "3",
+          "description": "GO_ALONG"
+        },
+        {
+          "enum": "4",
+          "description": "OVER_THE_DAY"
+        },
+        {
+          "enum": "5",
+          "description": "HELD"
+        },
+        {
+          "enum": "6",
+          "description": "PARTICIPATE_DONT_INITIATE"
+        },
+        {
+          "enum": "7",
+          "description": "STRICT_SCALE"
+        },
+        {
+          "enum": "8",
+          "description": "TRY_TO_SCALE"
+        },
+        {
+          "enum": "9",
+          "description": "STAY_ON_BIDSIDE"
+        },
+        {
+          "enum": "0",
+          "description": "STAY_ON_OFFERSIDE"
+        },
+        {
+          "enum": "A",
+          "description": "NO_CROSS"
+        },
+        {
+          "enum": "B",
+          "description": "OK_TO_CROSS"
+        },
+        {
+          "enum": "C",
+          "description": "CALL_FIRST"
+        },
+        {
+          "enum": "D",
+          "description": "PERCENT_OF_VOLUME"
+        },
+        {
+          "enum": "E",
+          "description": "DO_NOT_INCREASE_DNI"
+        },
+        {
+          "enum": "F",
+          "description": "DO_NOT_REDUCE_DNR"
+        },
+        {
+          "enum": "G",
+          "description": "ALL_OR_NONE_AON"
+        },
+        {
+          "enum": "I",
+          "description": "INSTITUTIONS_ONLY"
+        },
+        {
+          "enum": "L",
+          "description": "LAST_PEG"
+        },
+        {
+          "enum": "M",
+          "description": "MIDPRICE_PEG"
+        },
+        {
+          "enum": "N",
+          "description": "NONNEGOTIABLE"
+        },
+        {
+          "enum": "O",
+          "description": "OPENING_PEG"
+        },
+        {
+          "enum": "P",
+          "description": "MARKET_PEG"
+        },
+        {
+          "enum": "R",
+          "description": "PRIMARY_PEG"
+        },
+        {
+          "enum": "S",
+          "description": "SUSPEND"
+        }
+      ]
     },
     {
       "tag": "19",
@@ -124,17 +272,71 @@
     {
       "tag": "20",
       "name": "ExecTransType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NEW"
+        },
+        {
+          "enum": "1",
+          "description": "CANCEL"
+        },
+        {
+          "enum": "2",
+          "description": "CORRECT"
+        },
+        {
+          "enum": "3",
+          "description": "STATUS"
+        }
+      ]
     },
     {
       "tag": "21",
       "name": "HandlInst",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "AUTOMATED_EXECUTION_ORDER_PRIVATE_NO_BROKER_INTERVENTION"
+        },
+        {
+          "enum": "2",
+          "description": "AUTOMATED_EXECUTION_ORDER_PUBLIC_BROKER_INTERVENTION_OK"
+        },
+        {
+          "enum": "3",
+          "description": "MANUAL_ORDER_BEST_EXECUTION"
+        }
+      ]
     },
     {
       "tag": "22",
       "name": "IDSource",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "CUSIP"
+        },
+        {
+          "enum": "2",
+          "description": "SEDOL"
+        },
+        {
+          "enum": "3",
+          "description": "QUIK"
+        },
+        {
+          "enum": "4",
+          "description": "ISIN_NUMBER"
+        },
+        {
+          "enum": "5",
+          "description": "RIC_CODE"
+        }
+      ]
     },
     {
       "tag": "23",
@@ -149,7 +351,21 @@
     {
       "tag": "25",
       "name": "IOIQltyInd",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "L",
+          "description": "LOW"
+        },
+        {
+          "enum": "M",
+          "description": "MEDIUM"
+        },
+        {
+          "enum": "H",
+          "description": "HIGH"
+        }
+      ]
     },
     {
       "tag": "26",
@@ -164,12 +380,44 @@
     {
       "tag": "28",
       "name": "IOITransType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "N",
+          "description": "NEW"
+        },
+        {
+          "enum": "C",
+          "description": "CANCEL"
+        },
+        {
+          "enum": "R",
+          "description": "REPLACE"
+        }
+      ]
     },
     {
       "tag": "29",
       "name": "LastCapacity",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "AGENT"
+        },
+        {
+          "enum": "2",
+          "description": "CROSS_AS_AGENT"
+        },
+        {
+          "enum": "3",
+          "description": "CROSS_AS_PRINCIPAL"
+        },
+        {
+          "enum": "4",
+          "description": "PRINCIPAL"
+        }
+      ]
     },
     {
       "tag": "30",
@@ -199,7 +447,117 @@
     {
       "tag": "35",
       "name": "MsgType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "0",
+          "description": "HEARTBEAT"
+        },
+        {
+          "enum": "1",
+          "description": "TEST_REQUEST"
+        },
+        {
+          "enum": "2",
+          "description": "RESEND_REQUEST"
+        },
+        {
+          "enum": "3",
+          "description": "REJECT"
+        },
+        {
+          "enum": "4",
+          "description": "SEQUENCE_RESET"
+        },
+        {
+          "enum": "5",
+          "description": "LOGOUT"
+        },
+        {
+          "enum": "6",
+          "description": "INDICATION_OF_INTEREST"
+        },
+        {
+          "enum": "7",
+          "description": "ADVERTISEMENT"
+        },
+        {
+          "enum": "8",
+          "description": "EXECUTION_REPORT"
+        },
+        {
+          "enum": "9",
+          "description": "ORDER_CANCEL_REJECT"
+        },
+        {
+          "enum": "A",
+          "description": "LOGON"
+        },
+        {
+          "enum": "B",
+          "description": "NEWS"
+        },
+        {
+          "enum": "C",
+          "description": "EMAIL"
+        },
+        {
+          "enum": "D",
+          "description": "ORDER_SINGLE"
+        },
+        {
+          "enum": "E",
+          "description": "ORDER_LIST"
+        },
+        {
+          "enum": "F",
+          "description": "ORDER_CANCEL_REQUEST"
+        },
+        {
+          "enum": "G",
+          "description": "ORDER_CANCEL"
+        },
+        {
+          "enum": "H",
+          "description": "ORDER_STATUS_REQUEST"
+        },
+        {
+          "enum": "J",
+          "description": "ALLOCATION"
+        },
+        {
+          "enum": "K",
+          "description": "LIST_CANCEL_REQUEST"
+        },
+        {
+          "enum": "L",
+          "description": "LIST_EXECUTE"
+        },
+        {
+          "enum": "M",
+          "description": "LIST_STATUS_REQUEST"
+        },
+        {
+          "enum": "N",
+          "description": "LIST_STATUS"
+        },
+        {
+          "enum": "P",
+          "description": "ALLOCATION_ACK"
+        },
+        {
+          "enum": "Q",
+          "description": "DONT_KNOW_TRADE"
+        },
+        {
+          "enum": "R",
+          "description": "QUOTE_REQUEST"
+        },
+        {
+          "enum": "S",
+          "description": "QUOTE"
+        }
+      ]
     },
     {
       "tag": "36",
@@ -219,12 +577,128 @@
     {
       "tag": "39",
       "name": "OrdStatus",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NEW"
+        },
+        {
+          "enum": "1",
+          "description": "PARTIALLY_FILLED"
+        },
+        {
+          "enum": "2",
+          "description": "FILLED"
+        },
+        {
+          "enum": "3",
+          "description": "DONE_FOR_DAY"
+        },
+        {
+          "enum": "4",
+          "description": "CANCELED"
+        },
+        {
+          "enum": "5",
+          "description": "REPLACED"
+        },
+        {
+          "enum": "6",
+          "description": "PENDING_CANCELREPLACE"
+        },
+        {
+          "enum": "7",
+          "description": "STOPPED"
+        },
+        {
+          "enum": "8",
+          "description": "REJECTED"
+        },
+        {
+          "enum": "9",
+          "description": "SUSPENDED"
+        },
+        {
+          "enum": "A",
+          "description": "PENDING_NEW"
+        },
+        {
+          "enum": "B",
+          "description": "CALCULATED"
+        },
+        {
+          "enum": "C",
+          "description": "EXPIRED"
+        }
+      ]
     },
     {
       "tag": "40",
       "name": "OrdType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "MARKET"
+        },
+        {
+          "enum": "2",
+          "description": "LIMIT"
+        },
+        {
+          "enum": "3",
+          "description": "STOP"
+        },
+        {
+          "enum": "4",
+          "description": "STOP_LIMIT"
+        },
+        {
+          "enum": "5",
+          "description": "MARKET_ON_CLOSE"
+        },
+        {
+          "enum": "6",
+          "description": "WITH_OR_WITHOUT"
+        },
+        {
+          "enum": "7",
+          "description": "LIMIT_OR_BETTER"
+        },
+        {
+          "enum": "8",
+          "description": "LIMIT_WITH_OR_WITHOUT"
+        },
+        {
+          "enum": "9",
+          "description": "ON_BASIS"
+        },
+        {
+          "enum": "A",
+          "description": "ON_CLOSE"
+        },
+        {
+          "enum": "B",
+          "description": "LIMIT_ON_CLOSE"
+        },
+        {
+          "enum": "C",
+          "description": "FOREX"
+        },
+        {
+          "enum": "D",
+          "description": "PREVIOUSLY_QUOTED"
+        },
+        {
+          "enum": "E",
+          "description": "PREVIOUSLY_INDICATED"
+        },
+        {
+          "enum": "P",
+          "description": "PEGGED"
+        }
+      ]
     },
     {
       "tag": "41",
@@ -239,7 +713,17 @@
     {
       "tag": "43",
       "name": "PossDupFlag",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "Y",
+          "description": "POSSIBLE_DUPLICATE"
+        },
+        {
+          "enum": "N",
+          "description": "ORIGINAL_TRANSMISSION"
+        }
+      ]
     },
     {
       "tag": "44",
@@ -259,7 +743,53 @@
     {
       "tag": "47",
       "name": "Rule80A",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "A",
+          "description": "AGENCY_SINGLE_ORDER"
+        },
+        {
+          "enum": "D",
+          "description": "PROGRAM_ORDER_INDEX_ARB_FOR_MEMBER_FIRMORG"
+        },
+        {
+          "enum": "C",
+          "description": "PROGRAM_ORDER_NONINDEX_ARB_FOR_MEMBER_FIRMORG"
+        },
+        {
+          "enum": "I",
+          "description": "INDIVIDUAL_INVESTOR"
+        },
+        {
+          "enum": "J",
+          "description": "PROGRAM_ORDER_INDEX_ARB_FOR_INDIVIDUAL_CUSTOMER"
+        },
+        {
+          "enum": "K",
+          "description": "PROGRAM_ORDER_NONINDEX_ARB_FOR_INDIVIDUAL_CUSTOMER"
+        },
+        {
+          "enum": "U",
+          "description": "PROGRAM_ORDER_INDEX_ARB_FOR_OTHER_AGENCY"
+        },
+        {
+          "enum": "Y",
+          "description": "PROGRAM_ORDER_NONINDEX_ARB_FOR_OTHER_AGENCY"
+        },
+        {
+          "enum": "M",
+          "description": "PROGRAM_ORDER_INDEX_ARB_FOR_OTHER_MEMBER"
+        },
+        {
+          "enum": "N",
+          "description": "PROGRAM_ORDER_NONINDEX_ARB_FOR_OTHER_MEMBER"
+        },
+        {
+          "enum": "W",
+          "description": "ALL_OTHER_ORDERS_AS_AGENT_FOR_OTHER_MEMBER"
+        }
+      ]
     },
     {
       "tag": "48",
@@ -289,7 +819,33 @@
     {
       "tag": "54",
       "name": "Side",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "BUY"
+        },
+        {
+          "enum": "2",
+          "description": "SELL"
+        },
+        {
+          "enum": "3",
+          "description": "BUY_MINUS"
+        },
+        {
+          "enum": "4",
+          "description": "SELL_PLUS"
+        },
+        {
+          "enum": "5",
+          "description": "SELL_SHORT"
+        },
+        {
+          "enum": "6",
+          "description": "SELL_SHORT_EXEMPT"
+        }
+      ]
     },
     {
       "tag": "55",
@@ -314,7 +870,37 @@
     {
       "tag": "59",
       "name": "TimeInForce",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "0",
+          "description": "DAY"
+        },
+        {
+          "enum": "1",
+          "description": "GOOD_TILL_CANCEL"
+        },
+        {
+          "enum": "2",
+          "description": "AT_THE_OPENING"
+        },
+        {
+          "enum": "3",
+          "description": "IMMEDIATE_OR_CANCEL"
+        },
+        {
+          "enum": "4",
+          "description": "FILL_OR_KILL"
+        },
+        {
+          "enum": "5",
+          "description": "GOOD_TILL_CROSSING"
+        },
+        {
+          "enum": "6",
+          "description": "GOOD_TILL_DATE"
+        }
+      ]
     },
     {
       "tag": "60",
@@ -324,7 +910,21 @@
     {
       "tag": "61",
       "name": "Urgency",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NORMAL"
+        },
+        {
+          "enum": "1",
+          "description": "FLASH"
+        },
+        {
+          "enum": "2",
+          "description": "BACKGROUND"
+        }
+      ]
     },
     {
       "tag": "62",
@@ -334,7 +934,49 @@
     {
       "tag": "63",
       "name": "SettlmntTyp",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "0",
+          "description": "REGULAR"
+        },
+        {
+          "enum": "1",
+          "description": "CASH"
+        },
+        {
+          "enum": "2",
+          "description": "NEXT_DAY"
+        },
+        {
+          "enum": "3",
+          "description": "TPLUS2"
+        },
+        {
+          "enum": "4",
+          "description": "TPLUS3"
+        },
+        {
+          "enum": "5",
+          "description": "TPLUS4"
+        },
+        {
+          "enum": "6",
+          "description": "FUTURE"
+        },
+        {
+          "enum": "7",
+          "description": "WHEN_ISSUED"
+        },
+        {
+          "enum": "8",
+          "description": "SELLERS_OPTION"
+        },
+        {
+          "enum": "9",
+          "description": "TPLUS5"
+        }
+      ]
     },
     {
       "tag": "64",
@@ -374,7 +1016,21 @@
     {
       "tag": "71",
       "name": "AllocTransType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NEW"
+        },
+        {
+          "enum": "1",
+          "description": "REPLACE"
+        },
+        {
+          "enum": "2",
+          "description": "CANCEL"
+        }
+      ]
     },
     {
       "tag": "72",
@@ -424,7 +1080,37 @@
     {
       "tag": "81",
       "name": "ProcessCode",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "0",
+          "description": "REGULAR"
+        },
+        {
+          "enum": "1",
+          "description": "SOFT_DOLLAR"
+        },
+        {
+          "enum": "2",
+          "description": "STEPIN"
+        },
+        {
+          "enum": "3",
+          "description": "STEPOUT"
+        },
+        {
+          "enum": "4",
+          "description": "SOFTDOLLAR_STEPIN"
+        },
+        {
+          "enum": "5",
+          "description": "SOFTDOLLAR_STEPOUT"
+        },
+        {
+          "enum": "6",
+          "description": "PLAN_SPONSOR"
+        }
+      ]
     },
     {
       "tag": "82",
@@ -454,12 +1140,64 @@
     {
       "tag": "87",
       "name": "AllocStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "ACCEPTED"
+        },
+        {
+          "enum": "1",
+          "description": "REJECTED"
+        },
+        {
+          "enum": "2",
+          "description": "PARTIAL_ACCEPT"
+        },
+        {
+          "enum": "3",
+          "description": "RECEIVED"
+        }
+      ]
     },
     {
       "tag": "88",
       "name": "AllocRejCode",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "UNKNOWN_ACCOUNT"
+        },
+        {
+          "enum": "1",
+          "description": "INCORRECT_QUANTITY"
+        },
+        {
+          "enum": "2",
+          "description": "INCORRECT_AVERAGE_PRICE"
+        },
+        {
+          "enum": "3",
+          "description": "UNKNOWN_EXECUTING_BROKER_MNEMONIC"
+        },
+        {
+          "enum": "4",
+          "description": "COMMISSION_DIFFERENCE"
+        },
+        {
+          "enum": "5",
+          "description": "UNKNOWN_ORDERID"
+        },
+        {
+          "enum": "6",
+          "description": "UNKNOWN_LISTID"
+        },
+        {
+          "enum": "7",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "89",
@@ -489,7 +1227,21 @@
     {
       "tag": "94",
       "name": "EmailType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NEW"
+        },
+        {
+          "enum": "1",
+          "description": "REPLY"
+        },
+        {
+          "enum": "2",
+          "description": "ADMIN_REPLY"
+        }
+      ]
     },
     {
       "tag": "95",
@@ -509,7 +1261,37 @@
     {
       "tag": "98",
       "name": "EncryptMethod",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NONE_OTHER"
+        },
+        {
+          "enum": "1",
+          "description": "PKCS"
+        },
+        {
+          "enum": "2",
+          "description": "DES"
+        },
+        {
+          "enum": "3",
+          "description": "PKCSDES"
+        },
+        {
+          "enum": "4",
+          "description": "PGPDES"
+        },
+        {
+          "enum": "5",
+          "description": "PGPDESMD5"
+        },
+        {
+          "enum": "6",
+          "description": "PEMDESMD5"
+        }
+      ]
     },
     {
       "tag": "99",
@@ -519,22 +1301,118 @@
     {
       "tag": "100",
       "name": "ExDestination",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NONE"
+        },
+        {
+          "enum": "4",
+          "description": "POSIT"
+        }
+      ]
     },
     {
       "tag": "102",
       "name": "CxlRejReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "TOO_LATE_TO_CANCEL"
+        },
+        {
+          "enum": "1",
+          "description": "UNKNOWN_ORDER"
+        }
+      ]
     },
     {
       "tag": "103",
       "name": "OrdRejReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "BROKER_OPTION"
+        },
+        {
+          "enum": "1",
+          "description": "UNKNOWN_SYMBOL"
+        },
+        {
+          "enum": "2",
+          "description": "EXCHANGE_CLOSED"
+        },
+        {
+          "enum": "3",
+          "description": "ORDER_EXCEEDS_LIMIT"
+        },
+        {
+          "enum": "4",
+          "description": "TOO_LATE_TO_ENTER"
+        }
+      ]
     },
     {
       "tag": "104",
       "name": "IOIQualifier",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "X",
+          "description": "CROSSING_OPPORTUNITY"
+        },
+        {
+          "enum": "O",
+          "description": "AT_THE_OPEN"
+        },
+        {
+          "enum": "M",
+          "description": "MORE_BEHIND"
+        },
+        {
+          "enum": "P",
+          "description": "TAKING_A_POSITION"
+        },
+        {
+          "enum": "V",
+          "description": "VERSUS"
+        },
+        {
+          "enum": "Q",
+          "description": "CURRENT_QUOTE"
+        },
+        {
+          "enum": "C",
+          "description": "AT_THE_CLOSE"
+        },
+        {
+          "enum": "S",
+          "description": "PORTFOLIO_SHOWN"
+        },
+        {
+          "enum": "I",
+          "description": "IN_TOUCH_WITH"
+        },
+        {
+          "enum": "W",
+          "description": "INDICATION_WORKING_AWAY"
+        },
+        {
+          "enum": "A",
+          "description": "ALL_OR_NONE"
+        },
+        {
+          "enum": "L",
+          "description": "LIMIT"
+        },
+        {
+          "enum": "T",
+          "description": "THROUGH_THE_DAY"
+        }
+      ]
     },
     {
       "tag": "105",
@@ -579,12 +1457,32 @@
     {
       "tag": "113",
       "name": "ReportToExch",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "Y",
+          "description": "YES"
+        },
+        {
+          "enum": "N",
+          "description": "NO"
+        }
+      ]
     },
     {
       "tag": "114",
       "name": "LocateReqd",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "Y",
+          "description": "YES"
+        },
+        {
+          "enum": "N",
+          "description": "NO"
+        }
+      ]
     },
     {
       "tag": "115",
@@ -619,7 +1517,17 @@
     {
       "tag": "121",
       "name": "ForexReq",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "Y",
+          "description": "YES"
+        },
+        {
+          "enum": "N",
+          "description": "NO"
+        }
+      ]
     },
     {
       "tag": "122",
@@ -629,7 +1537,17 @@
     {
       "tag": "123",
       "name": "GapFillFlag",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "Y",
+          "description": "GAP_FILL_MESSAGE_MSGSEQNUM_FIELD_VALID"
+        },
+        {
+          "enum": "N",
+          "description": "SEQUENCE_RESET_IGNORE_MSGSEQNUM"
+        }
+      ]
     },
     {
       "tag": "124",
@@ -639,7 +1557,17 @@
     {
       "tag": "125",
       "name": "CxlType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "P",
+          "description": "PARTIAL_CANCEL"
+        },
+        {
+          "enum": "F",
+          "description": "FULL_REMAINING_QUANTITY"
+        }
+      ]
     },
     {
       "tag": "126",
@@ -649,7 +1577,33 @@
     {
       "tag": "127",
       "name": "DKReason",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "A",
+          "description": "UNKNOWN_SYMBOL"
+        },
+        {
+          "enum": "B",
+          "description": "WRONG_SIDE"
+        },
+        {
+          "enum": "C",
+          "description": "QUANTITY_EXCEEDS_ORDER"
+        },
+        {
+          "enum": "D",
+          "description": "NO_MATCHING_ORDER"
+        },
+        {
+          "enum": "E",
+          "description": "PRICE_EXCEEDS_LIMIT"
+        },
+        {
+          "enum": "Z",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "128",
@@ -664,7 +1618,17 @@
     {
       "tag": "130",
       "name": "IOINaturalFlag",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "Y",
+          "description": "NATURAL"
+        },
+        {
+          "enum": "N",
+          "description": "NOT_NATURAL"
+        }
+      ]
     },
     {
       "tag": "131",
@@ -709,7 +1673,37 @@
     {
       "tag": "139",
       "name": "MiscFeeType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "REGULATORY"
+        },
+        {
+          "enum": "2",
+          "description": "TAX"
+        },
+        {
+          "enum": "3",
+          "description": "LOCAL_COMMISSION"
+        },
+        {
+          "enum": "4",
+          "description": "EXCHANGE_FEES"
+        },
+        {
+          "enum": "5",
+          "description": "STAMP"
+        },
+        {
+          "enum": "6",
+          "description": "LEVY"
+        },
+        {
+          "enum": "7",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "140",
