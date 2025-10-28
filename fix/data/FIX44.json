@@ -52,12 +52,44 @@
     {
       "tag": "4",
       "name": "AdvSide",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "B",
+          "description": "BUY"
+        },
+        {
+          "enum": "S",
+          "description": "SELL"
+        },
+        {
+          "enum": "X",
+          "description": "CROSS"
+        },
+        {
+          "enum": "T",
+          "description": "TRADE"
+        }
+      ]
     },
     {
       "tag": "5",
       "name": "AdvTransType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "N",
+          "description": "NEW"
+        },
+        {
+          "enum": "C",
+          "description": "CANCEL"
+        },
+        {
+          "enum": "R",
+          "description": "REPLACE"
+        }
+      ]
     },
     {
       "tag": "6",
@@ -97,7 +129,33 @@
     {
       "tag": "13",
       "name": "CommType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "1",
+          "description": "PER_UNIT"
+        },
+        {
+          "enum": "2",
+          "description": "PERCENTAGE"
+        },
+        {
+          "enum": "3",
+          "description": "ABSOLUTE"
+        },
+        {
+          "enum": "4",
+          "description": "PERCENTAGE_WAIVED_CASH_DISCOUNT"
+        },
+        {
+          "enum": "5",
+          "description": "PERCENTAGE_WAIVED_ENHANCED_UNITS"
+        },
+        {
+          "enum": "6",
+          "description": "POINTS_PER_BOND_OR_OR_CONTRACT"
+        }
+      ]
     },
     {
       "tag": "14",
@@ -122,7 +180,173 @@
     {
       "tag": "18",
       "name": "ExecInst",
-      "type": "MULTIPLEVALUESTRING"
+      "type": "MULTIPLEVALUESTRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "NOT_HELD"
+        },
+        {
+          "enum": "2",
+          "description": "WORK"
+        },
+        {
+          "enum": "3",
+          "description": "GO_ALONG"
+        },
+        {
+          "enum": "4",
+          "description": "OVER_THE_DAY"
+        },
+        {
+          "enum": "5",
+          "description": "HELD"
+        },
+        {
+          "enum": "6",
+          "description": "PARTICIPATE_DONT_INITIATE"
+        },
+        {
+          "enum": "7",
+          "description": "STRICT_SCALE"
+        },
+        {
+          "enum": "8",
+          "description": "TRY_TO_SCALE"
+        },
+        {
+          "enum": "9",
+          "description": "STAY_ON_BIDSIDE"
+        },
+        {
+          "enum": "0",
+          "description": "STAY_ON_OFFERSIDE"
+        },
+        {
+          "enum": "A",
+          "description": "NO_CROSS"
+        },
+        {
+          "enum": "B",
+          "description": "OK_TO_CROSS"
+        },
+        {
+          "enum": "C",
+          "description": "CALL_FIRST"
+        },
+        {
+          "enum": "D",
+          "description": "PERCENT_OF_VOLUME"
+        },
+        {
+          "enum": "E",
+          "description": "DO_NOT_INCREASE"
+        },
+        {
+          "enum": "F",
+          "description": "DO_NOT_REDUCE"
+        },
+        {
+          "enum": "G",
+          "description": "ALL_OR_NONE"
+        },
+        {
+          "enum": "H",
+          "description": "REINSTATE_ON_SYSTEM_FAILURE"
+        },
+        {
+          "enum": "I",
+          "description": "INSTITUTIONS_ONLY"
+        },
+        {
+          "enum": "J",
+          "description": "REINSTATE_ON_TRADING_HALT"
+        },
+        {
+          "enum": "K",
+          "description": "CANCEL_ON_TRADING_HALT"
+        },
+        {
+          "enum": "L",
+          "description": "LAST_PEG"
+        },
+        {
+          "enum": "M",
+          "description": "MID_PRICE"
+        },
+        {
+          "enum": "N",
+          "description": "NON_NEGOTIABLE"
+        },
+        {
+          "enum": "O",
+          "description": "OPENING_PEG"
+        },
+        {
+          "enum": "P",
+          "description": "MARKET_PEG"
+        },
+        {
+          "enum": "Q",
+          "description": "CANCEL_ON_SYSTEM_FAILURE"
+        },
+        {
+          "enum": "R",
+          "description": "PRIMARY_PEG"
+        },
+        {
+          "enum": "S",
+          "description": "SUSPEND"
+        },
+        {
+          "enum": "T",
+          "description": "FIXED_PEG_TO_LOCAL_BEST_BID_OR_OFFER_AT_TIME_OF_ORDER"
+        },
+        {
+          "enum": "U",
+          "description": "CUSTOMER_DISPLAY_INSTRUCTION"
+        },
+        {
+          "enum": "V",
+          "description": "NETTING"
+        },
+        {
+          "enum": "W",
+          "description": "PEG_TO_VWAP"
+        },
+        {
+          "enum": "X",
+          "description": "TRADE_ALONG"
+        },
+        {
+          "enum": "Y",
+          "description": "TRY_TO_STOP"
+        },
+        {
+          "enum": "Z",
+          "description": "CANCEL_IF_NOT_BEST"
+        },
+        {
+          "enum": "a",
+          "description": "TRAILING_STOP_PEG"
+        },
+        {
+          "enum": "b",
+          "description": "STRICT_LIMIT"
+        },
+        {
+          "enum": "c",
+          "description": "IGNORE_PRICE_VALIDITY_CHECKS"
+        },
+        {
+          "enum": "d",
+          "description": "PEG_TO_LIMIT_PRICE"
+        },
+        {
+          "enum": "e",
+          "description": "WORK_TO_TARGET_STRATEGY"
+        }
+      ]
     },
     {
       "tag": "19",
@@ -132,12 +356,104 @@
     {
       "tag": "21",
       "name": "HandlInst",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "1",
+          "description": "AUTOMATED_EXECUTION_ORDER_PRIVATE"
+        },
+        {
+          "enum": "2",
+          "description": "AUTOMATED_EXECUTION_ORDER_PUBLIC"
+        },
+        {
+          "enum": "3",
+          "description": "MANUAL_ORDER"
+        }
+      ]
     },
     {
       "tag": "22",
       "name": "SecurityIDSource",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "CUSIP"
+        },
+        {
+          "enum": "2",
+          "description": "SEDOL"
+        },
+        {
+          "enum": "3",
+          "description": "QUIK"
+        },
+        {
+          "enum": "4",
+          "description": "ISIN_NUMBER"
+        },
+        {
+          "enum": "5",
+          "description": "RIC_CODE"
+        },
+        {
+          "enum": "6",
+          "description": "ISO_CURRENCY_CODE"
+        },
+        {
+          "enum": "7",
+          "description": "ISO_COUNTRY_CODE"
+        },
+        {
+          "enum": "8",
+          "description": "EXCHANGE_SYMBOL"
+        },
+        {
+          "enum": "9",
+          "description": "CONSOLIDATED_TAPE_ASSOCIATION"
+        },
+        {
+          "enum": "A",
+          "description": "BLOOMBERG_SYMBOL"
+        },
+        {
+          "enum": "B",
+          "description": "WERTPAPIER"
+        },
+        {
+          "enum": "C",
+          "description": "DUTCH"
+        },
+        {
+          "enum": "D",
+          "description": "VALOREN"
+        },
+        {
+          "enum": "E",
+          "description": "SICOVAM"
+        },
+        {
+          "enum": "F",
+          "description": "BELGIAN"
+        },
+        {
+          "enum": "G",
+          "description": "COMMON"
+        },
+        {
+          "enum": "H",
+          "description": "CLEARING_HOUSE_CLEARING_ORGANIZATION"
+        },
+        {
+          "enum": "I",
+          "description": "ISDA_FPML_PRODUCT_SPECIFICATION"
+        },
+        {
+          "enum": "J",
+          "description": "OPTIONS_PRICE_REPORTING_AUTHORITY"
+        }
+      ]
     },
     {
       "tag": "23",
@@ -147,7 +463,21 @@
     {
       "tag": "25",
       "name": "IOIQltyInd",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "L",
+          "description": "LOW"
+        },
+        {
+          "enum": "M",
+          "description": "MEDIUM"
+        },
+        {
+          "enum": "H",
+          "description": "HIGH"
+        }
+      ]
     },
     {
       "tag": "26",
@@ -162,12 +492,44 @@
     {
       "tag": "28",
       "name": "IOITransType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "N",
+          "description": "NEW"
+        },
+        {
+          "enum": "C",
+          "description": "CANCEL"
+        },
+        {
+          "enum": "R",
+          "description": "REPLACE"
+        }
+      ]
     },
     {
       "tag": "29",
       "name": "LastCapacity",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "1",
+          "description": "AGENT"
+        },
+        {
+          "enum": "2",
+          "description": "CROSS_AS_AGENT"
+        },
+        {
+          "enum": "3",
+          "description": "CROSS_AS_PRINCIPAL"
+        },
+        {
+          "enum": "4",
+          "description": "PRINCIPAL"
+        }
+      ]
     },
     {
       "tag": "30",
@@ -197,7 +559,381 @@
     {
       "tag": "35",
       "name": "MsgType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "0",
+          "description": "HEARTBEAT"
+        },
+        {
+          "enum": "1",
+          "description": "TEST_REQUEST"
+        },
+        {
+          "enum": "2",
+          "description": "RESEND_REQUEST"
+        },
+        {
+          "enum": "3",
+          "description": "REJECT"
+        },
+        {
+          "enum": "4",
+          "description": "SEQUENCE_RESET"
+        },
+        {
+          "enum": "5",
+          "description": "LOGOUT"
+        },
+        {
+          "enum": "6",
+          "description": "INDICATION_OF_INTEREST"
+        },
+        {
+          "enum": "7",
+          "description": "ADVERTISEMENT"
+        },
+        {
+          "enum": "8",
+          "description": "EXECUTION_REPORT"
+        },
+        {
+          "enum": "9",
+          "description": "ORDER_CANCEL_REJECT"
+        },
+        {
+          "enum": "A",
+          "description": "LOGON"
+        },
+        {
+          "enum": "B",
+          "description": "NEWS"
+        },
+        {
+          "enum": "C",
+          "description": "EMAIL"
+        },
+        {
+          "enum": "D",
+          "description": "ORDER_SINGLE"
+        },
+        {
+          "enum": "E",
+          "description": "ORDER_LIST"
+        },
+        {
+          "enum": "F",
+          "description": "ORDER_CANCEL_REQUEST"
+        },
+        {
+          "enum": "G",
+          "description": "ORDER_CANCEL_REPLACE_REQUEST"
+        },
+        {
+          "enum": "H",
+          "description": "ORDER_STATUS_REQUEST"
+        },
+        {
+          "enum": "J",
+          "description": "ALLOCATION_INSTRUCTION"
+        },
+        {
+          "enum": "K",
+          "description": "LIST_CANCEL_REQUEST"
+        },
+        {
+          "enum": "L",
+          "description": "LIST_EXECUTE"
+        },
+        {
+          "enum": "M",
+          "description": "LIST_STATUS_REQUEST"
+        },
+        {
+          "enum": "N",
+          "description": "LIST_STATUS"
+        },
+        {
+          "enum": "P",
+          "description": "ALLOCATION_INSTRUCTION_ACK"
+        },
+        {
+          "enum": "Q",
+          "description": "DONT_KNOW_TRADE"
+        },
+        {
+          "enum": "R",
+          "description": "QUOTE_REQUEST"
+        },
+        {
+          "enum": "S",
+          "description": "QUOTE"
+        },
+        {
+          "enum": "T",
+          "description": "SETTLEMENT_INSTRUCTIONS"
+        },
+        {
+          "enum": "V",
+          "description": "MARKET_DATA_REQUEST"
+        },
+        {
+          "enum": "W",
+          "description": "MARKET_DATA_SNAPSHOT_FULL_REFRESH"
+        },
+        {
+          "enum": "X",
+          "description": "MARKET_DATA_INCREMENTAL_REFRESH"
+        },
+        {
+          "enum": "Y",
+          "description": "MARKET_DATA_REQUEST_REJECT"
+        },
+        {
+          "enum": "Z",
+          "description": "QUOTE_CANCEL"
+        },
+        {
+          "enum": "a",
+          "description": "QUOTE_STATUS_REQUEST"
+        },
+        {
+          "enum": "b",
+          "description": "MASS_QUOTE_ACKNOWLEDGEMENT"
+        },
+        {
+          "enum": "c",
+          "description": "SECURITY_DEFINITION_REQUEST"
+        },
+        {
+          "enum": "d",
+          "description": "SECURITY_DEFINITION"
+        },
+        {
+          "enum": "e",
+          "description": "SECURITY_STATUS_REQUEST"
+        },
+        {
+          "enum": "f",
+          "description": "SECURITY_STATUS"
+        },
+        {
+          "enum": "g",
+          "description": "TRADING_SESSION_STATUS_REQUEST"
+        },
+        {
+          "enum": "h",
+          "description": "TRADING_SESSION_STATUS"
+        },
+        {
+          "enum": "i",
+          "description": "MASS_QUOTE"
+        },
+        {
+          "enum": "j",
+          "description": "BUSINESS_MESSAGE_REJECT"
+        },
+        {
+          "enum": "k",
+          "description": "BID_REQUEST"
+        },
+        {
+          "enum": "l",
+          "description": "BID_RESPONSE"
+        },
+        {
+          "enum": "m",
+          "description": "LIST_STRIKE_PRICE"
+        },
+        {
+          "enum": "n",
+          "description": "XML_MESSAGE"
+        },
+        {
+          "enum": "o",
+          "description": "REGISTRATION_INSTRUCTIONS"
+        },
+        {
+          "enum": "p",
+          "description": "REGISTRATION_INSTRUCTIONS_RESPONSE"
+        },
+        {
+          "enum": "q",
+          "description": "ORDER_MASS_CANCEL_REQUEST"
+        },
+        {
+          "enum": "r",
+          "description": "ORDER_MASS_CANCEL_REPORT"
+        },
+        {
+          "enum": "s",
+          "description": "NEW_ORDER_CROSS"
+        },
+        {
+          "enum": "t",
+          "description": "CROSS_ORDER_CANCEL_REPLACE_REQUEST"
+        },
+        {
+          "enum": "u",
+          "description": "CROSS_ORDER_CANCEL_REQUEST"
+        },
+        {
+          "enum": "v",
+          "description": "SECURITY_TYPE_REQUEST"
+        },
+        {
+          "enum": "w",
+          "description": "SECURITY_TYPES"
+        },
+        {
+          "enum": "x",
+          "description": "SECURITY_LIST_REQUEST"
+        },
+        {
+          "enum": "y",
+          "description": "SECURITY_LIST"
+        },
+        {
+          "enum": "z",
+          "description": "DERIVATIVE_SECURITY_LIST_REQUEST"
+        },
+        {
+          "enum": "AA",
+          "description": "DERIVATIVE_SECURITY_LIST"
+        },
+        {
+          "enum": "AB",
+          "description": "NEW_ORDER_MULTILEG"
+        },
+        {
+          "enum": "AC",
+          "description": "MULTILEG_ORDER_CANCEL_REPLACE"
+        },
+        {
+          "enum": "AD",
+          "description": "TRADE_CAPTURE_REPORT_REQUEST"
+        },
+        {
+          "enum": "AE",
+          "description": "TRADE_CAPTURE_REPORT"
+        },
+        {
+          "enum": "AF",
+          "description": "ORDER_MASS_STATUS_REQUEST"
+        },
+        {
+          "enum": "AG",
+          "description": "QUOTE_REQUEST_REJECT"
+        },
+        {
+          "enum": "AH",
+          "description": "RFQ_REQUEST"
+        },
+        {
+          "enum": "AI",
+          "description": "QUOTE_STATUS_REPORT"
+        },
+        {
+          "enum": "AJ",
+          "description": "QUOTE_RESPONSE"
+        },
+        {
+          "enum": "AK",
+          "description": "CONFIRMATION"
+        },
+        {
+          "enum": "AL",
+          "description": "POSITION_MAINTENANCE_REQUEST"
+        },
+        {
+          "enum": "AM",
+          "description": "POSITION_MAINTENANCE_REPORT"
+        },
+        {
+          "enum": "AN",
+          "description": "REQUEST_FOR_POSITIONS"
+        },
+        {
+          "enum": "AO",
+          "description": "REQUEST_FOR_POSITIONS_ACK"
+        },
+        {
+          "enum": "AP",
+          "description": "POSITION_REPORT"
+        },
+        {
+          "enum": "AQ",
+          "description": "TRADE_CAPTURE_REPORT_REQUEST_ACK"
+        },
+        {
+          "enum": "AR",
+          "description": "TRADE_CAPTURE_REPORT_ACK"
+        },
+        {
+          "enum": "AS",
+          "description": "ALLOCATION_REPORT"
+        },
+        {
+          "enum": "AT",
+          "description": "ALLOCATION_REPORT_ACK"
+        },
+        {
+          "enum": "AU",
+          "description": "CONFIRMATION_ACK"
+        },
+        {
+          "enum": "AV",
+          "description": "SETTLEMENT_INSTRUCTION_REQUEST"
+        },
+        {
+          "enum": "AW",
+          "description": "ASSIGNMENT_REPORT"
+        },
+        {
+          "enum": "AX",
+          "description": "COLLATERAL_REQUEST"
+        },
+        {
+          "enum": "AY",
+          "description": "COLLATERAL_ASSIGNMENT"
+        },
+        {
+          "enum": "AZ",
+          "description": "COLLATERAL_RESPONSE"
+        },
+        {
+          "enum": "BA",
+          "description": "COLLATERAL_REPORT"
+        },
+        {
+          "enum": "BB",
+          "description": "COLLATERAL_INQUIRY"
+        },
+        {
+          "enum": "BC",
+          "description": "NETWORK_STATUS_REQUEST"
+        },
+        {
+          "enum": "BD",
+          "description": "NETWORK_STATUS_RESPONSE"
+        },
+        {
+          "enum": "BE",
+          "description": "USER_REQUEST"
+        },
+        {
+          "enum": "BF",
+          "description": "USER_RESPONSE"
+        },
+        {
+          "enum": "BG",
+          "description": "COLLATERAL_INQUIRY_ACK"
+        },
+        {
+          "enum": "BH",
+          "description": "CONFIRMATION_REQUEST"
+        }
+      ]
     },
     {
       "tag": "36",
@@ -217,12 +953,168 @@
     {
       "tag": "39",
       "name": "OrdStatus",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NEW"
+        },
+        {
+          "enum": "1",
+          "description": "PARTIALLY_FILLED"
+        },
+        {
+          "enum": "2",
+          "description": "FILLED"
+        },
+        {
+          "enum": "3",
+          "description": "DONE_FOR_DAY"
+        },
+        {
+          "enum": "4",
+          "description": "CANCELED"
+        },
+        {
+          "enum": "5",
+          "description": "REPLACED"
+        },
+        {
+          "enum": "6",
+          "description": "PENDING_CANCEL"
+        },
+        {
+          "enum": "7",
+          "description": "STOPPED"
+        },
+        {
+          "enum": "8",
+          "description": "REJECTED"
+        },
+        {
+          "enum": "9",
+          "description": "SUSPENDED"
+        },
+        {
+          "enum": "A",
+          "description": "PENDING_NEW"
+        },
+        {
+          "enum": "B",
+          "description": "CALCULATED"
+        },
+        {
+          "enum": "C",
+          "description": "EXPIRED"
+        },
+        {
+          "enum": "D",
+          "description": "ACCEPTED_FOR_BIDDING"
+        },
+        {
+          "enum": "E",
+          "description": "PENDING_REPLACE"
+        }
+      ]
     },
     {
       "tag": "40",
       "name": "OrdType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "1",
+          "description": "MARKET"
+        },
+        {
+          "enum": "2",
+          "description": "LIMIT"
+        },
+        {
+          "enum": "3",
+          "description": "STOP"
+        },
+        {
+          "enum": "4",
+          "description": "STOP_LIMIT"
+        },
+        {
+          "enum": "5",
+          "description": "MARKET_ON_CLOSE"
+        },
+        {
+          "enum": "6",
+          "description": "WITH_OR_WITHOUT"
+        },
+        {
+          "enum": "7",
+          "description": "LIMIT_OR_BETTER"
+        },
+        {
+          "enum": "8",
+          "description": "LIMIT_WITH_OR_WITHOUT"
+        },
+        {
+          "enum": "9",
+          "description": "ON_BASIS"
+        },
+        {
+          "enum": "A",
+          "description": "ON_CLOSE"
+        },
+        {
+          "enum": "B",
+          "description": "LIMIT_ON_CLOSE"
+        },
+        {
+          "enum": "C",
+          "description": "FOREX_MARKET"
+        },
+        {
+          "enum": "D",
+          "description": "PREVIOUSLY_QUOTED"
+        },
+        {
+          "enum": "E",
+          "description": "PREVIOUSLY_INDICATED"
+        },
+        {
+          "enum": "F",
+          "description": "FOREX_LIMIT"
+        },
+        {
+          "enum": "G",
+          "description": "FOREX_SWAP"
+        },
+        {
+          "enum": "H",
+          "description": "FOREX_PREVIOUSLY_QUOTED"
+        },
+        {
+          "enum": "I",
+          "description": "FUNARI"
+        },
+        {
+          "enum": "J",
+          "description": "MARKET_IF_TOUCHED"
+        },
+        {
+          "enum": "K",
+          "description": "MARKET_WITH_LEFTOVER_AS_LIMIT"
+        },
+        {
+          "enum": "L",
+          "description": "PREVIOUS_FUND_VALUATION_POINT"
+        },
+        {
+          "enum": "M",
+          "description": "NEXT_FUND_VALUATION_POINT"
+        },
+        {
+          "enum": "P",
+          "description": "PEGGED"
+        }
+      ]
     },
     {
       "tag": "41",
@@ -277,7 +1169,73 @@
     {
       "tag": "54",
       "name": "Side",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "1",
+          "description": "BUY"
+        },
+        {
+          "enum": "2",
+          "description": "SELL"
+        },
+        {
+          "enum": "3",
+          "description": "BUY_MINUS"
+        },
+        {
+          "enum": "4",
+          "description": "SELL_PLUS"
+        },
+        {
+          "enum": "5",
+          "description": "SELL_SHORT"
+        },
+        {
+          "enum": "6",
+          "description": "SELL_SHORT_EXEMPT"
+        },
+        {
+          "enum": "7",
+          "description": "UNDISCLOSED"
+        },
+        {
+          "enum": "8",
+          "description": "CROSS"
+        },
+        {
+          "enum": "9",
+          "description": "CROSS_SHORT"
+        },
+        {
+          "enum": "A",
+          "description": "CROSS_SHORT_EXEMPT"
+        },
+        {
+          "enum": "B",
+          "description": "AS_DEFINED"
+        },
+        {
+          "enum": "C",
+          "description": "OPPOSITE"
+        },
+        {
+          "enum": "D",
+          "description": "SUBSCRIBE"
+        },
+        {
+          "enum": "E",
+          "description": "REDEEM"
+        },
+        {
+          "enum": "F",
+          "description": "LEND"
+        },
+        {
+          "enum": "G",
+          "description": "BORROW"
+        }
+      ]
     },
     {
       "tag": "55",
@@ -302,7 +1260,41 @@
     {
       "tag": "59",
       "name": "TimeInForce",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "DAY"
+        },
+        {
+          "enum": "1",
+          "description": "GOOD_TILL_CANCEL"
+        },
+        {
+          "enum": "2",
+          "description": "AT_THE_OPENING"
+        },
+        {
+          "enum": "3",
+          "description": "IMMEDIATE_OR_CANCEL"
+        },
+        {
+          "enum": "4",
+          "description": "FILL_OR_KILL"
+        },
+        {
+          "enum": "5",
+          "description": "GOOD_TILL_CROSSING"
+        },
+        {
+          "enum": "6",
+          "description": "GOOD_TILL_DATE"
+        },
+        {
+          "enum": "7",
+          "description": "AT_THE_CLOSE"
+        }
+      ]
     },
     {
       "tag": "60",
@@ -312,7 +1304,21 @@
     {
       "tag": "61",
       "name": "Urgency",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NORMAL"
+        },
+        {
+          "enum": "1",
+          "description": "FLASH"
+        },
+        {
+          "enum": "2",
+          "description": "BACKGROUND"
+        }
+      ]
     },
     {
       "tag": "62",
@@ -322,7 +1328,49 @@
     {
       "tag": "63",
       "name": "SettlType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "REGULAR"
+        },
+        {
+          "enum": "1",
+          "description": "CASH"
+        },
+        {
+          "enum": "2",
+          "description": "NEXT_DAY"
+        },
+        {
+          "enum": "3",
+          "description": "T_PLUS_2"
+        },
+        {
+          "enum": "4",
+          "description": "T_PLUS_3"
+        },
+        {
+          "enum": "5",
+          "description": "T_PLUS_4"
+        },
+        {
+          "enum": "6",
+          "description": "FUTURE"
+        },
+        {
+          "enum": "7",
+          "description": "WHEN_AND_IF_ISSUED"
+        },
+        {
+          "enum": "8",
+          "description": "SELLERS_OPTION"
+        },
+        {
+          "enum": "9",
+          "description": "T_PLUS_5"
+        }
+      ]
     },
     {
       "tag": "64",
@@ -332,7 +1380,17 @@
     {
       "tag": "65",
       "name": "SymbolSfx",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "WI",
+          "description": "WHEN_ISSUED"
+        },
+        {
+          "enum": "CD",
+          "description": "A_EUCP_WITH_LUMP_SUM_INTEREST"
+        }
+      ]
     },
     {
       "tag": "66",
@@ -362,7 +1420,33 @@
     {
       "tag": "71",
       "name": "AllocTransType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NEW"
+        },
+        {
+          "enum": "1",
+          "description": "REPLACE"
+        },
+        {
+          "enum": "2",
+          "description": "CANCEL"
+        },
+        {
+          "enum": "3",
+          "description": "PRELIMINARY"
+        },
+        {
+          "enum": "4",
+          "description": "CALCULATED"
+        },
+        {
+          "enum": "5",
+          "description": "CALCULATED_WITHOUT_PRELIMINARY"
+        }
+      ]
     },
     {
       "tag": "72",
@@ -387,7 +1471,25 @@
     {
       "tag": "77",
       "name": "PositionEffect",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "O",
+          "description": "OPEN"
+        },
+        {
+          "enum": "C",
+          "description": "CLOSE"
+        },
+        {
+          "enum": "R",
+          "description": "ROLLED"
+        },
+        {
+          "enum": "F",
+          "description": "FIFO"
+        }
+      ]
     },
     {
       "tag": "78",
@@ -407,7 +1509,37 @@
     {
       "tag": "81",
       "name": "ProcessCode",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "REGULAR"
+        },
+        {
+          "enum": "1",
+          "description": "SOFT_DOLLAR"
+        },
+        {
+          "enum": "2",
+          "description": "STEP_IN"
+        },
+        {
+          "enum": "3",
+          "description": "STEP_OUT"
+        },
+        {
+          "enum": "4",
+          "description": "SOFT_DOLLAR_STEP_IN"
+        },
+        {
+          "enum": "5",
+          "description": "SOFT_DOLLAR_STEP_OUT"
+        },
+        {
+          "enum": "6",
+          "description": "PLAN_SPONSOR"
+        }
+      ]
     },
     {
       "tag": "82",
@@ -432,12 +1564,96 @@
     {
       "tag": "87",
       "name": "AllocStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "ACCEPTED"
+        },
+        {
+          "enum": "1",
+          "description": "BLOCK_LEVEL_REJECT"
+        },
+        {
+          "enum": "2",
+          "description": "ACCOUNT_LEVEL_REJECT"
+        },
+        {
+          "enum": "3",
+          "description": "RECEIVED"
+        },
+        {
+          "enum": "4",
+          "description": "INCOMPLETE"
+        },
+        {
+          "enum": "5",
+          "description": "REJECTED_BY_INTERMEDIARY"
+        }
+      ]
     },
     {
       "tag": "88",
       "name": "AllocRejCode",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "UNKNOWN_ACCOUNT"
+        },
+        {
+          "enum": "1",
+          "description": "INCORRECT_QUANTITY"
+        },
+        {
+          "enum": "2",
+          "description": "INCORRECT_AVERAGE_PRICE"
+        },
+        {
+          "enum": "3",
+          "description": "UNKNOWN_EXECUTING_BROKER_MNEMONIC"
+        },
+        {
+          "enum": "4",
+          "description": "COMMISSION_DIFFERENCE"
+        },
+        {
+          "enum": "5",
+          "description": "UNKNOWN_ORDERID"
+        },
+        {
+          "enum": "6",
+          "description": "UNKNOWN_LISTID"
+        },
+        {
+          "enum": "7",
+          "description": "OTHER"
+        },
+        {
+          "enum": "8",
+          "description": "INCORRECT_ALLOCATED_QUANTITY"
+        },
+        {
+          "enum": "9",
+          "description": "CALCULATION_DIFFERENCE"
+        },
+        {
+          "enum": "10",
+          "description": "UNKNOWN_OR_STALE_EXEC_ID"
+        },
+        {
+          "enum": "11",
+          "description": "MISMATCHED_DATA_VALUE"
+        },
+        {
+          "enum": "12",
+          "description": "UNKNOWN_CLORDID"
+        },
+        {
+          "enum": "13",
+          "description": "WAREHOUSE_REQUEST_REJECTED"
+        }
+      ]
     },
     {
       "tag": "89",
@@ -462,7 +1678,21 @@
     {
       "tag": "94",
       "name": "EmailType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NEW"
+        },
+        {
+          "enum": "1",
+          "description": "REPLY"
+        },
+        {
+          "enum": "2",
+          "description": "ADMIN_REPLY"
+        }
+      ]
     },
     {
       "tag": "95",
@@ -482,7 +1712,37 @@
     {
       "tag": "98",
       "name": "EncryptMethod",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NONE_OTHER"
+        },
+        {
+          "enum": "1",
+          "description": "PKCS"
+        },
+        {
+          "enum": "2",
+          "description": "DES"
+        },
+        {
+          "enum": "3",
+          "description": "PKCS_DES"
+        },
+        {
+          "enum": "4",
+          "description": "PGP_DES"
+        },
+        {
+          "enum": "5",
+          "description": "PGP_DES_MD5"
+        },
+        {
+          "enum": "6",
+          "description": "PEM_DES_MD5"
+        }
+      ]
     },
     {
       "tag": "99",
@@ -497,17 +1757,195 @@
     {
       "tag": "102",
       "name": "CxlRejReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "TOO_LATE_TO_CANCEL"
+        },
+        {
+          "enum": "1",
+          "description": "UNKNOWN_ORDER"
+        },
+        {
+          "enum": "2",
+          "description": "BROKER_EXCHANGE_OPTION"
+        },
+        {
+          "enum": "3",
+          "description": "ORDER_ALREADY_IN_PENDING_CANCEL_OR_PENDING_REPLACE_STATUS"
+        },
+        {
+          "enum": "4",
+          "description": "UNABLE_TO_PROCESS_ORDER_MASS_CANCEL_REQUEST"
+        },
+        {
+          "enum": "5",
+          "description": "ORIGORDMODTIME_DID_NOT_MATCH_LAST_TRANSACTTIME_OF_ORDER"
+        },
+        {
+          "enum": "6",
+          "description": "DUPLICATE_CLORDID_RECEIVED"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "103",
       "name": "OrdRejReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "BROKER_EXCHANGE_OPTION"
+        },
+        {
+          "enum": "1",
+          "description": "UNKNOWN_SYMBOL"
+        },
+        {
+          "enum": "2",
+          "description": "EXCHANGE_CLOSED"
+        },
+        {
+          "enum": "3",
+          "description": "ORDER_EXCEEDS_LIMIT"
+        },
+        {
+          "enum": "4",
+          "description": "TOO_LATE_TO_ENTER"
+        },
+        {
+          "enum": "5",
+          "description": "UNKNOWN_ORDER"
+        },
+        {
+          "enum": "6",
+          "description": "DUPLICATE_ORDER"
+        },
+        {
+          "enum": "7",
+          "description": "DUPLICATE_OF_A_VERBALLY_COMMUNICATED_ORDER"
+        },
+        {
+          "enum": "8",
+          "description": "STALE_ORDER"
+        },
+        {
+          "enum": "9",
+          "description": "TRADE_ALONG_REQUIRED"
+        },
+        {
+          "enum": "10",
+          "description": "INVALID_INVESTOR_ID"
+        },
+        {
+          "enum": "11",
+          "description": "UNSUPPORTED_ORDER_CHARACTERISTIC"
+        },
+        {
+          "enum": "12",
+          "description": "SURVEILLENCE_OPTION"
+        },
+        {
+          "enum": "13",
+          "description": "INCORRECT_QUANTITY"
+        },
+        {
+          "enum": "14",
+          "description": "INCORRECT_ALLOCATED_QUANTITY"
+        },
+        {
+          "enum": "15",
+          "description": "UNKNOWN_ACCOUNT"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "104",
       "name": "IOIQualifier",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "A",
+          "description": "ALL_OR_NONE"
+        },
+        {
+          "enum": "B",
+          "description": "MARKET_ON_CLOSE"
+        },
+        {
+          "enum": "C",
+          "description": "AT_THE_CLOSE"
+        },
+        {
+          "enum": "D",
+          "description": "VWAP"
+        },
+        {
+          "enum": "I",
+          "description": "IN_TOUCH_WITH"
+        },
+        {
+          "enum": "L",
+          "description": "LIMIT"
+        },
+        {
+          "enum": "M",
+          "description": "MORE_BEHIND"
+        },
+        {
+          "enum": "O",
+          "description": "AT_THE_OPEN"
+        },
+        {
+          "enum": "P",
+          "description": "TAKING_A_POSITION"
+        },
+        {
+          "enum": "Q",
+          "description": "AT_THE_MARKET"
+        },
+        {
+          "enum": "R",
+          "description": "READY_TO_TRADE"
+        },
+        {
+          "enum": "S",
+          "description": "PORTFOLIO_SHOWN"
+        },
+        {
+          "enum": "T",
+          "description": "THROUGH_THE_DAY"
+        },
+        {
+          "enum": "V",
+          "description": "VERSUS"
+        },
+        {
+          "enum": "W",
+          "description": "INDICATION_WORKING_AWAY"
+        },
+        {
+          "enum": "X",
+          "description": "CROSSING_OPPORTUNITY"
+        },
+        {
+          "enum": "Y",
+          "description": "AT_THE_MIDPOINT"
+        },
+        {
+          "enum": "Z",
+          "description": "PRE_OPEN"
+        }
+      ]
     },
     {
       "tag": "105",
@@ -612,7 +2050,37 @@
     {
       "tag": "127",
       "name": "DKReason",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "A",
+          "description": "UNKNOWN_SYMBOL"
+        },
+        {
+          "enum": "B",
+          "description": "WRONG_SIDE"
+        },
+        {
+          "enum": "C",
+          "description": "QUANTITY_EXCEEDS_ORDER"
+        },
+        {
+          "enum": "D",
+          "description": "NO_MATCHING_ORDER"
+        },
+        {
+          "enum": "E",
+          "description": "PRICE_EXCEEDS_LIMIT"
+        },
+        {
+          "enum": "F",
+          "description": "CALCULATION_DIFFERENCE"
+        },
+        {
+          "enum": "Z",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "128",
@@ -672,7 +2140,45 @@
     {
       "tag": "139",
       "name": "MiscFeeType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "1",
+          "description": "REGULATORY"
+        },
+        {
+          "enum": "2",
+          "description": "TAX"
+        },
+        {
+          "enum": "3",
+          "description": "LOCAL_COMMISSION"
+        },
+        {
+          "enum": "4",
+          "description": "EXCHANGE_FEES"
+        },
+        {
+          "enum": "5",
+          "description": "STAMP"
+        },
+        {
+          "enum": "6",
+          "description": "LEVY"
+        },
+        {
+          "enum": "7",
+          "description": "OTHER"
+        },
+        {
+          "enum": "8",
+          "description": "MARKUP"
+        },
+        {
+          "enum": "9",
+          "description": "CONSUMPTION_TAX"
+        }
+      ]
     },
     {
       "tag": "140",
@@ -727,7 +2233,85 @@
     {
       "tag": "150",
       "name": "ExecType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NEW"
+        },
+        {
+          "enum": "1",
+          "description": "PARTIAL_FILL"
+        },
+        {
+          "enum": "2",
+          "description": "FILL"
+        },
+        {
+          "enum": "3",
+          "description": "DONE_FOR_DAY"
+        },
+        {
+          "enum": "4",
+          "description": "CANCELED"
+        },
+        {
+          "enum": "5",
+          "description": "REPLACE"
+        },
+        {
+          "enum": "6",
+          "description": "PENDING_CANCEL"
+        },
+        {
+          "enum": "7",
+          "description": "STOPPED"
+        },
+        {
+          "enum": "8",
+          "description": "REJECTED"
+        },
+        {
+          "enum": "9",
+          "description": "SUSPENDED"
+        },
+        {
+          "enum": "A",
+          "description": "PENDING_NEW"
+        },
+        {
+          "enum": "B",
+          "description": "CALCULATED"
+        },
+        {
+          "enum": "C",
+          "description": "EXPIRED"
+        },
+        {
+          "enum": "D",
+          "description": "RESTATED"
+        },
+        {
+          "enum": "E",
+          "description": "PENDING_REPLACE"
+        },
+        {
+          "enum": "F",
+          "description": "TRADE"
+        },
+        {
+          "enum": "G",
+          "description": "TRADE_CORRECT"
+        },
+        {
+          "enum": "H",
+          "description": "TRADE_CANCEL"
+        },
+        {
+          "enum": "I",
+          "description": "ORDER_STATUS"
+        }
+      ]
     },
     {
       "tag": "151",
@@ -757,7 +2341,17 @@
     {
       "tag": "156",
       "name": "SettlCurrFxRateCalc",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "M",
+          "description": "MULTIPLY"
+        },
+        {
+          "enum": "D",
+          "description": "DIVIDE"
+        }
+      ]
     },
     {
       "tag": "157",
@@ -777,7 +2371,25 @@
     {
       "tag": "160",
       "name": "SettlInstMode",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "DEFAULT"
+        },
+        {
+          "enum": "1",
+          "description": "STANDING_INSTRUCTIONS_PROVIDED"
+        },
+        {
+          "enum": "4",
+          "description": "SPECIFIC_ORDER_FOR_A_SINGLE_ACCOUNT"
+        },
+        {
+          "enum": "5",
+          "description": "REQUEST_REJECT"
+        }
+      ]
     },
     {
       "tag": "161",
@@ -792,7 +2404,25 @@
     {
       "tag": "163",
       "name": "SettlInstTransType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "N",
+          "description": "NEW"
+        },
+        {
+          "enum": "C",
+          "description": "CANCEL"
+        },
+        {
+          "enum": "R",
+          "description": "REPLACE"
+        },
+        {
+          "enum": "T",
+          "description": "RESTATE"
+        }
+      ]
     },
     {
       "tag": "164",
@@ -802,12 +2432,404 @@
     {
       "tag": "165",
       "name": "SettlInstSource",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "1",
+          "description": "BROKERS_INSTRUCTIONS"
+        },
+        {
+          "enum": "2",
+          "description": "INSTITUTIONS_INSTRUCTIONS"
+        },
+        {
+          "enum": "3",
+          "description": "INVESTOR"
+        }
+      ]
     },
     {
       "tag": "167",
       "name": "SecurityType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "?",
+          "description": "WILDCARD"
+        },
+        {
+          "enum": "ABS",
+          "description": "ASSET_BACKED_SECURITIES"
+        },
+        {
+          "enum": "AMENDED",
+          "description": "AMENDED_AND_RESTATED"
+        },
+        {
+          "enum": "AN",
+          "description": "OTHER_ANTICIPATION_NOTES"
+        },
+        {
+          "enum": "BA",
+          "description": "BANKERS_ACCEPTANCE"
+        },
+        {
+          "enum": "BN",
+          "description": "BANK_NOTES"
+        },
+        {
+          "enum": "BOX",
+          "description": "BILL_OF_EXCHANGES"
+        },
+        {
+          "enum": "BRADY",
+          "description": "BRADY_BOND"
+        },
+        {
+          "enum": "BRIDGE",
+          "description": "BRIDGE_LOAN"
+        },
+        {
+          "enum": "BUYSELL",
+          "description": "BUY_SELLBACK"
+        },
+        {
+          "enum": "CB",
+          "description": "CONVERTIBLE_BOND"
+        },
+        {
+          "enum": "CD",
+          "description": "CERTIFICATE_OF_DEPOSIT"
+        },
+        {
+          "enum": "CL",
+          "description": "CALL_LOANS"
+        },
+        {
+          "enum": "CMBS",
+          "description": "CORP_MORTGAGE_BACKED_SECURITIES"
+        },
+        {
+          "enum": "CMO",
+          "description": "COLLATERALIZED_MORTGAGE_OBLIGATION"
+        },
+        {
+          "enum": "COFO",
+          "description": "CERTIFICATE_OF_OBLIGATION"
+        },
+        {
+          "enum": "COFP",
+          "description": "CERTIFICATE_OF_PARTICIPATION"
+        },
+        {
+          "enum": "CORP",
+          "description": "CORPORATE_BOND"
+        },
+        {
+          "enum": "CP",
+          "description": "COMMERCIAL_PAPER"
+        },
+        {
+          "enum": "CPP",
+          "description": "CORPORATE_PRIVATE_PLACEMENT"
+        },
+        {
+          "enum": "CS",
+          "description": "COMMON_STOCK"
+        },
+        {
+          "enum": "DEFLTED",
+          "description": "DEFAULTED"
+        },
+        {
+          "enum": "DINP",
+          "description": "DEBTOR_IN_POSSESSION"
+        },
+        {
+          "enum": "DN",
+          "description": "DEPOSIT_NOTES"
+        },
+        {
+          "enum": "DUAL",
+          "description": "DUAL_CURRENCY"
+        },
+        {
+          "enum": "EUCD",
+          "description": "EURO_CERTIFICATE_OF_DEPOSIT"
+        },
+        {
+          "enum": "EUCORP",
+          "description": "EURO_CORPORATE_BOND"
+        },
+        {
+          "enum": "EUCP",
+          "description": "EURO_COMMERCIAL_PAPER"
+        },
+        {
+          "enum": "EUSOV",
+          "description": "EURO_SOVEREIGNS"
+        },
+        {
+          "enum": "EUSUPRA",
+          "description": "EURO_SUPRANATIONAL_COUPONS"
+        },
+        {
+          "enum": "FAC",
+          "description": "FEDERAL_AGENCY_COUPON"
+        },
+        {
+          "enum": "FADN",
+          "description": "FEDERAL_AGENCY_DISCOUNT_NOTE"
+        },
+        {
+          "enum": "FOR",
+          "description": "FOREIGN_EXCHANGE_CONTRACT"
+        },
+        {
+          "enum": "FORWARD",
+          "description": "FORWARD"
+        },
+        {
+          "enum": "FUT",
+          "description": "FUTURE"
+        },
+        {
+          "enum": "GO",
+          "description": "GENERAL_OBLIGATION_BONDS"
+        },
+        {
+          "enum": "IET",
+          "description": "IOETTE_MORTGAGE"
+        },
+        {
+          "enum": "LOFC",
+          "description": "LETTER_OF_CREDIT"
+        },
+        {
+          "enum": "LQN",
+          "description": "LIQUIDITY_NOTE"
+        },
+        {
+          "enum": "MATURED",
+          "description": "MATURED"
+        },
+        {
+          "enum": "MBS",
+          "description": "MORTGAGE_BACKED_SECURITIES"
+        },
+        {
+          "enum": "MF",
+          "description": "MUTUAL_FUND"
+        },
+        {
+          "enum": "MIO",
+          "description": "MORTGAGE_INTEREST_ONLY"
+        },
+        {
+          "enum": "MLEG",
+          "description": "MULTI_LEG_INSTRUMENT"
+        },
+        {
+          "enum": "MPO",
+          "description": "MORTGAGE_PRINCIPAL_ONLY"
+        },
+        {
+          "enum": "MPP",
+          "description": "MORTGAGE_PRIVATE_PLACEMENT"
+        },
+        {
+          "enum": "MPT",
+          "description": "MISCELLANEOUS_PASS_THROUGH"
+        },
+        {
+          "enum": "MT",
+          "description": "MANDATORY_TENDER"
+        },
+        {
+          "enum": "MTN",
+          "description": "MEDIUM_TERM_NOTES"
+        },
+        {
+          "enum": "NONE",
+          "description": "NO_SECURITY_TYPE"
+        },
+        {
+          "enum": "ONITE",
+          "description": "OVERNIGHT"
+        },
+        {
+          "enum": "OPT",
+          "description": "OPTION"
+        },
+        {
+          "enum": "PEF",
+          "description": "PRIVATE_EXPORT_FUNDING"
+        },
+        {
+          "enum": "PFAND",
+          "description": "PFANDBRIEFE"
+        },
+        {
+          "enum": "PN",
+          "description": "PROMISSORY_NOTE"
+        },
+        {
+          "enum": "PS",
+          "description": "PREFERRED_STOCK"
+        },
+        {
+          "enum": "PZFJ",
+          "description": "PLAZOS_FIJOS"
+        },
+        {
+          "enum": "RAN",
+          "description": "REVENUE_ANTICIPATION_NOTE"
+        },
+        {
+          "enum": "REPLACD",
+          "description": "REPLACED"
+        },
+        {
+          "enum": "REPO",
+          "description": "REPURCHASE"
+        },
+        {
+          "enum": "RETIRED",
+          "description": "RETIRED"
+        },
+        {
+          "enum": "REV",
+          "description": "REVENUE_BONDS"
+        },
+        {
+          "enum": "RVLV",
+          "description": "REVOLVER_LOAN"
+        },
+        {
+          "enum": "RVLVTRM",
+          "description": "REVOLVER_TERM_LOAN"
+        },
+        {
+          "enum": "SECLOAN",
+          "description": "SECURITIES_LOAN"
+        },
+        {
+          "enum": "SECPLEDGE",
+          "description": "SECURITIES_PLEDGE"
+        },
+        {
+          "enum": "SPCLA",
+          "description": "SPECIAL_ASSESSMENT"
+        },
+        {
+          "enum": "SPCLO",
+          "description": "SPECIAL_OBLIGATION"
+        },
+        {
+          "enum": "SPCLT",
+          "description": "SPECIAL_TAX"
+        },
+        {
+          "enum": "STN",
+          "description": "SHORT_TERM_LOAN_NOTE"
+        },
+        {
+          "enum": "STRUCT",
+          "description": "STRUCTURED_NOTES"
+        },
+        {
+          "enum": "SUPRA",
+          "description": "USD_SUPRANATIONAL_COUPONS"
+        },
+        {
+          "enum": "SWING",
+          "description": "SWING_LINE_FACILITY"
+        },
+        {
+          "enum": "TAN",
+          "description": "TAX_ANTICIPATION_NOTE"
+        },
+        {
+          "enum": "TAXA",
+          "description": "TAX_ALLOCATION"
+        },
+        {
+          "enum": "TBA",
+          "description": "TO_BE_ANNOUNCED"
+        },
+        {
+          "enum": "TBILL",
+          "description": "US_TREASURY_BILL"
+        },
+        {
+          "enum": "TBOND",
+          "description": "US_TREASURY_BOND"
+        },
+        {
+          "enum": "TCAL",
+          "description": "PRINCIPAL_STRIP_OF_A_CALLABLE_BOND_OR_NOTE"
+        },
+        {
+          "enum": "TD",
+          "description": "TIME_DEPOSIT"
+        },
+        {
+          "enum": "TECP",
+          "description": "TAX_EXEMPT_COMMERCIAL_PAPER"
+        },
+        {
+          "enum": "TERM",
+          "description": "TERM_LOAN"
+        },
+        {
+          "enum": "TINT",
+          "description": "INTEREST_STRIP_FROM_ANY_BOND_OR_NOTE"
+        },
+        {
+          "enum": "TIPS",
+          "description": "TREASURY_INFLATION_PROTECTED_SECURITIES"
+        },
+        {
+          "enum": "TNOTE",
+          "description": "US_TREASURY_NOTE"
+        },
+        {
+          "enum": "TPRN",
+          "description": "PRINCIPAL_STRIP_FROM_A_NON_CALLABLE_BOND_OR_NOTE"
+        },
+        {
+          "enum": "TRAN",
+          "description": "TAX_AND_REVENUE_ANTICIPATION_NOTE"
+        },
+        {
+          "enum": "VRDN",
+          "description": "VARIABLE_RATE_DEMAND_NOTE"
+        },
+        {
+          "enum": "WAR",
+          "description": "WARRANT"
+        },
+        {
+          "enum": "WITHDRN",
+          "description": "WITHDRAWN"
+        },
+        {
+          "enum": "XCN",
+          "description": "EXTENDED_COMM_NOTE"
+        },
+        {
+          "enum": "XLINKD",
+          "description": "INDEXED_LINKED"
+        },
+        {
+          "enum": "YANK",
+          "description": "YANKEE_CORPORATE_BOND"
+        },
+        {
+          "enum": "YCD",
+          "description": "YANKEE_CERTIFICATE_OF_DEPOSIT"
+        }
+      ]
     },
     {
       "tag": "168",
@@ -817,7 +2839,29 @@
     {
       "tag": "169",
       "name": "StandInstDbType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "OTHER"
+        },
+        {
+          "enum": "1",
+          "description": "DTC_SID"
+        },
+        {
+          "enum": "2",
+          "description": "THOMSON_ALERT"
+        },
+        {
+          "enum": "3",
+          "description": "A_GLOBAL_CUSTODIAN"
+        },
+        {
+          "enum": "4",
+          "description": "ACCOUNTNET"
+        }
+      ]
     },
     {
       "tag": "170",
@@ -832,7 +2876,25 @@
     {
       "tag": "172",
       "name": "SettlDeliveryType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "VERSUS_PAYMENT"
+        },
+        {
+          "enum": "1",
+          "description": "FREE"
+        },
+        {
+          "enum": "2",
+          "description": "TRI_PARTY"
+        },
+        {
+          "enum": "3",
+          "description": "HOLD_IN_CUSTODY"
+        }
+      ]
     },
     {
       "tag": "188",
@@ -882,7 +2944,17 @@
     {
       "tag": "197",
       "name": "AllocLinkType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "F_X_NETTING"
+        },
+        {
+          "enum": "1",
+          "description": "F_X_SWAP"
+        }
+      ]
     },
     {
       "tag": "198",
@@ -902,7 +2974,17 @@
     {
       "tag": "201",
       "name": "PutOrCall",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "PUT"
+        },
+        {
+          "enum": "1",
+          "description": "CALL"
+        }
+      ]
     },
     {
       "tag": "202",
@@ -912,7 +2994,17 @@
     {
       "tag": "203",
       "name": "CoveredOrUncovered",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "COVERED"
+        },
+        {
+          "enum": "1",
+          "description": "UNCOVERED"
+        }
+      ]
     },
     {
       "tag": "206",
@@ -932,7 +3024,21 @@
     {
       "tag": "209",
       "name": "AllocHandlInst",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "MATCH"
+        },
+        {
+          "enum": "2",
+          "description": "FORWARD"
+        },
+        {
+          "enum": "3",
+          "description": "FORWARD_AND_MATCH"
+        }
+      ]
     },
     {
       "tag": "210",
@@ -967,7 +3073,25 @@
     {
       "tag": "216",
       "name": "RoutingType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "TARGET_FIRM"
+        },
+        {
+          "enum": "2",
+          "description": "TARGET_LIST"
+        },
+        {
+          "enum": "3",
+          "description": "BLOCK_FIRM"
+        },
+        {
+          "enum": "4",
+          "description": "BLOCK_LIST"
+        }
+      ]
     },
     {
       "tag": "217",
@@ -987,7 +3111,57 @@
     {
       "tag": "221",
       "name": "BenchmarkCurveName",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "MuniAAA",
+          "description": "MUNIAAA"
+        },
+        {
+          "enum": "FutureSWAP",
+          "description": "FUTURESWAP"
+        },
+        {
+          "enum": "LIBID",
+          "description": "LIBID"
+        },
+        {
+          "enum": "LIBOR",
+          "description": "LIBOR"
+        },
+        {
+          "enum": "OTHER",
+          "description": "OTHER"
+        },
+        {
+          "enum": "SWAP",
+          "description": "SWAP"
+        },
+        {
+          "enum": "Treasury",
+          "description": "TREASURY"
+        },
+        {
+          "enum": "Euribor",
+          "description": "EURIBOR"
+        },
+        {
+          "enum": "Pfandbriefe",
+          "description": "PFANDBRIEFE"
+        },
+        {
+          "enum": "EONIA",
+          "description": "EONIA"
+        },
+        {
+          "enum": "SONIA",
+          "description": "SONIA"
+        },
+        {
+          "enum": "EUREPO",
+          "description": "EUREPO"
+        }
+      ]
     },
     {
       "tag": "222",
@@ -1047,17 +3221,451 @@
     {
       "tag": "233",
       "name": "StipulationType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "AMT",
+          "description": "AMT"
+        },
+        {
+          "enum": "AUTOREINV",
+          "description": "AUTO_REINVESTMENT_AT_OR_BETTER"
+        },
+        {
+          "enum": "BANKQUAL",
+          "description": "BANK_QUALIFIED"
+        },
+        {
+          "enum": "BGNCON",
+          "description": "BARGAIN_CONDITIONS"
+        },
+        {
+          "enum": "COUPON",
+          "description": "COUPON_RANGE"
+        },
+        {
+          "enum": "CURRENCY",
+          "description": "ISO_CURRENCY_CODE"
+        },
+        {
+          "enum": "CUSTOMDATE",
+          "description": "CUSTOM_START_END_DATE"
+        },
+        {
+          "enum": "GEOG",
+          "description": "GEOGRAPHICS_AND_PERCENT_RANGE"
+        },
+        {
+          "enum": "HAIRCUT",
+          "description": "VALUATION_DISCOUNT"
+        },
+        {
+          "enum": "INSURED",
+          "description": "INSURED"
+        },
+        {
+          "enum": "ISSUE",
+          "description": "YEAR_OR_YEAR_MONTH_OF_ISSUE"
+        },
+        {
+          "enum": "ISSUER",
+          "description": "ISSUERS_TICKER"
+        },
+        {
+          "enum": "ISSUESIZE",
+          "description": "ISSUE_SIZE_RANGE"
+        },
+        {
+          "enum": "LOOKBACK",
+          "description": "LOOKBACK_DAYS"
+        },
+        {
+          "enum": "LOT",
+          "description": "EXPLICIT_LOT_IDENTIFIER"
+        },
+        {
+          "enum": "LOTVAR",
+          "description": "LOT_VARIANCE"
+        },
+        {
+          "enum": "MAT",
+          "description": "MATURITY_YEAR_AND_MONTH"
+        },
+        {
+          "enum": "MATURITY",
+          "description": "MATURITY_RANGE"
+        },
+        {
+          "enum": "MAXSUBS",
+          "description": "MAXIMUM_SUBSTITUTIONS"
+        },
+        {
+          "enum": "MINQTY",
+          "description": "MINIMUM_QUANTITY"
+        },
+        {
+          "enum": "MININCR",
+          "description": "MINIMUM_INCREMENT"
+        },
+        {
+          "enum": "MINDNOM",
+          "description": "MINIMUM_DENOMINATION"
+        },
+        {
+          "enum": "PAYFREQ",
+          "description": "PAYMENT_FREQUENCY_CALENDAR"
+        },
+        {
+          "enum": "PIECES",
+          "description": "NUMBER_OF_PIECES"
+        },
+        {
+          "enum": "PMAX",
+          "description": "POOLS_MAXIMUM"
+        },
+        {
+          "enum": "PPM",
+          "description": "POOLS_PER_MILLION"
+        },
+        {
+          "enum": "PPL",
+          "description": "POOLS_PER_LOT"
+        },
+        {
+          "enum": "PPT",
+          "description": "POOLS_PER_TRADE"
+        },
+        {
+          "enum": "PRICE",
+          "description": "PRICE_RANGE"
+        },
+        {
+          "enum": "PRICEFREQ",
+          "description": "PRICING_FREQUENCY"
+        },
+        {
+          "enum": "PROD",
+          "description": "PRODUCTION_YEAR"
+        },
+        {
+          "enum": "PROTECT",
+          "description": "CALL_PROTECTION"
+        },
+        {
+          "enum": "PURPOSE",
+          "description": "PURPOSE"
+        },
+        {
+          "enum": "PXSOURCE",
+          "description": "BENCHMARK_PRICE_SOURCE"
+        },
+        {
+          "enum": "RATING",
+          "description": "RATING_SOURCE_AND_RANGE"
+        },
+        {
+          "enum": "RESTRICTED",
+          "description": "RESTRICTED"
+        },
+        {
+          "enum": "SECTOR",
+          "description": "MARKET_SECTOR"
+        },
+        {
+          "enum": "SECTYPE",
+          "description": "SECURITYTYPE_INCLUDED_OR_EXCLUDED"
+        },
+        {
+          "enum": "STRUCT",
+          "description": "STRUCTURE"
+        },
+        {
+          "enum": "SUBSFREQ",
+          "description": "SUBSTITUTIONS_FREQUENCY"
+        },
+        {
+          "enum": "SUBSLEFT",
+          "description": "SUBSTITUTIONS_LEFT"
+        },
+        {
+          "enum": "TEXT",
+          "description": "FREEFORM_TEXT"
+        },
+        {
+          "enum": "TRDVAR",
+          "description": "TRADE_VARIANCE"
+        },
+        {
+          "enum": "WAC",
+          "description": "WEIGHTED_AVERAGE_COUPON"
+        },
+        {
+          "enum": "WAL",
+          "description": "WEIGHTED_AVERAGE_LIFE_COUPON"
+        },
+        {
+          "enum": "WALA",
+          "description": "WEIGHTED_AVERAGE_LOAN_AGE"
+        },
+        {
+          "enum": "WAM",
+          "description": "WEIGHTED_AVERAGE_MATURITY"
+        },
+        {
+          "enum": "WHOLE",
+          "description": "WHOLE_POOL"
+        },
+        {
+          "enum": "YIELD",
+          "description": "YIELD_RANGE"
+        },
+        {
+          "enum": "SMM",
+          "description": "SINGLE_MONTHLY_MORTALITY"
+        },
+        {
+          "enum": "CPR",
+          "description": "CONSTANT_PREPAYMENT_RATE"
+        },
+        {
+          "enum": "CPY",
+          "description": "CONSTANT_PREPAYMENT_YIELD"
+        },
+        {
+          "enum": "CPP",
+          "description": "CONSTANT_PREPAYMENT_PENALTY"
+        },
+        {
+          "enum": "ABS",
+          "description": "ABSOLUTE_PREPAYMENT_SPEED"
+        },
+        {
+          "enum": "MPR",
+          "description": "MONTHLY_PREPAYMENT_RATE"
+        },
+        {
+          "enum": "PSA",
+          "description": "PERCENT_OF_BMA_PREPAYMENT_CURVE"
+        },
+        {
+          "enum": "PPC",
+          "description": "PERCENT_OF_PROSPECTUS_PREPAYMENT_CURVE"
+        },
+        {
+          "enum": "MHP",
+          "description": "PERCENT_OF_MANUFACTURED_HOUSING_PREPAYMENT_CURVE"
+        },
+        {
+          "enum": "HEP",
+          "description": "FINAL_CPR_OF_HOME_EQUITY_PREPAYMENT_CURVE"
+        }
+      ]
     },
     {
       "tag": "234",
       "name": "StipulationValue",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "CD",
+          "description": "SPECIAL_CUM_DIVIDEND"
+        },
+        {
+          "enum": "XD",
+          "description": "SPECIAL_EX_DIVIDEND"
+        },
+        {
+          "enum": "CC",
+          "description": "SPECIAL_CUM_COUPON"
+        },
+        {
+          "enum": "XC",
+          "description": "SPECIAL_EX_COUPON"
+        },
+        {
+          "enum": "CB",
+          "description": "SPECIAL_CUM_BONUS"
+        },
+        {
+          "enum": "XB",
+          "description": "SPECIAL_EX_BONUS"
+        },
+        {
+          "enum": "CR",
+          "description": "SPECIAL_CUM_RIGHTS"
+        },
+        {
+          "enum": "XR",
+          "description": "SPECIAL_EX_RIGHTS"
+        },
+        {
+          "enum": "CP",
+          "description": "SPECIAL_CUM_CAPITAL_REPAYMENTS"
+        },
+        {
+          "enum": "XP",
+          "description": "SPECIAL_EX_CAPITAL_REPAYMENTS"
+        },
+        {
+          "enum": "CS",
+          "description": "CASH_SETTLEMENT"
+        },
+        {
+          "enum": "SP",
+          "description": "SPECIAL_PRICE"
+        },
+        {
+          "enum": "TR",
+          "description": "REPORT_FOR_EUROPEAN_EQUITY_MARKET_SECURITIES"
+        },
+        {
+          "enum": "GD",
+          "description": "GUARANTEED_DELIVERY"
+        }
+      ]
     },
     {
       "tag": "235",
       "name": "YieldType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "AFTERTAX",
+          "description": "AFTER_TAX_YIELD"
+        },
+        {
+          "enum": "ANNUAL",
+          "description": "ANNUAL_YIELD"
+        },
+        {
+          "enum": "ATISSUE",
+          "description": "YIELD_AT_ISSUE"
+        },
+        {
+          "enum": "AVGMATURITY",
+          "description": "YIELD_TO_AVERAGE_MATURITY"
+        },
+        {
+          "enum": "BOOK",
+          "description": "BOOK_YIELD"
+        },
+        {
+          "enum": "CALL",
+          "description": "YIELD_TO_NEXT_CALL"
+        },
+        {
+          "enum": "CHANGE",
+          "description": "YIELD_CHANGE_SINCE_CLOSE"
+        },
+        {
+          "enum": "CLOSE",
+          "description": "CLOSING_YIELD"
+        },
+        {
+          "enum": "COMPOUND",
+          "description": "COMPOUND_YIELD"
+        },
+        {
+          "enum": "CURRENT",
+          "description": "CURRENT_YIELD"
+        },
+        {
+          "enum": "GROSS",
+          "description": "TRUE_GROSS_YIELD"
+        },
+        {
+          "enum": "GOVTEQUIV",
+          "description": "GOVERNMENT_EQUIVALENT_YIELD"
+        },
+        {
+          "enum": "INFLATION",
+          "description": "YIELD_WITH_INFLATION_ASSUMPTION"
+        },
+        {
+          "enum": "INVERSEFLOATER",
+          "description": "INVERSE_FLOATER_BOND_YIELD"
+        },
+        {
+          "enum": "LASTCLOSE",
+          "description": "MOST_RECENT_CLOSING_YIELD"
+        },
+        {
+          "enum": "LASTMONTH",
+          "description": "CLOSING_YIELD_MOST_RECENT_MONTH"
+        },
+        {
+          "enum": "LASTQUARTER",
+          "description": "CLOSING_YIELD_MOST_RECENT_QUARTER"
+        },
+        {
+          "enum": "LASTYEAR",
+          "description": "CLOSING_YIELD_MOST_RECENT_YEAR"
+        },
+        {
+          "enum": "LONGAVGLIFE",
+          "description": "YIELD_TO_LONGEST_AVERAGE_LIFE"
+        },
+        {
+          "enum": "MARK",
+          "description": "MARK_TO_MARKET_YIELD"
+        },
+        {
+          "enum": "MATURITY",
+          "description": "YIELD_TO_MATURITY"
+        },
+        {
+          "enum": "NEXTREFUND",
+          "description": "YIELD_TO_NEXT_REFUND"
+        },
+        {
+          "enum": "OPENAVG",
+          "description": "OPEN_AVERAGE_YIELD"
+        },
+        {
+          "enum": "PUT",
+          "description": "YIELD_TO_NEXT_PUT"
+        },
+        {
+          "enum": "PREVCLOSE",
+          "description": "PREVIOUS_CLOSE_YIELD"
+        },
+        {
+          "enum": "PROCEEDS",
+          "description": "PROCEEDS_YIELD"
+        },
+        {
+          "enum": "SEMIANNUAL",
+          "description": "SEMI_ANNUAL_YIELD"
+        },
+        {
+          "enum": "SHORTAVGLIFE",
+          "description": "YIELD_TO_SHORTEST_AVERAGE_LIFE"
+        },
+        {
+          "enum": "SIMPLE",
+          "description": "SIMPLE_YIELD"
+        },
+        {
+          "enum": "TAXEQUIV",
+          "description": "TAX_EQUIVALENT_YIELD"
+        },
+        {
+          "enum": "TENDER",
+          "description": "YIELD_TO_TENDER_DATE"
+        },
+        {
+          "enum": "TRUE",
+          "description": "TRUE_YIELD"
+        },
+        {
+          "enum": "VALUE1_32",
+          "description": "YIELD_VALUE_OF_1_32"
+        },
+        {
+          "enum": "WORST",
+          "description": "YIELD_TO_WORST"
+        }
+      ]
     },
     {
       "tag": "236",
@@ -1192,7 +3800,21 @@
     {
       "tag": "263",
       "name": "SubscriptionRequestType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "SNAPSHOT"
+        },
+        {
+          "enum": "1",
+          "description": "SNAPSHOT_PLUS_UPDATES"
+        },
+        {
+          "enum": "2",
+          "description": "DISABLE_PREVIOUS_SNAPSHOT_PLUS_UPDATE_REQUEST"
+        }
+      ]
     },
     {
       "tag": "264",
@@ -1202,7 +3824,17 @@
     {
       "tag": "265",
       "name": "MDUpdateType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "FULL_REFRESH"
+        },
+        {
+          "enum": "1",
+          "description": "INCREMENTAL_REFRESH"
+        }
+      ]
     },
     {
       "tag": "266",
@@ -1222,7 +3854,61 @@
     {
       "tag": "269",
       "name": "MDEntryType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "BID"
+        },
+        {
+          "enum": "1",
+          "description": "OFFER"
+        },
+        {
+          "enum": "2",
+          "description": "TRADE"
+        },
+        {
+          "enum": "3",
+          "description": "INDEX_VALUE"
+        },
+        {
+          "enum": "4",
+          "description": "OPENING_PRICE"
+        },
+        {
+          "enum": "5",
+          "description": "CLOSING_PRICE"
+        },
+        {
+          "enum": "6",
+          "description": "SETTLEMENT_PRICE"
+        },
+        {
+          "enum": "7",
+          "description": "TRADING_SESSION_HIGH_PRICE"
+        },
+        {
+          "enum": "8",
+          "description": "TRADING_SESSION_LOW_PRICE"
+        },
+        {
+          "enum": "9",
+          "description": "TRADING_SESSION_VWAP_PRICE"
+        },
+        {
+          "enum": "A",
+          "description": "IMBALANCE"
+        },
+        {
+          "enum": "B",
+          "description": "TRADE_VOLUME"
+        },
+        {
+          "enum": "C",
+          "description": "OPEN_INTEREST"
+        }
+      ]
     },
     {
       "tag": "270",
@@ -1247,7 +3933,25 @@
     {
       "tag": "274",
       "name": "TickDirection",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "PLUS_TICK"
+        },
+        {
+          "enum": "1",
+          "description": "ZERO_PLUS_TICK"
+        },
+        {
+          "enum": "2",
+          "description": "MINUS_TICK"
+        },
+        {
+          "enum": "3",
+          "description": "ZERO_MINUS_TICK"
+        }
+      ]
     },
     {
       "tag": "275",
@@ -1257,12 +3961,120 @@
     {
       "tag": "276",
       "name": "QuoteCondition",
-      "type": "MULTIPLEVALUESTRING"
+      "type": "MULTIPLEVALUESTRING",
+      "values": [
+        {
+          "enum": "A",
+          "description": "OPEN_ACTIVE"
+        },
+        {
+          "enum": "B",
+          "description": "CLOSED_INACTIVE"
+        },
+        {
+          "enum": "C",
+          "description": "EXCHANGE_BEST"
+        },
+        {
+          "enum": "D",
+          "description": "CONSOLIDATED_BEST"
+        },
+        {
+          "enum": "E",
+          "description": "LOCKED"
+        },
+        {
+          "enum": "F",
+          "description": "CROSSED"
+        },
+        {
+          "enum": "G",
+          "description": "DEPTH"
+        },
+        {
+          "enum": "H",
+          "description": "FAST_TRADING"
+        },
+        {
+          "enum": "I",
+          "description": "NON_FIRM"
+        }
+      ]
     },
     {
       "tag": "277",
       "name": "TradeCondition",
-      "type": "MULTIPLEVALUESTRING"
+      "type": "MULTIPLEVALUESTRING",
+      "values": [
+        {
+          "enum": "A",
+          "description": "CASH_MARKET"
+        },
+        {
+          "enum": "B",
+          "description": "AVERAGE_PRICE_TRADE"
+        },
+        {
+          "enum": "C",
+          "description": "CASH_TRADE"
+        },
+        {
+          "enum": "D",
+          "description": "NEXT_DAY_MARKET"
+        },
+        {
+          "enum": "E",
+          "description": "OPENING_REOPENING_TRADE_DETAIL"
+        },
+        {
+          "enum": "F",
+          "description": "INTRADAY_TRADE_DETAIL"
+        },
+        {
+          "enum": "G",
+          "description": "RULE127"
+        },
+        {
+          "enum": "H",
+          "description": "RULE155"
+        },
+        {
+          "enum": "I",
+          "description": "SOLD_LAST"
+        },
+        {
+          "enum": "J",
+          "description": "NEXT_DAY_TRADE"
+        },
+        {
+          "enum": "K",
+          "description": "OPENED"
+        },
+        {
+          "enum": "L",
+          "description": "SELLER"
+        },
+        {
+          "enum": "M",
+          "description": "SOLD"
+        },
+        {
+          "enum": "N",
+          "description": "STOPPED_STOCK"
+        },
+        {
+          "enum": "P",
+          "description": "IMBALANCE_MORE_BUYERS"
+        },
+        {
+          "enum": "Q",
+          "description": "IMBALANCE_MORE_SELLERS"
+        },
+        {
+          "enum": "R",
+          "description": "OPENING_PRICE"
+        }
+      ]
     },
     {
       "tag": "278",
@@ -1272,7 +4084,21 @@
     {
       "tag": "279",
       "name": "MDUpdateAction",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NEW"
+        },
+        {
+          "enum": "1",
+          "description": "CHANGE"
+        },
+        {
+          "enum": "2",
+          "description": "DELETE"
+        }
+      ]
     },
     {
       "tag": "280",
@@ -1282,7 +4108,61 @@
     {
       "tag": "281",
       "name": "MDReqRejReason",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "UNKNOWN_SYMBOL"
+        },
+        {
+          "enum": "1",
+          "description": "DUPLICATE_MDREQID"
+        },
+        {
+          "enum": "2",
+          "description": "INSUFFICIENT_BANDWIDTH"
+        },
+        {
+          "enum": "3",
+          "description": "INSUFFICIENT_PERMISSIONS"
+        },
+        {
+          "enum": "4",
+          "description": "UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE"
+        },
+        {
+          "enum": "5",
+          "description": "UNSUPPORTED_MARKETDEPTH"
+        },
+        {
+          "enum": "6",
+          "description": "UNSUPPORTED_MDUPDATETYPE"
+        },
+        {
+          "enum": "7",
+          "description": "UNSUPPORTED_AGGREGATEDBOOK"
+        },
+        {
+          "enum": "8",
+          "description": "UNSUPPORTED_MDENTRYTYPE"
+        },
+        {
+          "enum": "9",
+          "description": "UNSUPPORTED_TRADINGSESSIONID"
+        },
+        {
+          "enum": "A",
+          "description": "UNSUPPORTED_SCOPE"
+        },
+        {
+          "enum": "B",
+          "description": "UNSUPPORTED_OPENCLOSESETTLEFLAG"
+        },
+        {
+          "enum": "C",
+          "description": "UNSUPPORTED_MDIMPLICITDELETE"
+        }
+      ]
     },
     {
       "tag": "282",
@@ -1302,12 +4182,48 @@
     {
       "tag": "285",
       "name": "DeleteReason",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "CANCELATION_TRADE_BUST"
+        },
+        {
+          "enum": "1",
+          "description": "ERROR"
+        }
+      ]
     },
     {
       "tag": "286",
       "name": "OpenCloseSettlFlag",
-      "type": "MULTIPLEVALUESTRING"
+      "type": "MULTIPLEVALUESTRING",
+      "values": [
+        {
+          "enum": "0",
+          "description": "DAILY_OPEN_CLOSE_SETTLEMENT_ENTRY"
+        },
+        {
+          "enum": "1",
+          "description": "SESSION_OPEN_CLOSE_SETTLEMENT_ENTRY"
+        },
+        {
+          "enum": "2",
+          "description": "DELIVERY_SETTLEMENT_ENTRY"
+        },
+        {
+          "enum": "3",
+          "description": "EXPECTED_ENTRY"
+        },
+        {
+          "enum": "4",
+          "description": "ENTRY_FROM_PREVIOUS_BUSINESS_DAY"
+        },
+        {
+          "enum": "5",
+          "description": "THEORETICAL_PRICE_VALUE"
+        }
+      ]
     },
     {
       "tag": "287",
@@ -1332,12 +4248,44 @@
     {
       "tag": "291",
       "name": "FinancialStatus",
-      "type": "MULTIPLEVALUESTRING"
+      "type": "MULTIPLEVALUESTRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "BANKRUPT"
+        },
+        {
+          "enum": "2",
+          "description": "PENDING_DELISTING"
+        }
+      ]
     },
     {
       "tag": "292",
       "name": "CorporateAction",
-      "type": "MULTIPLEVALUESTRING"
+      "type": "MULTIPLEVALUESTRING",
+      "values": [
+        {
+          "enum": "A",
+          "description": "EX_DIVIDEND"
+        },
+        {
+          "enum": "B",
+          "description": "EX_DISTRIBUTION"
+        },
+        {
+          "enum": "C",
+          "description": "EX_RIGHTS"
+        },
+        {
+          "enum": "D",
+          "description": "NEW"
+        },
+        {
+          "enum": "E",
+          "description": "EX_INTEREST"
+        }
+      ]
     },
     {
       "tag": "293",
@@ -1362,12 +4310,96 @@
     {
       "tag": "297",
       "name": "QuoteStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "ACCEPTED"
+        },
+        {
+          "enum": "1",
+          "description": "CANCELED_FOR_SYMBOL"
+        },
+        {
+          "enum": "2",
+          "description": "CANCELED_FOR_SECURITY_TYPE"
+        },
+        {
+          "enum": "3",
+          "description": "CANCELED_FOR_UNDERLYING"
+        },
+        {
+          "enum": "4",
+          "description": "CANCELED_ALL"
+        },
+        {
+          "enum": "5",
+          "description": "REJECTED"
+        },
+        {
+          "enum": "6",
+          "description": "REMOVED_FROM_MARKET"
+        },
+        {
+          "enum": "7",
+          "description": "EXPIRED"
+        },
+        {
+          "enum": "8",
+          "description": "QUERY"
+        },
+        {
+          "enum": "9",
+          "description": "QUOTE_NOT_FOUND"
+        },
+        {
+          "enum": "10",
+          "description": "PENDING"
+        },
+        {
+          "enum": "11",
+          "description": "PASS"
+        },
+        {
+          "enum": "12",
+          "description": "LOCKED_MARKET_WARNING"
+        },
+        {
+          "enum": "13",
+          "description": "CROSS_MARKET_WARNING"
+        },
+        {
+          "enum": "14",
+          "description": "CANCELED_DUE_TO_LOCK_MARKET"
+        },
+        {
+          "enum": "15",
+          "description": "CANCELED_DUE_TO_CROSS_MARKET"
+        }
+      ]
     },
     {
       "tag": "298",
       "name": "QuoteCancelType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "CANCEL_FOR_SYMBOL"
+        },
+        {
+          "enum": "2",
+          "description": "CANCEL_FOR_SECURITY_TYPE"
+        },
+        {
+          "enum": "3",
+          "description": "CANCEL_FOR_UNDERLYING_SYMBOL"
+        },
+        {
+          "enum": "4",
+          "description": "CANCEL_ALL_QUOTES"
+        }
+      ]
     },
     {
       "tag": "299",
@@ -1377,12 +4409,68 @@
     {
       "tag": "300",
       "name": "QuoteRejectReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "UNKNOWN_SYMBOL"
+        },
+        {
+          "enum": "2",
+          "description": "EXCHANGE_CLOSED"
+        },
+        {
+          "enum": "3",
+          "description": "QUOTE_REQUEST_EXCEEDS_LIMIT"
+        },
+        {
+          "enum": "4",
+          "description": "TOO_LATE_TO_ENTER"
+        },
+        {
+          "enum": "5",
+          "description": "UNKNOWN_QUOTE"
+        },
+        {
+          "enum": "6",
+          "description": "DUPLICATE_QUOTE"
+        },
+        {
+          "enum": "7",
+          "description": "INVALID_BID_ASK_SPREAD"
+        },
+        {
+          "enum": "8",
+          "description": "INVALID_PRICE"
+        },
+        {
+          "enum": "9",
+          "description": "NOT_AUTHORIZED_TO_QUOTE_SECURITY"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "301",
       "name": "QuoteResponseLevel",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NO_ACKNOWLEDGEMENT"
+        },
+        {
+          "enum": "1",
+          "description": "ACKNOWLEDGE_ONLY_NEGATIVE_OR_ERRONEOUS_QUOTES"
+        },
+        {
+          "enum": "2",
+          "description": "ACKNOWLEDGE_EACH_QUOTE_MESSAGES"
+        }
+      ]
     },
     {
       "tag": "302",
@@ -1392,7 +4480,17 @@
     {
       "tag": "303",
       "name": "QuoteRequestType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "MANUAL"
+        },
+        {
+          "enum": "2",
+          "description": "AUTOMATIC"
+        }
+      ]
     },
     {
       "tag": "304",
@@ -1447,7 +4545,17 @@
     {
       "tag": "315",
       "name": "UnderlyingPutOrCall",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "PUT"
+        },
+        {
+          "enum": "1",
+          "description": "CALL"
+        }
+      ]
     },
     {
       "tag": "316",
@@ -1472,7 +4580,25 @@
     {
       "tag": "321",
       "name": "SecurityRequestType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "REQUEST_SECURITY_IDENTITY_AND_SPECIFICATIONS"
+        },
+        {
+          "enum": "1",
+          "description": "REQUEST_SECURITY_IDENTITY_FOR_THE_SPECIFICATIONS_PROVIDED"
+        },
+        {
+          "enum": "2",
+          "description": "REQUEST_LIST_SECURITY_TYPES"
+        },
+        {
+          "enum": "3",
+          "description": "REQUEST_LIST_SECURITIES"
+        }
+      ]
     },
     {
       "tag": "322",
@@ -1482,7 +4608,33 @@
     {
       "tag": "323",
       "name": "SecurityResponseType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "ACCEPT_SECURITY_PROPOSAL_AS_IS"
+        },
+        {
+          "enum": "2",
+          "description": "ACCEPT_SECURITY_PROPOSAL_WITH_REVISIONS_AS_INDICATED_IN_THE_MESSAGE"
+        },
+        {
+          "enum": "3",
+          "description": "LIST_OF_SECURITY_TYPES_RETURNED_PER_REQUEST"
+        },
+        {
+          "enum": "4",
+          "description": "LIST_OF_SECURITIES_RETURNED_PER_REQUEST"
+        },
+        {
+          "enum": "5",
+          "description": "REJECT_SECURITY_PROPOSAL"
+        },
+        {
+          "enum": "6",
+          "description": "CAN_NOT_MATCH_SELECTION_CRITERIA"
+        }
+      ]
     },
     {
       "tag": "324",
@@ -1497,12 +4649,132 @@
     {
       "tag": "326",
       "name": "SecurityTradingStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "OPENING_DELAY"
+        },
+        {
+          "enum": "2",
+          "description": "TRADING_HALT"
+        },
+        {
+          "enum": "3",
+          "description": "RESUME"
+        },
+        {
+          "enum": "4",
+          "description": "NO_OPEN_NO_RESUME"
+        },
+        {
+          "enum": "5",
+          "description": "PRICE_INDICATION"
+        },
+        {
+          "enum": "6",
+          "description": "TRADING_RANGE_INDICATION"
+        },
+        {
+          "enum": "7",
+          "description": "MARKET_IMBALANCE_BUY"
+        },
+        {
+          "enum": "8",
+          "description": "MARKET_IMBALANCE_SELL"
+        },
+        {
+          "enum": "9",
+          "description": "MARKET_ON_CLOSE_IMBALANCE_BUY"
+        },
+        {
+          "enum": "10",
+          "description": "MARKET_ON_CLOSE_IMBALANCE_SELL"
+        },
+        {
+          "enum": "11",
+          "description": "NOT_ASSIGNED"
+        },
+        {
+          "enum": "12",
+          "description": "NO_MARKET_IMBALANCE"
+        },
+        {
+          "enum": "13",
+          "description": "NO_MARKET_ON_CLOSE_IMBALANCE"
+        },
+        {
+          "enum": "14",
+          "description": "ITS_PRE_OPENING"
+        },
+        {
+          "enum": "15",
+          "description": "NEW_PRICE_INDICATION"
+        },
+        {
+          "enum": "16",
+          "description": "TRADE_DISSEMINATION_TIME"
+        },
+        {
+          "enum": "17",
+          "description": "READY_TO_TRADE_START_OF_SESSION"
+        },
+        {
+          "enum": "18",
+          "description": "NOT_AVAILABLE_FOR_TRADING_END_OF_SESSION"
+        },
+        {
+          "enum": "19",
+          "description": "NOT_TRADED_ON_THIS_MARKET"
+        },
+        {
+          "enum": "20",
+          "description": "UNKNOWN_OR_INVALID"
+        },
+        {
+          "enum": "21",
+          "description": "PRE_OPEN"
+        },
+        {
+          "enum": "22",
+          "description": "OPENING_ROTATION"
+        },
+        {
+          "enum": "23",
+          "description": "FAST_MARKET"
+        }
+      ]
     },
     {
       "tag": "327",
       "name": "HaltReason",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "I",
+          "description": "ORDER_IMBALANCE"
+        },
+        {
+          "enum": "X",
+          "description": "EQUIPMENT_CHANGEOVER"
+        },
+        {
+          "enum": "P",
+          "description": "NEWS_PENDING"
+        },
+        {
+          "enum": "D",
+          "description": "NEWS_DISSEMINATION"
+        },
+        {
+          "enum": "E",
+          "description": "ORDER_INFLUX"
+        },
+        {
+          "enum": "M",
+          "description": "ADDITIONAL_INFORMATION"
+        }
+      ]
     },
     {
       "tag": "328",
@@ -1537,7 +4809,21 @@
     {
       "tag": "334",
       "name": "Adjustment",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "CANCEL"
+        },
+        {
+          "enum": "2",
+          "description": "ERROR"
+        },
+        {
+          "enum": "3",
+          "description": "CORRECTION"
+        }
+      ]
     },
     {
       "tag": "335",
@@ -1557,17 +4843,75 @@
     {
       "tag": "338",
       "name": "TradSesMethod",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "ELECTRONIC"
+        },
+        {
+          "enum": "2",
+          "description": "OPEN_OUTCRY"
+        },
+        {
+          "enum": "3",
+          "description": "TWO_PARTY"
+        }
+      ]
     },
     {
       "tag": "339",
       "name": "TradSesMode",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "TESTING"
+        },
+        {
+          "enum": "2",
+          "description": "SIMULATED"
+        },
+        {
+          "enum": "3",
+          "description": "PRODUCTION"
+        }
+      ]
     },
     {
       "tag": "340",
       "name": "TradSesStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "UNKNOWN"
+        },
+        {
+          "enum": "1",
+          "description": "HALTED"
+        },
+        {
+          "enum": "2",
+          "description": "OPEN"
+        },
+        {
+          "enum": "3",
+          "description": "CLOSED"
+        },
+        {
+          "enum": "4",
+          "description": "PRE_OPEN"
+        },
+        {
+          "enum": "5",
+          "description": "PRE_CLOSE"
+        },
+        {
+          "enum": "6",
+          "description": "REQUEST_REJECTED"
+        }
+      ]
     },
     {
       "tag": "341",
@@ -1602,7 +4946,25 @@
     {
       "tag": "347",
       "name": "MessageEncoding",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "ISO-2022-JP",
+          "description": "ISO_2022_JP"
+        },
+        {
+          "enum": "EUC-JP",
+          "description": "EUC_JP"
+        },
+        {
+          "enum": "SHIFT_JIS",
+          "description": "SHIFT_JIS"
+        },
+        {
+          "enum": "UTF-8",
+          "description": "UTF_8"
+        }
+      ]
     },
     {
       "tag": "348",
@@ -1707,7 +5069,45 @@
     {
       "tag": "368",
       "name": "QuoteEntryRejectReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "UNKNOWN_SYMBOL"
+        },
+        {
+          "enum": "2",
+          "description": "EXCHANGE_CLOSED"
+        },
+        {
+          "enum": "3",
+          "description": "QUOTE_EXCEEDS_LIMIT"
+        },
+        {
+          "enum": "4",
+          "description": "TOO_LATE_TO_ENTER"
+        },
+        {
+          "enum": "5",
+          "description": "UNKNOWN_QUOTE"
+        },
+        {
+          "enum": "6",
+          "description": "DUPLICATE_QUOTE"
+        },
+        {
+          "enum": "7",
+          "description": "INVALID_BID_ASK_SPREAD"
+        },
+        {
+          "enum": "8",
+          "description": "INVALID_PRICE"
+        },
+        {
+          "enum": "9",
+          "description": "NOT_AUTHORIZED_TO_QUOTE_SECURITY"
+        }
+      ]
     },
     {
       "tag": "369",
@@ -1727,12 +5127,100 @@
     {
       "tag": "373",
       "name": "SessionRejectReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "INVALID_TAG_NUMBER"
+        },
+        {
+          "enum": "1",
+          "description": "REQUIRED_TAG_MISSING"
+        },
+        {
+          "enum": "2",
+          "description": "TAG_NOT_DEFINED_FOR_THIS_MESSAGE_TYPE"
+        },
+        {
+          "enum": "3",
+          "description": "UNDEFINED_TAG"
+        },
+        {
+          "enum": "4",
+          "description": "TAG_SPECIFIED_WITHOUT_A_VALUE"
+        },
+        {
+          "enum": "5",
+          "description": "VALUE_IS_INCORRECT"
+        },
+        {
+          "enum": "6",
+          "description": "INCORRECT_DATA_FORMAT_FOR_VALUE"
+        },
+        {
+          "enum": "7",
+          "description": "DECRYPTION_PROBLEM"
+        },
+        {
+          "enum": "8",
+          "description": "SIGNATURE_PROBLEM"
+        },
+        {
+          "enum": "9",
+          "description": "COMPID_PROBLEM"
+        },
+        {
+          "enum": "10",
+          "description": "SENDINGTIME_ACCURACY_PROBLEM"
+        },
+        {
+          "enum": "11",
+          "description": "INVALID_MSGTYPE"
+        },
+        {
+          "enum": "12",
+          "description": "XML_VALIDATION_ERROR"
+        },
+        {
+          "enum": "13",
+          "description": "TAG_APPEARS_MORE_THAN_ONCE"
+        },
+        {
+          "enum": "14",
+          "description": "TAG_SPECIFIED_OUT_OF_REQUIRED_ORDER"
+        },
+        {
+          "enum": "15",
+          "description": "REPEATING_GROUP_FIELDS_OUT_OF_ORDER"
+        },
+        {
+          "enum": "16",
+          "description": "INCORRECT_NUMINGROUP_COUNT_FOR_REPEATING_GROUP"
+        },
+        {
+          "enum": "17",
+          "description": "NON_DATA_VALUE_INCLUDES_FIELD_DELIMITER"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "374",
       "name": "BidRequestTransType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "N",
+          "description": "NEW"
+        },
+        {
+          "enum": "C",
+          "description": "CANCEL"
+        }
+      ]
     },
     {
       "tag": "375",
@@ -1752,7 +5240,57 @@
     {
       "tag": "378",
       "name": "ExecRestatementReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "GT_CORPORATE_ACTION"
+        },
+        {
+          "enum": "1",
+          "description": "GT_RENEWAL_RESTATEMENT"
+        },
+        {
+          "enum": "2",
+          "description": "VERBAL_CHANGE"
+        },
+        {
+          "enum": "3",
+          "description": "REPRICING_OF_ORDER"
+        },
+        {
+          "enum": "4",
+          "description": "BROKER_OPTION"
+        },
+        {
+          "enum": "5",
+          "description": "PARTIAL_DECLINE_OF_ORDERQTY"
+        },
+        {
+          "enum": "6",
+          "description": "CANCEL_ON_TRADING_HALT"
+        },
+        {
+          "enum": "7",
+          "description": "CANCEL_ON_SYSTEM_FAILURE"
+        },
+        {
+          "enum": "8",
+          "description": "MARKET_OPTION"
+        },
+        {
+          "enum": "9",
+          "description": "CANCELED_NOT_BEST"
+        },
+        {
+          "enum": "10",
+          "description": "WAREHOUSE_RECAP"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "379",
@@ -1762,7 +5300,41 @@
     {
       "tag": "380",
       "name": "BusinessRejectReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "OTHER"
+        },
+        {
+          "enum": "1",
+          "description": "UNKOWN_ID"
+        },
+        {
+          "enum": "2",
+          "description": "UNKNOWN_SECURITY"
+        },
+        {
+          "enum": "3",
+          "description": "UNSUPPORTED_MESSAGE_TYPE"
+        },
+        {
+          "enum": "4",
+          "description": "APPLICATION_NOT_AVAILABLE"
+        },
+        {
+          "enum": "5",
+          "description": "CONDITIONALLY_REQUIRED_FIELD_MISSING"
+        },
+        {
+          "enum": "6",
+          "description": "NOT_AUTHORIZED"
+        },
+        {
+          "enum": "7",
+          "description": "DELIVERTO_FIRM_NOT_AVAILABLE_AT_THIS_TIME"
+        }
+      ]
     },
     {
       "tag": "381",
@@ -1787,7 +5359,17 @@
     {
       "tag": "385",
       "name": "MsgDirection",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "S",
+          "description": "SEND"
+        },
+        {
+          "enum": "R",
+          "description": "RECEIVE"
+        }
+      ]
     },
     {
       "tag": "386",
@@ -1802,7 +5384,37 @@
     {
       "tag": "388",
       "name": "DiscretionInst",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "RELATED_TO_DISPLAYED_PRICE"
+        },
+        {
+          "enum": "1",
+          "description": "RELATED_TO_MARKET_PRICE"
+        },
+        {
+          "enum": "2",
+          "description": "RELATED_TO_PRIMARY_PRICE"
+        },
+        {
+          "enum": "3",
+          "description": "RELATED_TO_LOCAL_PRIMARY_PRICE"
+        },
+        {
+          "enum": "4",
+          "description": "RELATED_TO_MIDPOINT_PRICE"
+        },
+        {
+          "enum": "5",
+          "description": "RELATED_TO_LAST_TRADE_PRICE"
+        },
+        {
+          "enum": "6",
+          "description": "RELATED_TO_VWAP"
+        }
+      ]
     },
     {
       "tag": "389",
@@ -1832,7 +5444,21 @@
     {
       "tag": "394",
       "name": "BidType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "NON_DISCLOSED"
+        },
+        {
+          "enum": "2",
+          "description": "DISCLOSED_STYLE"
+        },
+        {
+          "enum": "3",
+          "description": "NO_BIDDING_PROCESS"
+        }
+      ]
     },
     {
       "tag": "395",
@@ -1857,7 +5483,21 @@
     {
       "tag": "399",
       "name": "BidDescriptorType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "SECTOR"
+        },
+        {
+          "enum": "2",
+          "description": "COUNTRY"
+        },
+        {
+          "enum": "3",
+          "description": "INDEX"
+        }
+      ]
     },
     {
       "tag": "400",
@@ -1867,7 +5507,17 @@
     {
       "tag": "401",
       "name": "SideValueInd",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "SIDEVALUE1"
+        },
+        {
+          "enum": "2",
+          "description": "SIDEVALUE2"
+        }
+      ]
     },
     {
       "tag": "402",
@@ -1907,7 +5557,25 @@
     {
       "tag": "409",
       "name": "LiquidityIndType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "FIVEDAY_MOVING_AVERAGE"
+        },
+        {
+          "enum": "2",
+          "description": "TWENTYDAY_MOVING_AVERAGE"
+        },
+        {
+          "enum": "3",
+          "description": "NORMAL_MARKET_SIZE"
+        },
+        {
+          "enum": "4",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "410",
@@ -1932,7 +5600,21 @@
     {
       "tag": "414",
       "name": "ProgRptReqs",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "BUYSIDE_EXPLICITLY_REQUESTS_STATUS_USING_STATUSREQUEST"
+        },
+        {
+          "enum": "2",
+          "description": "SELLSIDE_PERIODICALLY_SENDS_STATUS_USING_LISTSTATUS"
+        },
+        {
+          "enum": "3",
+          "description": "REAL_TIME_EXECUTION_REPORTS"
+        }
+      ]
     },
     {
       "tag": "415",
@@ -1942,7 +5624,17 @@
     {
       "tag": "416",
       "name": "IncTaxInd",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "NET"
+        },
+        {
+          "enum": "2",
+          "description": "GROSS"
+        }
+      ]
     },
     {
       "tag": "417",
@@ -1952,12 +5644,84 @@
     {
       "tag": "418",
       "name": "BidTradeType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "R",
+          "description": "RISK_TRADE"
+        },
+        {
+          "enum": "G",
+          "description": "VWAP_GUARANTEE"
+        },
+        {
+          "enum": "A",
+          "description": "AGENCY"
+        },
+        {
+          "enum": "J",
+          "description": "GUARANTEED_CLOSE"
+        }
+      ]
     },
     {
       "tag": "419",
       "name": "BasisPxType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "2",
+          "description": "CLOSING_PRICE_AT_MORNING_SESSION"
+        },
+        {
+          "enum": "3",
+          "description": "CLOSING_PRICE"
+        },
+        {
+          "enum": "4",
+          "description": "CURRENT_PRICE"
+        },
+        {
+          "enum": "5",
+          "description": "SQ"
+        },
+        {
+          "enum": "6",
+          "description": "VWAP_THROUGH_A_DAY"
+        },
+        {
+          "enum": "7",
+          "description": "VWAP_THROUGH_A_MORNING_SESSION"
+        },
+        {
+          "enum": "8",
+          "description": "VWAP_THROUGH_AN_AFTERNOON_SESSION"
+        },
+        {
+          "enum": "9",
+          "description": "VWAP_THROUGH_A_DAY_EXCEPT_YORI"
+        },
+        {
+          "enum": "A",
+          "description": "VWAP_THROUGH_A_MORNING_SESSION_EXCEPT_YORI"
+        },
+        {
+          "enum": "B",
+          "description": "VWAP_THROUGH_AN_AFTERNOON_SESSION_EXCEPT_YORI"
+        },
+        {
+          "enum": "C",
+          "description": "STRIKE"
+        },
+        {
+          "enum": "D",
+          "description": "OPEN"
+        },
+        {
+          "enum": "Z",
+          "description": "OTHERS"
+        }
+      ]
     },
     {
       "tag": "420",
@@ -1977,7 +5741,53 @@
     {
       "tag": "423",
       "name": "PriceType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "PERCENTAGE"
+        },
+        {
+          "enum": "2",
+          "description": "PER_UNIT"
+        },
+        {
+          "enum": "3",
+          "description": "FIXED_AMOUNT"
+        },
+        {
+          "enum": "4",
+          "description": "DISCOUNT"
+        },
+        {
+          "enum": "5",
+          "description": "PREMIUM"
+        },
+        {
+          "enum": "6",
+          "description": "SPREAD"
+        },
+        {
+          "enum": "7",
+          "description": "TED_PRICE"
+        },
+        {
+          "enum": "8",
+          "description": "TED_YIELD"
+        },
+        {
+          "enum": "9",
+          "description": "YIELD"
+        },
+        {
+          "enum": "10",
+          "description": "FIXED_CABINET_TRADE_PRICE"
+        },
+        {
+          "enum": "11",
+          "description": "VARIABLE_CABINET_TRADE_PRICE"
+        }
+      ]
     },
     {
       "tag": "424",
@@ -1997,7 +5807,21 @@
     {
       "tag": "427",
       "name": "GTBookingInst",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "BOOK_OUT_ALL_TRADES_ON_DAY_OF_EXECUTION"
+        },
+        {
+          "enum": "1",
+          "description": "ACCUMULATE_EXECUTIONS_UNTIL_ORDER_IS_FILLED_OR_EXPIRES"
+        },
+        {
+          "enum": "2",
+          "description": "ACCUMULATE_UNTIL_VERBALLY_NOTIFIED_OTHERWISE"
+        }
+      ]
     },
     {
       "tag": "428",
@@ -2007,17 +5831,83 @@
     {
       "tag": "429",
       "name": "ListStatusType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "ACK"
+        },
+        {
+          "enum": "2",
+          "description": "RESPONSE"
+        },
+        {
+          "enum": "3",
+          "description": "TIMED"
+        },
+        {
+          "enum": "4",
+          "description": "EXECSTARTED"
+        },
+        {
+          "enum": "5",
+          "description": "ALLDONE"
+        },
+        {
+          "enum": "6",
+          "description": "ALERT"
+        }
+      ]
     },
     {
       "tag": "430",
       "name": "NetGrossInd",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "NET"
+        },
+        {
+          "enum": "2",
+          "description": "GROSS"
+        }
+      ]
     },
     {
       "tag": "431",
       "name": "ListOrderStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "INBIDDINGPROCESS"
+        },
+        {
+          "enum": "2",
+          "description": "RECEIVEDFOREXECUTION"
+        },
+        {
+          "enum": "3",
+          "description": "EXECUTING"
+        },
+        {
+          "enum": "4",
+          "description": "CANCELING"
+        },
+        {
+          "enum": "5",
+          "description": "ALERT"
+        },
+        {
+          "enum": "6",
+          "description": "ALL_DONE"
+        },
+        {
+          "enum": "7",
+          "description": "REJECT"
+        }
+      ]
     },
     {
       "tag": "432",
@@ -2027,12 +5917,44 @@
     {
       "tag": "433",
       "name": "ListExecInstType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "1",
+          "description": "IMMEDIATE"
+        },
+        {
+          "enum": "2",
+          "description": "WAIT_FOR_EXECUTE_INSTRUCTION"
+        },
+        {
+          "enum": "3",
+          "description": "EXCHANGE_SWITCH_CIV_ORDER_SELL_DRIVEN"
+        },
+        {
+          "enum": "4",
+          "description": "EXCHANGE_SWITCH_CIV_ORDER_BUY_DRIVEN_CASH_TOP_UP"
+        },
+        {
+          "enum": "5",
+          "description": "EXCHANGE_SWITCH_CIV_ORDER_BUY_DRIVEN_CASH_WITHDRAW"
+        }
+      ]
     },
     {
       "tag": "434",
       "name": "CxlRejResponseTo",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "1",
+          "description": "ORDER_CANCEL_REQUEST"
+        },
+        {
+          "enum": "2",
+          "description": "ORDER_CANCEL_REPLACE_REQUEST"
+        }
+      ]
     },
     {
       "tag": "435",
@@ -2062,7 +5984,21 @@
     {
       "tag": "442",
       "name": "MultiLegReportingType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "1",
+          "description": "SINGLE_SECURITY"
+        },
+        {
+          "enum": "2",
+          "description": "INDIVIDUAL_LEG_OF_A_MULTI_LEG_SECURITY"
+        },
+        {
+          "enum": "3",
+          "description": "MULTI_LEG_SECURITY"
+        }
+      ]
     },
     {
       "tag": "443",
@@ -2087,7 +6023,81 @@
     {
       "tag": "447",
       "name": "PartyIDSource",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "B",
+          "description": "BIC"
+        },
+        {
+          "enum": "C",
+          "description": "GENERALLY_ACCEPTED_MARKET_PARTICIPANT_IDENTIFIER"
+        },
+        {
+          "enum": "D",
+          "description": "PROPRIETARY_CUSTOM_CODE"
+        },
+        {
+          "enum": "E",
+          "description": "ISO_COUNTRY_CODE"
+        },
+        {
+          "enum": "F",
+          "description": "SETTLEMENT_ENTITY_LOCATION"
+        },
+        {
+          "enum": "G",
+          "description": "MIC"
+        },
+        {
+          "enum": "H",
+          "description": "CSD_PARTICIPANT_MEMBER_CODE"
+        },
+        {
+          "enum": "1",
+          "description": "KOREAN_INVESTOR_ID"
+        },
+        {
+          "enum": "2",
+          "description": "TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID_QFII_FID"
+        },
+        {
+          "enum": "3",
+          "description": "TAIWANESE_TRADING_ACCOUNT"
+        },
+        {
+          "enum": "4",
+          "description": "MALAYSIAN_CENTRAL_DEPOSITORY_NUMBER"
+        },
+        {
+          "enum": "5",
+          "description": "CHINESE_B_SHARE"
+        },
+        {
+          "enum": "6",
+          "description": "UK_NATIONAL_INSURANCE_OR_PENSION_NUMBER"
+        },
+        {
+          "enum": "7",
+          "description": "US_SOCIAL_SECURITY_NUMBER"
+        },
+        {
+          "enum": "8",
+          "description": "US_EMPLOYER_IDENTIFICATION_NUMBER"
+        },
+        {
+          "enum": "9",
+          "description": "AUSTRALIAN_BUSINESS_NUMBER"
+        },
+        {
+          "enum": "A",
+          "description": "AUSTRALIAN_TAX_FILE_NUMBER"
+        },
+        {
+          "enum": "I",
+          "description": "DIRECTED_BROKER"
+        }
+      ]
     },
     {
       "tag": "448",
@@ -2102,7 +6112,157 @@
     {
       "tag": "452",
       "name": "PartyRole",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "EXECUTING_FIRM"
+        },
+        {
+          "enum": "2",
+          "description": "BROKER_OF_CREDIT"
+        },
+        {
+          "enum": "3",
+          "description": "CLIENT_ID"
+        },
+        {
+          "enum": "4",
+          "description": "CLEARING_FIRM"
+        },
+        {
+          "enum": "5",
+          "description": "INVESTOR_ID"
+        },
+        {
+          "enum": "6",
+          "description": "INTRODUCING_FIRM"
+        },
+        {
+          "enum": "7",
+          "description": "ENTERING_FIRM"
+        },
+        {
+          "enum": "8",
+          "description": "LOCATE_LENDING_FIRM"
+        },
+        {
+          "enum": "9",
+          "description": "FUND_MANAGER_CLIENT_ID"
+        },
+        {
+          "enum": "10",
+          "description": "SETTLEMENT_LOCATION"
+        },
+        {
+          "enum": "11",
+          "description": "ORDER_ORIGINATION_TRADER"
+        },
+        {
+          "enum": "12",
+          "description": "EXECUTING_TRADER"
+        },
+        {
+          "enum": "13",
+          "description": "ORDER_ORIGINATION_FIRM"
+        },
+        {
+          "enum": "14",
+          "description": "GIVEUP_CLEARING_FIRM"
+        },
+        {
+          "enum": "15",
+          "description": "CORRESPONDANT_CLEARING_FIRM"
+        },
+        {
+          "enum": "16",
+          "description": "EXECUTING_SYSTEM"
+        },
+        {
+          "enum": "17",
+          "description": "CONTRA_FIRM"
+        },
+        {
+          "enum": "18",
+          "description": "CONTRA_CLEARING_FIRM"
+        },
+        {
+          "enum": "19",
+          "description": "SPONSORING_FIRM"
+        },
+        {
+          "enum": "20",
+          "description": "UNDERLYING_CONTRA_FIRM"
+        },
+        {
+          "enum": "21",
+          "description": "CLEARING_ORGANIZATION"
+        },
+        {
+          "enum": "22",
+          "description": "EXCHANGE"
+        },
+        {
+          "enum": "24",
+          "description": "CUSTOMER_ACCOUNT"
+        },
+        {
+          "enum": "25",
+          "description": "CORRESPONDENT_CLEARING_ORGANIZATION"
+        },
+        {
+          "enum": "26",
+          "description": "CORRESPONDENT_BROKER"
+        },
+        {
+          "enum": "27",
+          "description": "BUYER_SELLER"
+        },
+        {
+          "enum": "28",
+          "description": "CUSTODIAN"
+        },
+        {
+          "enum": "29",
+          "description": "INTERMEDIARY"
+        },
+        {
+          "enum": "30",
+          "description": "AGENT"
+        },
+        {
+          "enum": "31",
+          "description": "SUB_CUSTODIAN"
+        },
+        {
+          "enum": "32",
+          "description": "BENEFICIARY"
+        },
+        {
+          "enum": "33",
+          "description": "INTERESTED_PARTY"
+        },
+        {
+          "enum": "34",
+          "description": "REGULATORY_BODY"
+        },
+        {
+          "enum": "35",
+          "description": "LIQUIDITY_PROVIDER"
+        },
+        {
+          "enum": "36",
+          "description": "ENTERING_TRADER"
+        },
+        {
+          "enum": "37",
+          "description": "CONTRA_TRADER"
+        },
+        {
+          "enum": "38",
+          "description": "POSITION_ACCOUNT"
+        }
+      ]
     },
     {
       "tag": "453",
@@ -2142,7 +6302,61 @@
     {
       "tag": "460",
       "name": "Product",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "AGENCY"
+        },
+        {
+          "enum": "2",
+          "description": "COMMODITY"
+        },
+        {
+          "enum": "3",
+          "description": "CORPORATE"
+        },
+        {
+          "enum": "4",
+          "description": "CURRENCY"
+        },
+        {
+          "enum": "5",
+          "description": "EQUITY"
+        },
+        {
+          "enum": "6",
+          "description": "GOVERNMENT"
+        },
+        {
+          "enum": "7",
+          "description": "INDEX"
+        },
+        {
+          "enum": "8",
+          "description": "LOAN"
+        },
+        {
+          "enum": "9",
+          "description": "MONEYMARKET"
+        },
+        {
+          "enum": "10",
+          "description": "MORTGAGE"
+        },
+        {
+          "enum": "11",
+          "description": "MUNICIPAL"
+        },
+        {
+          "enum": "12",
+          "description": "OTHER"
+        },
+        {
+          "enum": "13",
+          "description": "FINANCING"
+        }
+      ]
     },
     {
       "tag": "461",
@@ -2167,7 +6381,41 @@
     {
       "tag": "465",
       "name": "QuantityType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "SHARES"
+        },
+        {
+          "enum": "2",
+          "description": "BONDS"
+        },
+        {
+          "enum": "3",
+          "description": "CURRENTFACE"
+        },
+        {
+          "enum": "4",
+          "description": "ORIGINALFACE"
+        },
+        {
+          "enum": "5",
+          "description": "CURRENCY"
+        },
+        {
+          "enum": "6",
+          "description": "CONTRACTS"
+        },
+        {
+          "enum": "7",
+          "description": "OTHER"
+        },
+        {
+          "enum": "8",
+          "description": "PAR"
+        }
+      ]
     },
     {
       "tag": "466",
@@ -2182,7 +6430,21 @@
     {
       "tag": "468",
       "name": "RoundingDirection",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "ROUND_TO_NEAREST"
+        },
+        {
+          "enum": "1",
+          "description": "ROUND_DOWN"
+        },
+        {
+          "enum": "2",
+          "description": "ROUND_UP"
+        }
+      ]
     },
     {
       "tag": "469",
@@ -2227,7 +6489,57 @@
     {
       "tag": "477",
       "name": "DistribPaymentMethod",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "CREST"
+        },
+        {
+          "enum": "2",
+          "description": "NSCC"
+        },
+        {
+          "enum": "3",
+          "description": "EUROCLEAR"
+        },
+        {
+          "enum": "4",
+          "description": "CLEARSTREAM"
+        },
+        {
+          "enum": "5",
+          "description": "CHEQUE"
+        },
+        {
+          "enum": "6",
+          "description": "TELEGRAPHIC_TRANSFER"
+        },
+        {
+          "enum": "7",
+          "description": "FEDWIRE"
+        },
+        {
+          "enum": "8",
+          "description": "DIRECT_CREDIT"
+        },
+        {
+          "enum": "9",
+          "description": "ACH_CREDIT"
+        },
+        {
+          "enum": "10",
+          "description": "BPAY"
+        },
+        {
+          "enum": "11",
+          "description": "HIGH_VALUE_CLEARING_SYSTEM"
+        },
+        {
+          "enum": "12",
+          "description": "REINVEST_IN_FUND"
+        }
+      ]
     },
     {
       "tag": "478",
@@ -2242,12 +6554,52 @@
     {
       "tag": "480",
       "name": "CancellationRights",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "Y",
+          "description": "YES"
+        },
+        {
+          "enum": "N",
+          "description": "NO_EXECUTION_ONLY"
+        },
+        {
+          "enum": "M",
+          "description": "NO_WAIVER_AGREEMENT"
+        },
+        {
+          "enum": "O",
+          "description": "NO_INSTITUTIONAL"
+        }
+      ]
     },
     {
       "tag": "481",
       "name": "MoneyLaunderingStatus",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "Y",
+          "description": "PASSED"
+        },
+        {
+          "enum": "N",
+          "description": "NOT_CHECKED"
+        },
+        {
+          "enum": "1",
+          "description": "EXEMPT_BELOW_THE_LIMIT"
+        },
+        {
+          "enum": "2",
+          "description": "EXEMPT_CLIENT_MONEY_TYPE_EXEMPTION"
+        },
+        {
+          "enum": "3",
+          "description": "EXEMPT_AUTHORISED_CREDIT_OR_FINANCIAL_INSTITUTION"
+        }
+      ]
     },
     {
       "tag": "482",
@@ -2262,7 +6614,41 @@
     {
       "tag": "484",
       "name": "ExecPriceType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "B",
+          "description": "BID_PRICE"
+        },
+        {
+          "enum": "C",
+          "description": "CREATION_PRICE"
+        },
+        {
+          "enum": "D",
+          "description": "CREATION_PRICE_PLUS_ADJUSTMENT_PERCENT"
+        },
+        {
+          "enum": "E",
+          "description": "CREATION_PRICE_PLUS_ADJUSTMENT_AMOUNT"
+        },
+        {
+          "enum": "O",
+          "description": "OFFER_PRICE"
+        },
+        {
+          "enum": "P",
+          "description": "OFFER_PRICE_MINUS_ADJUSTMENT_PERCENT"
+        },
+        {
+          "enum": "Q",
+          "description": "OFFER_PRICE_MINUS_ADJUSTMENT_AMOUNT"
+        },
+        {
+          "enum": "S",
+          "description": "SINGLE_PRICE"
+        }
+      ]
     },
     {
       "tag": "485",
@@ -2277,7 +6663,29 @@
     {
       "tag": "487",
       "name": "TradeReportTransType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NEW"
+        },
+        {
+          "enum": "1",
+          "description": "CANCEL"
+        },
+        {
+          "enum": "2",
+          "description": "REPLACE"
+        },
+        {
+          "enum": "3",
+          "description": "RELEASE"
+        },
+        {
+          "enum": "4",
+          "description": "REVERSE"
+        }
+      ]
     },
     {
       "tag": "488",
@@ -2302,7 +6710,69 @@
     {
       "tag": "492",
       "name": "PaymentMethod",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "CREST"
+        },
+        {
+          "enum": "2",
+          "description": "NSCC"
+        },
+        {
+          "enum": "3",
+          "description": "EUROCLEAR"
+        },
+        {
+          "enum": "4",
+          "description": "CLEARSTREAM"
+        },
+        {
+          "enum": "5",
+          "description": "CHEQUE"
+        },
+        {
+          "enum": "6",
+          "description": "TELEGRAPHIC_TRANSFER"
+        },
+        {
+          "enum": "7",
+          "description": "FEDWIRE"
+        },
+        {
+          "enum": "8",
+          "description": "DEBIT_CARD"
+        },
+        {
+          "enum": "9",
+          "description": "DIRECT_DEBIT"
+        },
+        {
+          "enum": "10",
+          "description": "DIRECT_CREDIT"
+        },
+        {
+          "enum": "11",
+          "description": "CREDIT_CARD"
+        },
+        {
+          "enum": "12",
+          "description": "ACH_DEBIT"
+        },
+        {
+          "enum": "13",
+          "description": "ACH_CREDIT"
+        },
+        {
+          "enum": "14",
+          "description": "BPAY"
+        },
+        {
+          "enum": "15",
+          "description": "HIGH_VALUE_CLEARING_SYSTEM"
+        }
+      ]
     },
     {
       "tag": "493",
@@ -2317,7 +6787,53 @@
     {
       "tag": "495",
       "name": "TaxAdvantageType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NONE"
+        },
+        {
+          "enum": "1",
+          "description": "MAXI_ISA"
+        },
+        {
+          "enum": "2",
+          "description": "TESSA"
+        },
+        {
+          "enum": "3",
+          "description": "MINI_CASH_ISA"
+        },
+        {
+          "enum": "4",
+          "description": "MINI_STOCKS_AND_SHARES_ISA"
+        },
+        {
+          "enum": "5",
+          "description": "MINI_INSURANCE_ISA"
+        },
+        {
+          "enum": "6",
+          "description": "CURRENT_YEAR_PAYMENT"
+        },
+        {
+          "enum": "7",
+          "description": "PRIOR_YEAR_PAYMENT"
+        },
+        {
+          "enum": "8",
+          "description": "ASSET_TRANSFER"
+        },
+        {
+          "enum": "9",
+          "description": "EMPLOYEE_PRIOR_YEAR"
+        },
+        {
+          "enum": "999",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "496",
@@ -2327,7 +6843,17 @@
     {
       "tag": "497",
       "name": "FundRenewWaiv",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "Y",
+          "description": "YES"
+        },
+        {
+          "enum": "N",
+          "description": "NO"
+        }
+      ]
     },
     {
       "tag": "498",
@@ -2372,12 +6898,108 @@
     {
       "tag": "506",
       "name": "RegistStatus",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "A",
+          "description": "ACCEPTED"
+        },
+        {
+          "enum": "R",
+          "description": "REJECTED"
+        },
+        {
+          "enum": "H",
+          "description": "HELD"
+        },
+        {
+          "enum": "N",
+          "description": "REMINDER"
+        }
+      ]
     },
     {
       "tag": "507",
       "name": "RegistRejReasonCode",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "INVALID_UNACCEPTABLE_ACCOUNT_TYPE"
+        },
+        {
+          "enum": "2",
+          "description": "INVALID_UNACCEPTABLE_TAX_EXEMPT_TYPE"
+        },
+        {
+          "enum": "3",
+          "description": "INVALID_UNACCEPTABLE_OWNERSHIP_TYPE"
+        },
+        {
+          "enum": "4",
+          "description": "INVALID_UNACCEPTABLE_NO_REG_DETLS"
+        },
+        {
+          "enum": "5",
+          "description": "INVALID_UNACCEPTABLE_REG_SEQ_NO"
+        },
+        {
+          "enum": "6",
+          "description": "INVALID_UNACCEPTABLE_REG_DTLS"
+        },
+        {
+          "enum": "7",
+          "description": "INVALID_UNACCEPTABLE_MAILING_DTLS"
+        },
+        {
+          "enum": "8",
+          "description": "INVALID_UNACCEPTABLE_MAILING_INST"
+        },
+        {
+          "enum": "9",
+          "description": "INVALID_UNACCEPTABLE_INVESTOR_ID"
+        },
+        {
+          "enum": "10",
+          "description": "INVALID_UNACCEPTABLE_INVESTOR_ID_SOURCE"
+        },
+        {
+          "enum": "11",
+          "description": "INVALID_UNACCEPTABLE_DATE_OF_BIRTH"
+        },
+        {
+          "enum": "12",
+          "description": "INVALID_UNACCEPTABLE_INVESTOR_COUNTRY_OF_RESIDENCE"
+        },
+        {
+          "enum": "13",
+          "description": "INVALID_UNACCEPTABLE_NODISTRIBINSTNS"
+        },
+        {
+          "enum": "14",
+          "description": "INVALID_UNACCEPTABLE_DISTRIB_PERCENTAGE"
+        },
+        {
+          "enum": "15",
+          "description": "INVALID_UNACCEPTABLE_DISTRIB_PAYMENT_METHOD"
+        },
+        {
+          "enum": "16",
+          "description": "INVALID_UNACCEPTABLE_CASH_DISTRIB_AGENT_ACCT_NAME"
+        },
+        {
+          "enum": "17",
+          "description": "INVALID_UNACCEPTABLE_CASH_DISTRIB_AGENT_CODE"
+        },
+        {
+          "enum": "18",
+          "description": "INVALID_UNACCEPTABLE_CASH_DISTRIB_AGENT_ACCT_NUM"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "508",
@@ -2412,7 +7034,21 @@
     {
       "tag": "514",
       "name": "RegistTransType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NEW"
+        },
+        {
+          "enum": "1",
+          "description": "REPLACE"
+        },
+        {
+          "enum": "2",
+          "description": "CANCEL"
+        }
+      ]
     },
     {
       "tag": "515",
@@ -2427,7 +7063,21 @@
     {
       "tag": "517",
       "name": "OwnershipType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "J",
+          "description": "JOINT_INVESTORS"
+        },
+        {
+          "enum": "T",
+          "description": "TENANTS_IN_COMMON"
+        },
+        {
+          "enum": "2",
+          "description": "JOINT_TRUSTEES"
+        }
+      ]
     },
     {
       "tag": "518",
@@ -2437,7 +7087,45 @@
     {
       "tag": "519",
       "name": "ContAmtType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "COMMISSION_AMOUNT"
+        },
+        {
+          "enum": "2",
+          "description": "COMMISSION_PERCENT"
+        },
+        {
+          "enum": "3",
+          "description": "INITIAL_CHARGE_AMOUNT"
+        },
+        {
+          "enum": "4",
+          "description": "INITIAL_CHARGE_PERCENT"
+        },
+        {
+          "enum": "5",
+          "description": "DISCOUNT_AMOUNT"
+        },
+        {
+          "enum": "6",
+          "description": "DISCOUNT_PERCENT"
+        },
+        {
+          "enum": "7",
+          "description": "DILUTION_LEVY_AMOUNT"
+        },
+        {
+          "enum": "8",
+          "description": "DILUTION_LEVY_PERCENT"
+        },
+        {
+          "enum": "9",
+          "description": "EXIT_CHARGE_AMOUNT"
+        }
+      ]
     },
     {
       "tag": "520",
@@ -2452,7 +7140,61 @@
     {
       "tag": "522",
       "name": "OwnerType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "INDIVIDUAL_INVESTOR"
+        },
+        {
+          "enum": "2",
+          "description": "PUBLIC_COMPANY"
+        },
+        {
+          "enum": "3",
+          "description": "PRIVATE_COMPANY"
+        },
+        {
+          "enum": "4",
+          "description": "INDIVIDUAL_TRUSTEE"
+        },
+        {
+          "enum": "5",
+          "description": "COMPANY_TRUSTEE"
+        },
+        {
+          "enum": "6",
+          "description": "PENSION_PLAN"
+        },
+        {
+          "enum": "7",
+          "description": "CUSTODIAN_UNDER_GIFTS_TO_MINORS_ACT"
+        },
+        {
+          "enum": "8",
+          "description": "TRUSTS"
+        },
+        {
+          "enum": "9",
+          "description": "FIDUCIARIES"
+        },
+        {
+          "enum": "10",
+          "description": "NETWORKING_SUB_ACCOUNT"
+        },
+        {
+          "enum": "11",
+          "description": "NON_PROFIT_ORGANIZATION"
+        },
+        {
+          "enum": "12",
+          "description": "CORPORATE_BODY"
+        },
+        {
+          "enum": "13",
+          "description": "NOMINEE"
+        }
+      ]
     },
     {
       "tag": "523",
@@ -2482,27 +7224,189 @@
     {
       "tag": "528",
       "name": "OrderCapacity",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "A",
+          "description": "AGENCY"
+        },
+        {
+          "enum": "G",
+          "description": "PROPRIETARY"
+        },
+        {
+          "enum": "I",
+          "description": "INDIVIDUAL"
+        },
+        {
+          "enum": "P",
+          "description": "PRINCIPAL"
+        },
+        {
+          "enum": "R",
+          "description": "RISKLESS_PRINCIPAL"
+        },
+        {
+          "enum": "W",
+          "description": "AGENT_FOR_OTHER_MEMBER"
+        }
+      ]
     },
     {
       "tag": "529",
       "name": "OrderRestrictions",
-      "type": "MULTIPLEVALUESTRING"
+      "type": "MULTIPLEVALUESTRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "PROGRAM_TRADE"
+        },
+        {
+          "enum": "2",
+          "description": "INDEX_ARBITRAGE"
+        },
+        {
+          "enum": "3",
+          "description": "NON_INDEX_ARBITRAGE"
+        },
+        {
+          "enum": "4",
+          "description": "COMPETING_MARKET_MAKER"
+        },
+        {
+          "enum": "5",
+          "description": "ACTING_AS_MARKET_MAKER_OR_SPECIALIST_IN_THE_SECURITY"
+        },
+        {
+          "enum": "6",
+          "description": "ACTING_AS_MARKET_MAKER_OR_SPECIALIST_IN_THE_UNDERLYING_SECURITY_OF_A_DERIVATIVE_SECURITY"
+        },
+        {
+          "enum": "7",
+          "description": "FOREIGN_ENTITY"
+        },
+        {
+          "enum": "8",
+          "description": "EXTERNAL_MARKET_PARTICIPANT"
+        },
+        {
+          "enum": "9",
+          "description": "EXTERNAL_INTER_CONNECTED_MARKET_LINKAGE"
+        },
+        {
+          "enum": "A",
+          "description": "RISKLESS_ARBITRAGE"
+        }
+      ]
     },
     {
       "tag": "530",
       "name": "MassCancelRequestType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "1",
+          "description": "CANCEL_ORDERS_FOR_A_SECURITY"
+        },
+        {
+          "enum": "2",
+          "description": "CANCEL_ORDERS_FOR_AN_UNDERLYING_SECURITY"
+        },
+        {
+          "enum": "3",
+          "description": "CANCEL_ORDERS_FOR_A_PRODUCT"
+        },
+        {
+          "enum": "4",
+          "description": "CANCEL_ORDERS_FOR_A_CFICODE"
+        },
+        {
+          "enum": "5",
+          "description": "CANCEL_ORDERS_FOR_A_SECURITYTYPE"
+        },
+        {
+          "enum": "6",
+          "description": "CANCEL_ORDERS_FOR_A_TRADING_SESSION"
+        },
+        {
+          "enum": "7",
+          "description": "CANCEL_ALL_ORDERS"
+        }
+      ]
     },
     {
       "tag": "531",
       "name": "MassCancelResponse",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "CANCEL_REQUEST_REJECTED"
+        },
+        {
+          "enum": "1",
+          "description": "CANCEL_ORDERS_FOR_A_SECURITY"
+        },
+        {
+          "enum": "2",
+          "description": "CANCEL_ORDERS_FOR_AN_UNDERLYING_SECURITY"
+        },
+        {
+          "enum": "3",
+          "description": "CANCEL_ORDERS_FOR_A_PRODUCT"
+        },
+        {
+          "enum": "4",
+          "description": "CANCEL_ORDERS_FOR_A_CFICODE"
+        },
+        {
+          "enum": "5",
+          "description": "CANCEL_ORDERS_FOR_A_SECURITYTYPE"
+        },
+        {
+          "enum": "6",
+          "description": "CANCEL_ORDERS_FOR_A_TRADING_SESSION"
+        },
+        {
+          "enum": "7",
+          "description": "CANCEL_ALL_ORDERS"
+        }
+      ]
     },
     {
       "tag": "532",
       "name": "MassCancelRejectReason",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "MASS_CANCEL_NOT_SUPPORTED"
+        },
+        {
+          "enum": "1",
+          "description": "INVALID_OR_UNKNOWN_SECURITY"
+        },
+        {
+          "enum": "2",
+          "description": "INVALID_OR_UNKNOWN_UNDERLYING"
+        },
+        {
+          "enum": "3",
+          "description": "INVALID_OR_UNKNOWN_PRODUCT"
+        },
+        {
+          "enum": "4",
+          "description": "INVALID_OR_UNKNOWN_CFICODE"
+        },
+        {
+          "enum": "5",
+          "description": "INVALID_OR_UNKNOWN_SECURITY_TYPE"
+        },
+        {
+          "enum": "6",
+          "description": "INVALID_OR_UNKNOWN_TRADING_SESSION"
+        }
+      ]
     },
     {
       "tag": "533",
@@ -2527,7 +7431,25 @@
     {
       "tag": "537",
       "name": "QuoteType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "INDICATIVE"
+        },
+        {
+          "enum": "1",
+          "description": "TRADEABLE"
+        },
+        {
+          "enum": "2",
+          "description": "RESTRICTED_TRADEABLE"
+        },
+        {
+          "enum": "3",
+          "description": "COUNTER"
+        }
+      ]
     },
     {
       "tag": "538",
@@ -2562,7 +7484,21 @@
     {
       "tag": "544",
       "name": "CashMargin",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "1",
+          "description": "CASH"
+        },
+        {
+          "enum": "2",
+          "description": "MARGIN_OPEN"
+        },
+        {
+          "enum": "3",
+          "description": "MARGIN_CLOSE"
+        }
+      ]
     },
     {
       "tag": "545",
@@ -2572,7 +7508,21 @@
     {
       "tag": "546",
       "name": "Scope",
-      "type": "MULTIPLEVALUESTRING"
+      "type": "MULTIPLEVALUESTRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "LOCAL"
+        },
+        {
+          "enum": "2",
+          "description": "NATIONAL"
+        },
+        {
+          "enum": "3",
+          "description": "GLOBAL"
+        }
+      ]
     },
     {
       "tag": "547",
@@ -2587,12 +7537,44 @@
     {
       "tag": "549",
       "name": "CrossType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "CROSS_TRADE_WHICH_IS_EXECUTED_COMPLETELY_OR_NOT"
+        },
+        {
+          "enum": "2",
+          "description": "CROSS_TRADE_WHICH_IS_EXECUTED_PARTIALLY_AND_THE_REST_IS_CANCELLED"
+        },
+        {
+          "enum": "3",
+          "description": "CROSS_TRADE_WHICH_IS_PARTIALLY_EXECUTED_WITH_THE_UNFILLED_PORTIONS_REMAINING_ACTIVE"
+        },
+        {
+          "enum": "4",
+          "description": "CROSS_TRADE_IS_EXECUTED_WITH_EXISTING_ORDERS_WITH_THE_SAME_PRICE"
+        }
+      ]
     },
     {
       "tag": "550",
       "name": "CrossPrioritization",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NONE"
+        },
+        {
+          "enum": "1",
+          "description": "BUY_SIDE_IS_PRIORITIZED"
+        },
+        {
+          "enum": "2",
+          "description": "SELL_SIDE_IS_PRIORITIZED"
+        }
+      ]
     },
     {
       "tag": "551",
@@ -2602,7 +7584,17 @@
     {
       "tag": "552",
       "name": "NoSides",
-      "type": "NUMINGROUP"
+      "type": "NUMINGROUP",
+      "values": [
+        {
+          "enum": "1",
+          "description": "ONE_SIDE"
+        },
+        {
+          "enum": "2",
+          "description": "BOTH_SIDES"
+        }
+      ]
     },
     {
       "tag": "553",
@@ -2637,12 +7629,60 @@
     {
       "tag": "559",
       "name": "SecurityListRequestType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "SYMBOL"
+        },
+        {
+          "enum": "1",
+          "description": "SECURITYTYPE_AND_OR_CFICODE"
+        },
+        {
+          "enum": "2",
+          "description": "PRODUCT"
+        },
+        {
+          "enum": "3",
+          "description": "TRADINGSESSIONID"
+        },
+        {
+          "enum": "4",
+          "description": "ALL_SECURITIES"
+        }
+      ]
     },
     {
       "tag": "560",
       "name": "SecurityRequestResult",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "VALID_REQUEST"
+        },
+        {
+          "enum": "1",
+          "description": "INVALID_OR_UNSUPPORTED_REQUEST"
+        },
+        {
+          "enum": "2",
+          "description": "NO_INSTRUMENTS_FOUND_THAT_MATCH_SELECTION_CRITERIA"
+        },
+        {
+          "enum": "3",
+          "description": "NOT_AUTHORIZED_TO_RETRIEVE_INSTRUMENT_DATA"
+        },
+        {
+          "enum": "4",
+          "description": "INSTRUMENT_DATA_TEMPORARILY_UNAVAILABLE"
+        },
+        {
+          "enum": "5",
+          "description": "REQUEST_FOR_INSTRUMENT_DATA_NOT_SUPPORTED"
+        }
+      ]
     },
     {
       "tag": "561",
@@ -2657,7 +7697,21 @@
     {
       "tag": "563",
       "name": "MultiLegRptTypeReq",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "REPORT_BY_MULITLEG_SECURITY_ONLY"
+        },
+        {
+          "enum": "1",
+          "description": "REPORT_BY_MULTILEG_SECURITY_AND_BY_INSTRUMENT_LEGS_BELONGING_TO_THE_MULTILEG_SECURITY"
+        },
+        {
+          "enum": "2",
+          "description": "REPORT_BY_INSTRUMENT_LEGS_BELONGING_TO_THE_MULTILEG_SECURITY_ONLY"
+        }
+      ]
     },
     {
       "tag": "564",
@@ -2677,7 +7731,13 @@
     {
       "tag": "567",
       "name": "TradSesStatusRejReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "UNKNOWN_OR_INVALID_TRADINGSESSIONID"
+        }
+      ]
     },
     {
       "tag": "568",
@@ -2687,7 +7747,29 @@
     {
       "tag": "569",
       "name": "TradeRequestType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "ALL_TRADES"
+        },
+        {
+          "enum": "1",
+          "description": "MATCHED_TRADES_MATCHING_CRITERIA_PROVIDED_ON_REQUEST"
+        },
+        {
+          "enum": "2",
+          "description": "UNMATCHED_TRADES_THAT_MATCH_CRITERIA"
+        },
+        {
+          "enum": "3",
+          "description": "UNREPORTED_TRADES_THAT_MATCH_CRITERIA"
+        },
+        {
+          "enum": "4",
+          "description": "ADVISORIES_THAT_MATCH_CRITERIA"
+        }
+      ]
     },
     {
       "tag": "570",
@@ -2707,7 +7789,21 @@
     {
       "tag": "573",
       "name": "MatchStatus",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "COMPARED_MATCHED_OR_AFFIRMED"
+        },
+        {
+          "enum": "1",
+          "description": "UNCOMPARED_UNMATCHED_OR_UNAFFIRMED"
+        },
+        {
+          "enum": "2",
+          "description": "ADVISORY_OR_ALERT"
+        }
+      ]
     },
     {
       "tag": "574",
@@ -2727,7 +7823,65 @@
     {
       "tag": "577",
       "name": "ClearingInstruction",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "PROCESS_NORMALLY"
+        },
+        {
+          "enum": "1",
+          "description": "EXCLUDE_FROM_ALL_NETTING"
+        },
+        {
+          "enum": "2",
+          "description": "BILATERAL_NETTING_ONLY"
+        },
+        {
+          "enum": "3",
+          "description": "EX_CLEARING"
+        },
+        {
+          "enum": "4",
+          "description": "SPECIAL_TRADE"
+        },
+        {
+          "enum": "5",
+          "description": "MULTILATERAL_NETTING"
+        },
+        {
+          "enum": "6",
+          "description": "CLEAR_AGAINST_CENTRAL_COUNTERPARTY"
+        },
+        {
+          "enum": "7",
+          "description": "EXCLUDE_FROM_CENTRAL_COUNTERPARTY"
+        },
+        {
+          "enum": "8",
+          "description": "MANUAL_MODE"
+        },
+        {
+          "enum": "9",
+          "description": "AUTOMATIC_POSTING_MODE"
+        },
+        {
+          "enum": "10",
+          "description": "AUTOMATIC_GIVE_UP_MODE"
+        },
+        {
+          "enum": "11",
+          "description": "QUALIFIED_SERVICE_REPRESENTATIVE"
+        },
+        {
+          "enum": "12",
+          "description": "CUSTOMER_TRADE"
+        },
+        {
+          "enum": "13",
+          "description": "SELF_CLEARING"
+        }
+      ]
     },
     {
       "tag": "578",
@@ -2747,12 +7901,60 @@
     {
       "tag": "581",
       "name": "AccountType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "ACCOUNT_IS_CARRIED_ON_CUSTOMER_SIDE_OF_BOOKS"
+        },
+        {
+          "enum": "2",
+          "description": "ACCOUNT_IS_CARRIED_ON_NON_CUSTOMER_SIDE_OF_BOOKS"
+        },
+        {
+          "enum": "3",
+          "description": "HOUSE_TRADER"
+        },
+        {
+          "enum": "4",
+          "description": "FLOOR_TRADER"
+        },
+        {
+          "enum": "6",
+          "description": "ACCOUNT_IS_CARRIED_ON_NON_CUSTOMER_SIDE_OF_BOOKS_AND_IS_CROSS_MARGINED"
+        },
+        {
+          "enum": "7",
+          "description": "ACCOUNT_IS_HOUSE_TRADER_AND_IS_CROSS_MARGINED"
+        },
+        {
+          "enum": "8",
+          "description": "JOINT_BACKOFFICE_ACCOUNT"
+        }
+      ]
     },
     {
       "tag": "582",
       "name": "CustOrderCapacity",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "MEMBER_TRADING_FOR_THEIR_OWN_ACCOUNT"
+        },
+        {
+          "enum": "2",
+          "description": "CLEARING_FIRM_TRADING_FOR_ITS_PROPRIETARY_ACCOUNT"
+        },
+        {
+          "enum": "3",
+          "description": "MEMBER_TRADING_FOR_ANOTHER_MEMBER"
+        },
+        {
+          "enum": "4",
+          "description": "ALL_OTHER"
+        }
+      ]
     },
     {
       "tag": "583",
@@ -2767,7 +7969,41 @@
     {
       "tag": "585",
       "name": "MassStatusReqType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "STATUS_FOR_ORDERS_FOR_A_SECURITY"
+        },
+        {
+          "enum": "2",
+          "description": "STATUS_FOR_ORDERS_FOR_AN_UNDERLYING_SECURITY"
+        },
+        {
+          "enum": "3",
+          "description": "STATUS_FOR_ORDERS_FOR_A_PRODUCT"
+        },
+        {
+          "enum": "4",
+          "description": "STATUS_FOR_ORDERS_FOR_A_CFICODE"
+        },
+        {
+          "enum": "5",
+          "description": "STATUS_FOR_ORDERS_FOR_A_SECURITYTYPE"
+        },
+        {
+          "enum": "6",
+          "description": "STATUS_FOR_ORDERS_FOR_A_TRADING_SESSION"
+        },
+        {
+          "enum": "7",
+          "description": "STATUS_FOR_ALL_ORDERS"
+        },
+        {
+          "enum": "8",
+          "description": "STATUS_FOR_ORDERS_FOR_A_PARTYID"
+        }
+      ]
     },
     {
       "tag": "586",
@@ -2787,17 +8023,55 @@
     {
       "tag": "589",
       "name": "DayBookingInst",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "CAN_TRIGGER_BOOKING_WITHOUT_REFERENCE_TO_THE_ORDER_INITIATOR"
+        },
+        {
+          "enum": "1",
+          "description": "SPEAK_WITH_ORDER_INITIATOR_BEFORE_BOOKING"
+        },
+        {
+          "enum": "2",
+          "description": "ACCUMULATE"
+        }
+      ]
     },
     {
       "tag": "590",
       "name": "BookingUnit",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "EACH_PARTIAL_EXECUTION_IS_A_BOOKABLE_UNIT"
+        },
+        {
+          "enum": "1",
+          "description": "AGGREGATE_PARTIAL_EXECUTIONS_ON_THIS_ORDER_AND_BOOK_ONE_TRADE_PER_ORDER"
+        },
+        {
+          "enum": "2",
+          "description": "AGGREGATE_EXECUTIONS_FOR_THIS_SYMBOL_SIDE_AND_SETTLEMENT_DATE"
+        }
+      ]
     },
     {
       "tag": "591",
       "name": "PreallocMethod",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "0",
+          "description": "PRO_RATA"
+        },
+        {
+          "enum": "1",
+          "description": "DO_NOT_PRO_RATA"
+        }
+      ]
     },
     {
       "tag": "592",
@@ -2972,7 +8246,29 @@
     {
       "tag": "626",
       "name": "AllocType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "CALCULATED"
+        },
+        {
+          "enum": "2",
+          "description": "PRELIMINARY"
+        },
+        {
+          "enum": "5",
+          "description": "READY_TO_BOOK_SINGLE_ORDER"
+        },
+        {
+          "enum": "7",
+          "description": "WAREHOUSE_INSTRUCTION"
+        },
+        {
+          "enum": "8",
+          "description": "REQUEST_TO_INTERMEDIARY"
+        }
+      ]
     },
     {
       "tag": "627",
@@ -3017,7 +8313,41 @@
     {
       "tag": "635",
       "name": "ClearingFeeIndicator",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "B",
+          "description": "CBOE_MEMBER"
+        },
+        {
+          "enum": "C",
+          "description": "NON_MEMBER_AND_CUSTOMER"
+        },
+        {
+          "enum": "E",
+          "description": "EQUITY_MEMBER_AND_CLEARING_MEMBER"
+        },
+        {
+          "enum": "F",
+          "description": "FULL_AND_ASSOCIATE_MEMBER_TRADING_FOR_OWN_ACCOUNT_AND_AS_FLOOR_BROKERS"
+        },
+        {
+          "enum": "H",
+          "description": "FIRMS_106H_AND_106J"
+        },
+        {
+          "enum": "I",
+          "description": "GIM_IDEM_AND_COM_MEMBERSHIP_INTEREST_HOLDERS"
+        },
+        {
+          "enum": "L",
+          "description": "LESSEE_AND_106F_EMPLOYEES"
+        },
+        {
+          "enum": "M",
+          "description": "ALL_OTHER_OWNERSHIP_TYPES"
+        }
+      ]
     },
     {
       "tag": "636",
@@ -3032,7 +8362,17 @@
     {
       "tag": "638",
       "name": "PriorityIndicator",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "PRIORITY_UNCHANGED"
+        },
+        {
+          "enum": "1",
+          "description": "LOST_PRIORITY_AS_RESULT_OF_ORDER_CHANGE"
+        }
+      ]
     },
     {
       "tag": "639",
@@ -3127,7 +8467,53 @@
     {
       "tag": "658",
       "name": "QuoteRequestRejectReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "UNKNOWN_SYMBOL"
+        },
+        {
+          "enum": "2",
+          "description": "EXCHANGE_CLOSED"
+        },
+        {
+          "enum": "3",
+          "description": "QUOTE_REQUEST_EXCEEDS_LIMIT"
+        },
+        {
+          "enum": "4",
+          "description": "TOO_LATE_TO_ENTER"
+        },
+        {
+          "enum": "5",
+          "description": "INVALID_PRICE"
+        },
+        {
+          "enum": "6",
+          "description": "NOT_AUTHORIZED_TO_REQUEST_QUOTE"
+        },
+        {
+          "enum": "7",
+          "description": "NO_MATCH_FOR_INQUIRY"
+        },
+        {
+          "enum": "8",
+          "description": "NO_MARKET_FOR_INSTRUMENT"
+        },
+        {
+          "enum": "9",
+          "description": "NO_INVENTORY"
+        },
+        {
+          "enum": "10",
+          "description": "PASS"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "659",
@@ -3137,7 +8523,33 @@
     {
       "tag": "660",
       "name": "AcctIDSource",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "BIC"
+        },
+        {
+          "enum": "2",
+          "description": "SID_CODE"
+        },
+        {
+          "enum": "3",
+          "description": "TFM"
+        },
+        {
+          "enum": "4",
+          "description": "OMGEO"
+        },
+        {
+          "enum": "5",
+          "description": "DTCC_CODE"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "661",
@@ -3162,12 +8574,48 @@
     {
       "tag": "665",
       "name": "ConfirmStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "RECEIVED"
+        },
+        {
+          "enum": "2",
+          "description": "MISMATCHED_ACCOUNT"
+        },
+        {
+          "enum": "3",
+          "description": "MISSING_SETTLEMENT_INSTRUCTIONS"
+        },
+        {
+          "enum": "4",
+          "description": "CONFIRMED"
+        },
+        {
+          "enum": "5",
+          "description": "REQUEST_REJECTED"
+        }
+      ]
     },
     {
       "tag": "666",
       "name": "ConfirmTransType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NEW"
+        },
+        {
+          "enum": "1",
+          "description": "REPLACE"
+        },
+        {
+          "enum": "2",
+          "description": "CANCEL"
+        }
+      ]
     },
     {
       "tag": "667",
@@ -3177,7 +8625,17 @@
     {
       "tag": "668",
       "name": "DeliveryForm",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "BOOKENTRY"
+        },
+        {
+          "enum": "2",
+          "description": "BEARER"
+        }
+      ]
     },
     {
       "tag": "669",
@@ -3287,7 +8745,25 @@
     {
       "tag": "690",
       "name": "LegSwapType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "PAR_FOR_PAR"
+        },
+        {
+          "enum": "2",
+          "description": "MODIFIED_DURATION"
+        },
+        {
+          "enum": "4",
+          "description": "RISK"
+        },
+        {
+          "enum": "5",
+          "description": "PROCEEDS"
+        }
+      ]
     },
     {
       "tag": "691",
@@ -3297,7 +8773,49 @@
     {
       "tag": "692",
       "name": "QuotePriceType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "PERCENT"
+        },
+        {
+          "enum": "2",
+          "description": "PER_SHARE"
+        },
+        {
+          "enum": "3",
+          "description": "FIXED_AMOUNT"
+        },
+        {
+          "enum": "4",
+          "description": "DISCOUNT"
+        },
+        {
+          "enum": "5",
+          "description": "PREMIUM"
+        },
+        {
+          "enum": "6",
+          "description": "BASIS_POINTS_RELATIVE_TO_BENCHMARK"
+        },
+        {
+          "enum": "7",
+          "description": "TED_PRICE"
+        },
+        {
+          "enum": "8",
+          "description": "TED_YIELD"
+        },
+        {
+          "enum": "9",
+          "description": "YIELD_SPREAD"
+        },
+        {
+          "enum": "10",
+          "description": "YIELD"
+        }
+      ]
     },
     {
       "tag": "693",
@@ -3307,7 +8825,33 @@
     {
       "tag": "694",
       "name": "QuoteRespType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "HIT_LIFT"
+        },
+        {
+          "enum": "2",
+          "description": "COUNTER"
+        },
+        {
+          "enum": "3",
+          "description": "EXPIRED"
+        },
+        {
+          "enum": "4",
+          "description": "COVER"
+        },
+        {
+          "enum": "5",
+          "description": "DONE_AWAY"
+        },
+        {
+          "enum": "6",
+          "description": "PASS"
+        }
+      ]
     },
     {
       "tag": "695",
@@ -3352,7 +8896,85 @@
     {
       "tag": "703",
       "name": "PosType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "TQ",
+          "description": "TRANSACTION_QUANTITY"
+        },
+        {
+          "enum": "IAS",
+          "description": "INTRA_SPREAD_QTY"
+        },
+        {
+          "enum": "IES",
+          "description": "INTER_SPREAD_QTY"
+        },
+        {
+          "enum": "FIN",
+          "description": "END_OF_DAY_QTY"
+        },
+        {
+          "enum": "SOD",
+          "description": "START_OF_DAY_QTY"
+        },
+        {
+          "enum": "EX",
+          "description": "OPTION_EXERCISE_QTY"
+        },
+        {
+          "enum": "AS",
+          "description": "OPTION_ASSIGNMENT"
+        },
+        {
+          "enum": "TX",
+          "description": "TRANSACTION_FROM_EXERCISE"
+        },
+        {
+          "enum": "TA",
+          "description": "TRANSACTION_FROM_ASSIGNMENT"
+        },
+        {
+          "enum": "PIT",
+          "description": "PIT_TRADE_QTY"
+        },
+        {
+          "enum": "TRF",
+          "description": "TRANSFER_TRADE_QTY"
+        },
+        {
+          "enum": "ETR",
+          "description": "ELECTRONIC_TRADE_QTY"
+        },
+        {
+          "enum": "ALC",
+          "description": "ALLOCATION_TRADE_QTY"
+        },
+        {
+          "enum": "PA",
+          "description": "ADJUSTMENT_QTY"
+        },
+        {
+          "enum": "ASF",
+          "description": "AS_OF_TRADE_QTY"
+        },
+        {
+          "enum": "DLV",
+          "description": "DELIVERY_QTY"
+        },
+        {
+          "enum": "TOT",
+          "description": "TOTAL_TRANSACTION_QTY"
+        },
+        {
+          "enum": "XM",
+          "description": "CROSS_MARGIN_QTY"
+        },
+        {
+          "enum": "SPL",
+          "description": "INTEGRAL_SPLIT"
+        }
+      ]
     },
     {
       "tag": "704",
@@ -3367,12 +8989,60 @@
     {
       "tag": "706",
       "name": "PosQtyStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "SUBMITTED"
+        },
+        {
+          "enum": "1",
+          "description": "ACCEPTED"
+        },
+        {
+          "enum": "2",
+          "description": "REJECTED"
+        }
+      ]
     },
     {
       "tag": "707",
       "name": "PosAmtType",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "FMTM",
+          "description": "FINAL_MARK_TO_MARKET_AMOUNT"
+        },
+        {
+          "enum": "IMTM",
+          "description": "INCREMENTAL_MARK_TO_MARKET_AMOUNT"
+        },
+        {
+          "enum": "TVAR",
+          "description": "TRADE_VARIATION_AMOUNT"
+        },
+        {
+          "enum": "SMTM",
+          "description": "START_OF_DAY_MARK_TO_MARKET_AMOUNT"
+        },
+        {
+          "enum": "PREM",
+          "description": "PREMIUM_AMOUNT"
+        },
+        {
+          "enum": "CRES",
+          "description": "CASH_RESIDUAL_AMOUNT"
+        },
+        {
+          "enum": "CASH",
+          "description": "CASH_AMOUNT"
+        },
+        {
+          "enum": "VADJ",
+          "description": "VALUE_ADJUSTED_AMOUNT"
+        }
+      ]
     },
     {
       "tag": "708",
@@ -3382,7 +9052,29 @@
     {
       "tag": "709",
       "name": "PosTransType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "EXERCISE"
+        },
+        {
+          "enum": "2",
+          "description": "DO_NOT_EXERCISE"
+        },
+        {
+          "enum": "3",
+          "description": "POSITION_ADJUSTMENT"
+        },
+        {
+          "enum": "4",
+          "description": "POSITION_CHANGE_SUBMISSION_MARGIN_DISPOSITION"
+        },
+        {
+          "enum": "5",
+          "description": "PLEDGE"
+        }
+      ]
     },
     {
       "tag": "710",
@@ -3397,7 +9089,21 @@
     {
       "tag": "712",
       "name": "PosMaintAction",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "NEW"
+        },
+        {
+          "enum": "2",
+          "description": "REPLACE"
+        },
+        {
+          "enum": "3",
+          "description": "CANCEL"
+        }
+      ]
     },
     {
       "tag": "713",
@@ -3427,7 +9133,25 @@
     {
       "tag": "718",
       "name": "AdjustmentType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "PROCESS_REQUEST_AS_MARGIN_DISPOSITION"
+        },
+        {
+          "enum": "1",
+          "description": "DELTA_PLUS"
+        },
+        {
+          "enum": "2",
+          "description": "DELTA_MINUS"
+        },
+        {
+          "enum": "3",
+          "description": "FINAL"
+        }
+      ]
     },
     {
       "tag": "719",
@@ -3447,22 +9171,86 @@
     {
       "tag": "722",
       "name": "PosMaintStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "ACCEPTED"
+        },
+        {
+          "enum": "1",
+          "description": "ACCEPTED_WITH_WARNINGS"
+        },
+        {
+          "enum": "2",
+          "description": "REJECTED"
+        },
+        {
+          "enum": "3",
+          "description": "COMPLETED"
+        },
+        {
+          "enum": "4",
+          "description": "COMPLETED_WITH_WARNINGS"
+        }
+      ]
     },
     {
       "tag": "723",
       "name": "PosMaintResult",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "SUCCESSFUL_COMPLETION_NO_WARNINGS_OR_ERRORS"
+        },
+        {
+          "enum": "1",
+          "description": "REJECTED"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "724",
       "name": "PosReqType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "POSITIONS"
+        },
+        {
+          "enum": "1",
+          "description": "TRADES"
+        },
+        {
+          "enum": "2",
+          "description": "EXERCISES"
+        },
+        {
+          "enum": "3",
+          "description": "ASSIGNMENTS"
+        }
+      ]
     },
     {
       "tag": "725",
       "name": "ResponseTransportType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "INBAND"
+        },
+        {
+          "enum": "1",
+          "description": "OUT_OF_BAND"
+        }
+      ]
     },
     {
       "tag": "726",
@@ -3477,12 +9265,52 @@
     {
       "tag": "728",
       "name": "PosReqResult",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "VALID_REQUEST"
+        },
+        {
+          "enum": "1",
+          "description": "INVALID_OR_UNSUPPORTED_REQUEST"
+        },
+        {
+          "enum": "2",
+          "description": "NO_POSITIONS_FOUND_THAT_MATCH_CRITERIA"
+        },
+        {
+          "enum": "3",
+          "description": "NOT_AUTHORIZED_TO_REQUEST_POSITIONS"
+        },
+        {
+          "enum": "4",
+          "description": "REQUEST_FOR_POSITION_NOT_SUPPORTED"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "729",
       "name": "PosReqStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "COMPLETED"
+        },
+        {
+          "enum": "1",
+          "description": "COMPLETED_WITH_WARNINGS"
+        },
+        {
+          "enum": "2",
+          "description": "REJECTED"
+        }
+      ]
     },
     {
       "tag": "730",
@@ -3492,7 +9320,17 @@
     {
       "tag": "731",
       "name": "SettlPriceType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "FINAL"
+        },
+        {
+          "enum": "2",
+          "description": "THEORETICAL"
+        }
+      ]
     },
     {
       "tag": "732",
@@ -3557,7 +9395,17 @@
     {
       "tag": "744",
       "name": "AssignmentMethod",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "R",
+          "description": "RANDOM"
+        },
+        {
+          "enum": "P",
+          "description": "PRORATA"
+        }
+      ]
     },
     {
       "tag": "745",
@@ -3572,7 +9420,17 @@
     {
       "tag": "747",
       "name": "ExerciseMethod",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "A",
+          "description": "AUTOMATIC"
+        },
+        {
+          "enum": "M",
+          "description": "MANUAL"
+        }
+      ]
     },
     {
       "tag": "748",
@@ -3582,22 +9440,114 @@
     {
       "tag": "749",
       "name": "TradeRequestResult",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "SUCCESSFUL"
+        },
+        {
+          "enum": "1",
+          "description": "INVALID_OR_UNKNOWN_INSTRUMENT"
+        },
+        {
+          "enum": "2",
+          "description": "INVALID_TYPE_OF_TRADE_REQUESTED"
+        },
+        {
+          "enum": "3",
+          "description": "INVALID_PARTIES"
+        },
+        {
+          "enum": "4",
+          "description": "INVALID_TRANSPORT_TYPE_REQUESTED"
+        },
+        {
+          "enum": "5",
+          "description": "INVALID_DESTINATION_REQUESTED"
+        },
+        {
+          "enum": "8",
+          "description": "TRADEREQUESTTYPE_NOT_SUPPORTED"
+        },
+        {
+          "enum": "9",
+          "description": "UNAUTHORIZED_FOR_TRADE_CAPTURE_REPORT_REQUEST"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "750",
       "name": "TradeRequestStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "ACCEPTED"
+        },
+        {
+          "enum": "1",
+          "description": "COMPLETED"
+        },
+        {
+          "enum": "2",
+          "description": "REJECTED"
+        }
+      ]
     },
     {
       "tag": "751",
       "name": "TradeReportRejectReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "SUCCESSFUL"
+        },
+        {
+          "enum": "1",
+          "description": "INVALID_PARTY_INFORMATION"
+        },
+        {
+          "enum": "2",
+          "description": "UNKNOWN_INSTRUMENT"
+        },
+        {
+          "enum": "3",
+          "description": "UNAUTHORIZED_TO_REPORT_TRADES"
+        },
+        {
+          "enum": "4",
+          "description": "INVALID_TRADE_TYPE"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "752",
       "name": "SideMultiLegReportingType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "SINGLE_SECURITY"
+        },
+        {
+          "enum": "2",
+          "description": "INDIVIDUAL_LEG_OF_A_MULTI_LEG_SECURITY"
+        },
+        {
+          "enum": "3",
+          "description": "MULTI_LEG_SECURITY"
+        }
+      ]
     },
     {
       "tag": "753",
@@ -3642,7 +9592,85 @@
     {
       "tag": "761",
       "name": "BenchmarkSecurityIDSource",
-      "type": "STRING"
+      "type": "STRING",
+      "values": [
+        {
+          "enum": "1",
+          "description": "CUSIP"
+        },
+        {
+          "enum": "2",
+          "description": "SEDOL"
+        },
+        {
+          "enum": "3",
+          "description": "QUIK"
+        },
+        {
+          "enum": "4",
+          "description": "ISIN_NUMBER"
+        },
+        {
+          "enum": "5",
+          "description": "RIC_CODE"
+        },
+        {
+          "enum": "6",
+          "description": "ISO_CURRENCY_CODE"
+        },
+        {
+          "enum": "7",
+          "description": "ISO_COUNTRY_CODE"
+        },
+        {
+          "enum": "8",
+          "description": "EXCHANGE_SYMBOL"
+        },
+        {
+          "enum": "9",
+          "description": "CONSOLIDATED_TAPE_ASSOCIATION"
+        },
+        {
+          "enum": "A",
+          "description": "BLOOMBERG_SYMBOL"
+        },
+        {
+          "enum": "B",
+          "description": "WERTPAPIER"
+        },
+        {
+          "enum": "C",
+          "description": "DUTCH"
+        },
+        {
+          "enum": "D",
+          "description": "VALOREN"
+        },
+        {
+          "enum": "E",
+          "description": "SICOVAM"
+        },
+        {
+          "enum": "F",
+          "description": "BELGIAN"
+        },
+        {
+          "enum": "G",
+          "description": "COMMON"
+        },
+        {
+          "enum": "H",
+          "description": "CLEARING_HOUSE_CLEARING_ORGANIZATION"
+        },
+        {
+          "enum": "I",
+          "description": "ISDA_FPML_PRODUCT_SPECIFICATION"
+        },
+        {
+          "enum": "J",
+          "description": "OPTIONS_PRICE_REPORTING_AUTHORITY"
+        }
+      ]
     },
     {
       "tag": "762",
@@ -3687,7 +9715,29 @@
     {
       "tag": "770",
       "name": "TrdRegTimestampType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "EXECUTION_TIME"
+        },
+        {
+          "enum": "2",
+          "description": "TIME_IN"
+        },
+        {
+          "enum": "3",
+          "description": "TIME_OUT"
+        },
+        {
+          "enum": "4",
+          "description": "BROKER_RECEIPT"
+        },
+        {
+          "enum": "5",
+          "description": "BROKER_EXECUTION"
+        }
+      ]
     },
     {
       "tag": "771",
@@ -3702,17 +9752,59 @@
     {
       "tag": "773",
       "name": "ConfirmType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "STATUS"
+        },
+        {
+          "enum": "2",
+          "description": "CONFIRMATION"
+        },
+        {
+          "enum": "3",
+          "description": "CONFIRMATION_REQUEST_REJECTED"
+        }
+      ]
     },
     {
       "tag": "774",
       "name": "ConfirmRejReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "MISMATCHED_ACCOUNT"
+        },
+        {
+          "enum": "2",
+          "description": "MISSING_SETTLEMENT_INSTRUCTIONS"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "775",
       "name": "BookingType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "REGULAR_BOOKING"
+        },
+        {
+          "enum": "1",
+          "description": "CFD"
+        },
+        {
+          "enum": "2",
+          "description": "TOTAL_RETURN_SWAP"
+        }
+      ]
     },
     {
       "tag": "776",
@@ -3737,7 +9829,29 @@
     {
       "tag": "780",
       "name": "AllocSettlInstType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "USE_DEFAULT_INSTRUCTIONS"
+        },
+        {
+          "enum": "1",
+          "description": "DERIVE_FROM_PARAMETERS_PROVIDED"
+        },
+        {
+          "enum": "2",
+          "description": "FULL_DETAILS_PROVIDED"
+        },
+        {
+          "enum": "3",
+          "description": "SSI_DB_IDS_PROVIDED"
+        },
+        {
+          "enum": "4",
+          "description": "PHONE_FOR_INSTRUCTIONS"
+        }
+      ]
     },
     {
       "tag": "781",
@@ -3772,12 +9886,40 @@
     {
       "tag": "787",
       "name": "DlvyInstType",
-      "type": "CHAR"
+      "type": "CHAR",
+      "values": [
+        {
+          "enum": "S",
+          "description": "SECURITIES"
+        },
+        {
+          "enum": "C",
+          "description": "CASH"
+        }
+      ]
     },
     {
       "tag": "788",
       "name": "TerminationType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "OVERNIGHT"
+        },
+        {
+          "enum": "2",
+          "description": "TERM"
+        },
+        {
+          "enum": "3",
+          "description": "FLEXIBLE"
+        },
+        {
+          "enum": "4",
+          "description": "OPEN"
+        }
+      ]
     },
     {
       "tag": "789",
@@ -3797,7 +9939,25 @@
     {
       "tag": "792",
       "name": "SettlInstReqRejCode",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "UNABLE_TO_PROCESS_REQUEST"
+        },
+        {
+          "enum": "1",
+          "description": "UNKNOWN_ACCOUNT"
+        },
+        {
+          "enum": "2",
+          "description": "NO_MATCHING_SETTLEMENT_INSTRUCTIONS_FOUND"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "793",
@@ -3807,7 +9967,25 @@
     {
       "tag": "794",
       "name": "AllocReportType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "3",
+          "description": "SELLSIDE_CALCULATED_USING_PRELIMINARY"
+        },
+        {
+          "enum": "4",
+          "description": "SELLSIDE_CALCULATED_WITHOUT_PRELIMINARY"
+        },
+        {
+          "enum": "5",
+          "description": "WAREHOUSE_RECAP"
+        },
+        {
+          "enum": "8",
+          "description": "REQUEST_TO_INTERMEDIARY"
+        }
+      ]
     },
     {
       "tag": "795",
@@ -3817,7 +9995,21 @@
     {
       "tag": "796",
       "name": "AllocCancReplaceReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "ORIGINAL_DETAILS_INCOMPLETE_INCORRECT"
+        },
+        {
+          "enum": "2",
+          "description": "CHANGE_IN_UNDERLYING_ORDER_DETAILS"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "797",
@@ -3827,7 +10019,37 @@
     {
       "tag": "798",
       "name": "AllocAccountType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "ACCOUNT_IS_CARRIED_ON_CUSTOMER_SIDE_OF_BOOKS"
+        },
+        {
+          "enum": "2",
+          "description": "ACCOUNT_IS_CARRIED_ON_NON_CUSTOMER_SIDE_OF_BOOKS"
+        },
+        {
+          "enum": "3",
+          "description": "HOUSE_TRADER"
+        },
+        {
+          "enum": "4",
+          "description": "FLOOR_TRADER"
+        },
+        {
+          "enum": "6",
+          "description": "ACCOUNT_IS_CARRIED_ON_NON_CUSTOMER_SIDE_OF_BOOKS_AND_IS_CROSS_MARGINED"
+        },
+        {
+          "enum": "7",
+          "description": "ACCOUNT_IS_HOUSE_TRADER_AND_IS_CROSS_MARGINED"
+        },
+        {
+          "enum": "8",
+          "description": "JOINT_BACKOFFICE_ACCOUNT"
+        }
+      ]
     },
     {
       "tag": "799",
@@ -3877,7 +10099,33 @@
     {
       "tag": "808",
       "name": "AllocIntermedReqType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "PENDING_ACCEPT"
+        },
+        {
+          "enum": "2",
+          "description": "PENDING_RELEASE"
+        },
+        {
+          "enum": "3",
+          "description": "PENDING_REVERSAL"
+        },
+        {
+          "enum": "4",
+          "description": "ACCEPT"
+        },
+        {
+          "enum": "5",
+          "description": "BLOCK_LEVEL_REJECT"
+        },
+        {
+          "enum": "6",
+          "description": "ACCOUNT_LEVEL_REJECT"
+        }
+      ]
     },
     {
       "tag": "810",
@@ -3902,12 +10150,48 @@
     {
       "tag": "814",
       "name": "ApplQueueResolution",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NO_ACTION_TAKEN"
+        },
+        {
+          "enum": "1",
+          "description": "QUEUE_FLUSHED"
+        },
+        {
+          "enum": "2",
+          "description": "OVERLAY_LAST"
+        },
+        {
+          "enum": "3",
+          "description": "END_SESSION"
+        }
+      ]
     },
     {
       "tag": "815",
       "name": "ApplQueueAction",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NO_ACTION_TAKEN"
+        },
+        {
+          "enum": "1",
+          "description": "QUEUE_FLUSHED"
+        },
+        {
+          "enum": "2",
+          "description": "OVERLAY_LAST"
+        },
+        {
+          "enum": "3",
+          "description": "END_SESSION"
+        }
+      ]
     },
     {
       "tag": "816",
@@ -3927,7 +10211,21 @@
     {
       "tag": "819",
       "name": "AvgPxIndicator",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NO_AVERAGE_PRICING"
+        },
+        {
+          "enum": "1",
+          "description": "TRADE_IS_PART_OF_AN_AVERAGE_PRICE_GROUP_IDENTIFIED_BY_THE_TRADELINKID"
+        },
+        {
+          "enum": "2",
+          "description": "LAST_TRADE_IN_THE_AVERAGE_PRICE_GROUP_IDENTIFIED_BY_THE_TRADELINKID"
+        }
+      ]
     },
     {
       "tag": "820",
@@ -3962,17 +10260,87 @@
     {
       "tag": "826",
       "name": "TradeAllocIndicator",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "ALLOCATION_NOT_REQUIRED"
+        },
+        {
+          "enum": "1",
+          "description": "ALLOCATION_REQUIRED"
+        },
+        {
+          "enum": "2",
+          "description": "USE_ALLOCATION_PROVIDED_WITH_THE_TRADE"
+        }
+      ]
     },
     {
       "tag": "827",
       "name": "ExpirationCycle",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "EXPIRE_ON_TRADING_SESSION_CLOSE"
+        },
+        {
+          "enum": "1",
+          "description": "EXPIRE_ON_TRADING_SESSION_OPEN"
+        }
+      ]
     },
     {
       "tag": "828",
       "name": "TrdType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "REGULAR_TRADE"
+        },
+        {
+          "enum": "1",
+          "description": "BLOCK_TRADE"
+        },
+        {
+          "enum": "2",
+          "description": "EFP"
+        },
+        {
+          "enum": "3",
+          "description": "TRANSFER"
+        },
+        {
+          "enum": "4",
+          "description": "LATE_TRADE"
+        },
+        {
+          "enum": "5",
+          "description": "T_TRADE"
+        },
+        {
+          "enum": "6",
+          "description": "WEIGHTED_AVERAGE_PRICE_TRADE"
+        },
+        {
+          "enum": "7",
+          "description": "BUNCHED_TRADE"
+        },
+        {
+          "enum": "8",
+          "description": "LATE_BUNCHED_TRADE"
+        },
+        {
+          "enum": "9",
+          "description": "PRIOR_REFERENCE_PRICE_TRADE"
+        },
+        {
+          "enum": "10",
+          "description": "AFTER_HOURS_TRADE"
+        }
+      ]
     },
     {
       "tag": "829",
@@ -4007,22 +10375,74 @@
     {
       "tag": "835",
       "name": "PegMoveType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "FLOATING"
+        },
+        {
+          "enum": "1",
+          "description": "FIXED"
+        }
+      ]
     },
     {
       "tag": "836",
       "name": "PegOffsetType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "PRICE"
+        },
+        {
+          "enum": "1",
+          "description": "BASIS_POINTS"
+        },
+        {
+          "enum": "2",
+          "description": "TICKS"
+        },
+        {
+          "enum": "3",
+          "description": "PRICE_TIER_LEVEL"
+        }
+      ]
     },
     {
       "tag": "837",
       "name": "PegLimitType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "OR_BETTER"
+        },
+        {
+          "enum": "1",
+          "description": "STRICT"
+        },
+        {
+          "enum": "2",
+          "description": "OR_WORSE"
+        }
+      ]
     },
     {
       "tag": "838",
       "name": "PegRoundDirection",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "MORE_AGGRESSIVE"
+        },
+        {
+          "enum": "2",
+          "description": "MORE_PASSIVE"
+        }
+      ]
     },
     {
       "tag": "839",
@@ -4032,27 +10452,97 @@
     {
       "tag": "840",
       "name": "PegScope",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "LOCAL"
+        },
+        {
+          "enum": "2",
+          "description": "NATIONAL"
+        },
+        {
+          "enum": "3",
+          "description": "GLOBAL"
+        },
+        {
+          "enum": "4",
+          "description": "NATIONAL_EXCLUDING_LOCAL"
+        }
+      ]
     },
     {
       "tag": "841",
       "name": "DiscretionMoveType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "FLOATING"
+        },
+        {
+          "enum": "1",
+          "description": "FIXED"
+        }
+      ]
     },
     {
       "tag": "842",
       "name": "DiscretionOffsetType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "PRICE"
+        },
+        {
+          "enum": "1",
+          "description": "BASIS_POINTS"
+        },
+        {
+          "enum": "2",
+          "description": "TICKS"
+        },
+        {
+          "enum": "3",
+          "description": "PRICE_TIER_LEVEL"
+        }
+      ]
     },
     {
       "tag": "843",
       "name": "DiscretionLimitType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "OR_BETTER"
+        },
+        {
+          "enum": "1",
+          "description": "STRICT"
+        },
+        {
+          "enum": "2",
+          "description": "OR_WORSE"
+        }
+      ]
     },
     {
       "tag": "844",
       "name": "DiscretionRoundDirection",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "MORE_AGGRESSIVE"
+        },
+        {
+          "enum": "2",
+          "description": "MORE_PASSIVE"
+        }
+      ]
     },
     {
       "tag": "845",
@@ -4062,7 +10552,25 @@
     {
       "tag": "846",
       "name": "DiscretionScope",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "LOCAL"
+        },
+        {
+          "enum": "2",
+          "description": "NATIONAL"
+        },
+        {
+          "enum": "3",
+          "description": "GLOBAL"
+        },
+        {
+          "enum": "4",
+          "description": "NATIONAL_EXCLUDING_LOCAL"
+        }
+      ]
     },
     {
       "tag": "847",
@@ -4087,7 +10595,21 @@
     {
       "tag": "851",
       "name": "LastLiquidityInd",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "ADDED_LIQUIDITY"
+        },
+        {
+          "enum": "2",
+          "description": "REMOVED_LIQUIDITY"
+        },
+        {
+          "enum": "3",
+          "description": "LIQUIDITY_ROUTED_OUT"
+        }
+      ]
     },
     {
       "tag": "852",
@@ -4097,12 +10619,48 @@
     {
       "tag": "853",
       "name": "ShortSaleReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "DEALER_SOLD_SHORT"
+        },
+        {
+          "enum": "1",
+          "description": "DEALER_SOLD_SHORT_EXEMPT"
+        },
+        {
+          "enum": "2",
+          "description": "SELLING_CUSTOMER_SOLD_SHORT"
+        },
+        {
+          "enum": "3",
+          "description": "SELLING_CUSTOMER_SOLD_SHORT_EXEMPT"
+        },
+        {
+          "enum": "4",
+          "description": "QUALIFED_SERVICE_REPRESENTATIVE_OR_AUTOMATIC_GIVEUP_CONTRA_SIDE_SOLD_SHORT"
+        },
+        {
+          "enum": "5",
+          "description": "QSR_OR_AGU_CONTRA_SIDE_SOLD_SHORT_EXEMPT"
+        }
+      ]
     },
     {
       "tag": "854",
       "name": "QtyType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "UNITS"
+        },
+        {
+          "enum": "1",
+          "description": "CONTRACTS"
+        }
+      ]
     },
     {
       "tag": "855",
@@ -4112,12 +10670,56 @@
     {
       "tag": "856",
       "name": "TradeReportType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "SUBMIT"
+        },
+        {
+          "enum": "1",
+          "description": "ALLEGED"
+        },
+        {
+          "enum": "2",
+          "description": "ACCEPT"
+        },
+        {
+          "enum": "3",
+          "description": "DECLINE"
+        },
+        {
+          "enum": "4",
+          "description": "ADDENDUM"
+        },
+        {
+          "enum": "5",
+          "description": "NO_WAS"
+        },
+        {
+          "enum": "6",
+          "description": "TRADE_REPORT_CANCEL"
+        },
+        {
+          "enum": "7",
+          "description": "LOCKED_IN_TRADE_BREAK"
+        }
+      ]
     },
     {
       "tag": "857",
       "name": "AllocNoOrdersType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NOT_SPECIFIED"
+        },
+        {
+          "enum": "1",
+          "description": "EXPLICIT_LIST_PROVIDED"
+        }
+      ]
     },
     {
       "tag": "858",
@@ -4157,7 +10759,29 @@
     {
       "tag": "865",
       "name": "EventType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "PUT"
+        },
+        {
+          "enum": "2",
+          "description": "CALL"
+        },
+        {
+          "enum": "3",
+          "description": "TENDER"
+        },
+        {
+          "enum": "4",
+          "description": "SINKING_FUND_CALL"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "866",
@@ -4187,7 +10811,101 @@
     {
       "tag": "871",
       "name": "InstrAttribType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "FLAT"
+        },
+        {
+          "enum": "2",
+          "description": "ZERO_COUPON"
+        },
+        {
+          "enum": "3",
+          "description": "INTEREST_BEARING"
+        },
+        {
+          "enum": "4",
+          "description": "NO_PERIODIC_PAYMENTS"
+        },
+        {
+          "enum": "5",
+          "description": "VARIABLE_RATE"
+        },
+        {
+          "enum": "6",
+          "description": "LESS_FEE_FOR_PUT"
+        },
+        {
+          "enum": "7",
+          "description": "STEPPED_COUPON"
+        },
+        {
+          "enum": "8",
+          "description": "COUPON_PERIOD"
+        },
+        {
+          "enum": "9",
+          "description": "WHEN_AND_IF_ISSUED"
+        },
+        {
+          "enum": "10",
+          "description": "ORIGINAL_ISSUE_DISCOUNT"
+        },
+        {
+          "enum": "11",
+          "description": "CALLABLE_PUTTABLE"
+        },
+        {
+          "enum": "12",
+          "description": "ESCROWED_TO_MATURITY"
+        },
+        {
+          "enum": "13",
+          "description": "ESCROWED_TO_REDEMPTION_DATE"
+        },
+        {
+          "enum": "14",
+          "description": "PRE_REFUNDED"
+        },
+        {
+          "enum": "15",
+          "description": "IN_DEFAULT"
+        },
+        {
+          "enum": "16",
+          "description": "UNRATED"
+        },
+        {
+          "enum": "17",
+          "description": "TAXABLE"
+        },
+        {
+          "enum": "18",
+          "description": "INDEXED"
+        },
+        {
+          "enum": "19",
+          "description": "SUBJECT_TO_ALTERNATIVE_MINIMUM_TAX"
+        },
+        {
+          "enum": "20",
+          "description": "ORIGINAL_ISSUE_DISCOUNT_PRICE"
+        },
+        {
+          "enum": "21",
+          "description": "CALLABLE_BELOW_MATURITY_VALUE"
+        },
+        {
+          "enum": "22",
+          "description": "CALLABLE_WITHOUT_NOTICE_BY_MAIL_TO_HOLDER_UNLESS_REGISTERED"
+        },
+        {
+          "enum": "99",
+          "description": "TEXT"
+        }
+      ]
     },
     {
       "tag": "872",
@@ -4287,7 +11005,21 @@
     {
       "tag": "891",
       "name": "MiscFeeBasis",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "ABSOLUTE"
+        },
+        {
+          "enum": "1",
+          "description": "PER_UNIT"
+        },
+        {
+          "enum": "2",
+          "description": "PERCENTAGE"
+        }
+      ]
     },
     {
       "tag": "892",
@@ -4307,12 +11039,80 @@
     {
       "tag": "895",
       "name": "CollAsgnReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "INITIAL"
+        },
+        {
+          "enum": "1",
+          "description": "SCHEDULED"
+        },
+        {
+          "enum": "2",
+          "description": "TIME_WARNING"
+        },
+        {
+          "enum": "3",
+          "description": "MARGIN_DEFICIENCY"
+        },
+        {
+          "enum": "4",
+          "description": "MARGIN_EXCESS"
+        },
+        {
+          "enum": "5",
+          "description": "FORWARD_COLLATERAL_DEMAND"
+        },
+        {
+          "enum": "6",
+          "description": "EVENT_OF_DEFAULT"
+        },
+        {
+          "enum": "7",
+          "description": "ADVERSE_TAX_EVENT"
+        }
+      ]
     },
     {
       "tag": "896",
       "name": "CollInquiryQualifier",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "TRADEDATE"
+        },
+        {
+          "enum": "1",
+          "description": "GC_INSTRUMENT"
+        },
+        {
+          "enum": "2",
+          "description": "COLLATERALINSTRUMENT"
+        },
+        {
+          "enum": "3",
+          "description": "SUBSTITUTION_ELIGIBLE"
+        },
+        {
+          "enum": "4",
+          "description": "NOT_ASSIGNED"
+        },
+        {
+          "enum": "5",
+          "description": "PARTIALLY_ASSIGNED"
+        },
+        {
+          "enum": "6",
+          "description": "FULLY_ASSIGNED"
+        },
+        {
+          "enum": "7",
+          "description": "OUTSTANDING_TRADES"
+        }
+      ]
     },
     {
       "tag": "897",
@@ -4347,7 +11147,29 @@
     {
       "tag": "903",
       "name": "CollAsgnTransType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "NEW"
+        },
+        {
+          "enum": "1",
+          "description": "REPLACE"
+        },
+        {
+          "enum": "2",
+          "description": "CANCEL"
+        },
+        {
+          "enum": "3",
+          "description": "RELEASE"
+        },
+        {
+          "enum": "4",
+          "description": "REVERSE"
+        }
+      ]
     },
     {
       "tag": "904",
@@ -4357,12 +11179,60 @@
     {
       "tag": "905",
       "name": "CollAsgnRespType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "RECEIVED"
+        },
+        {
+          "enum": "1",
+          "description": "ACCEPTED"
+        },
+        {
+          "enum": "2",
+          "description": "DECLINED"
+        },
+        {
+          "enum": "3",
+          "description": "REJECTED"
+        }
+      ]
     },
     {
       "tag": "906",
       "name": "CollAsgnRejectReason",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "UNKNOWN_DEAL"
+        },
+        {
+          "enum": "1",
+          "description": "UNKNOWN_OR_INVALID_INSTRUMENT"
+        },
+        {
+          "enum": "2",
+          "description": "UNAUTHORIZED_TRANSACTION"
+        },
+        {
+          "enum": "3",
+          "description": "INSUFFICIENT_COLLATERAL"
+        },
+        {
+          "enum": "4",
+          "description": "INVALID_TYPE_OF_COLLATERAL"
+        },
+        {
+          "enum": "5",
+          "description": "EXCESSIVE_SUBSTITUTION"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "907",
@@ -4382,7 +11252,29 @@
     {
       "tag": "910",
       "name": "CollStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "UNASSIGNED"
+        },
+        {
+          "enum": "1",
+          "description": "PARTIALLY_ASSIGNED"
+        },
+        {
+          "enum": "2",
+          "description": "ASSIGNMENT_PROPOSED"
+        },
+        {
+          "enum": "3",
+          "description": "ASSIGNED"
+        },
+        {
+          "enum": "4",
+          "description": "CHALLENGED"
+        }
+      ]
     },
     {
       "tag": "911",
@@ -4427,7 +11319,25 @@
     {
       "tag": "919",
       "name": "DeliveryType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "VERSUS_PAYMENT"
+        },
+        {
+          "enum": "1",
+          "description": "FREE"
+        },
+        {
+          "enum": "2",
+          "description": "TRI_PARTY"
+        },
+        {
+          "enum": "3",
+          "description": "HOLD_IN_CUSTODY"
+        }
+      ]
     },
     {
       "tag": "920",
@@ -4452,7 +11362,25 @@
     {
       "tag": "924",
       "name": "UserRequestType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "LOGONUSER"
+        },
+        {
+          "enum": "2",
+          "description": "LOGOFFUSER"
+        },
+        {
+          "enum": "3",
+          "description": "CHANGEPASSWORDFORUSER"
+        },
+        {
+          "enum": "4",
+          "description": "REQUEST_INDIVIDUAL_USER_STATUS"
+        }
+      ]
     },
     {
       "tag": "925",
@@ -4462,7 +11390,33 @@
     {
       "tag": "926",
       "name": "UserStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "LOGGED_IN"
+        },
+        {
+          "enum": "2",
+          "description": "NOT_LOGGED_IN"
+        },
+        {
+          "enum": "3",
+          "description": "USER_NOT_RECOGNISED"
+        },
+        {
+          "enum": "4",
+          "description": "PASSWORD_INCORRECT"
+        },
+        {
+          "enum": "5",
+          "description": "PASSWORD_CHANGED"
+        },
+        {
+          "enum": "6",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "927",
@@ -4472,7 +11426,25 @@
     {
       "tag": "928",
       "name": "StatusValue",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "CONNECTED"
+        },
+        {
+          "enum": "2",
+          "description": "NOT_CONNECTED_DOWN_EXPECTED_UP"
+        },
+        {
+          "enum": "3",
+          "description": "NOT_CONNECTED_DOWN_EXPECTED_DOWN"
+        },
+        {
+          "enum": "4",
+          "description": "IN_PROCESS"
+        }
+      ]
     },
     {
       "tag": "929",
@@ -4507,7 +11479,25 @@
     {
       "tag": "935",
       "name": "NetworkRequestType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "SNAPSHOT"
+        },
+        {
+          "enum": "2",
+          "description": "SUBSCRIBE"
+        },
+        {
+          "enum": "4",
+          "description": "STOP_SUBSCRIBING"
+        },
+        {
+          "enum": "8",
+          "description": "LEVEL_OF_DETAIL"
+        }
+      ]
     },
     {
       "tag": "936",
@@ -4517,7 +11507,17 @@
     {
       "tag": "937",
       "name": "NetworkStatusResponseType",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "FULL"
+        },
+        {
+          "enum": "2",
+          "description": "INCREMENTAL_UPDATE"
+        }
+      ]
     },
     {
       "tag": "938",
@@ -4527,12 +11527,36 @@
     {
       "tag": "939",
       "name": "TrdRptStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "ACCEPTED"
+        },
+        {
+          "enum": "1",
+          "description": "REJECTED"
+        }
+      ]
     },
     {
       "tag": "940",
       "name": "AffirmStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "1",
+          "description": "RECEIVED"
+        },
+        {
+          "enum": "2",
+          "description": "CONFIRM_REJECTED"
+        },
+        {
+          "enum": "3",
+          "description": "AFFIRMED"
+        }
+      ]
     },
     {
       "tag": "941",
@@ -4552,17 +11576,99 @@
     {
       "tag": "944",
       "name": "CollAction",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "RETAIN"
+        },
+        {
+          "enum": "1",
+          "description": "ADD"
+        },
+        {
+          "enum": "2",
+          "description": "REMOVE"
+        }
+      ]
     },
     {
       "tag": "945",
       "name": "CollInquiryStatus",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "ACCEPTED"
+        },
+        {
+          "enum": "1",
+          "description": "ACCEPTED_WITH_WARNINGS"
+        },
+        {
+          "enum": "2",
+          "description": "COMPLETED"
+        },
+        {
+          "enum": "3",
+          "description": "COMPLETED_WITH_WARNINGS"
+        },
+        {
+          "enum": "4",
+          "description": "REJECTED"
+        }
+      ]
     },
     {
       "tag": "946",
       "name": "CollInquiryResult",
-      "type": "INT"
+      "type": "INT",
+      "values": [
+        {
+          "enum": "0",
+          "description": "SUCCESSFUL"
+        },
+        {
+          "enum": "1",
+          "description": "INVALID_OR_UNKNOWN_INSTRUMENT"
+        },
+        {
+          "enum": "2",
+          "description": "INVALID_OR_UNKNOWN_COLLATERAL_TYPE"
+        },
+        {
+          "enum": "3",
+          "description": "INVALID_PARTIES"
+        },
+        {
+          "enum": "4",
+          "description": "INVALID_TRANSPORT_TYPE_REQUESTED"
+        },
+        {
+          "enum": "5",
+          "description": "INVALID_DESTINATION_REQUESTED"
+        },
+        {
+          "enum": "6",
+          "description": "NO_COLLATERAL_FOUND_FOR_THE_TRADE_SPECIFIED"
+        },
+        {
+          "enum": "7",
+          "description": "NO_COLLATERAL_FOUND_FOR_THE_ORDER_SPECIFIED"
+        },
+        {
+          "enum": "8",
+          "description": "COLLATERAL_INQUIRY_TYPE_NOT_SUPPORTED"
+        },
+        {
+          "enum": "9",
+          "description": "UNAUTHORIZED_FOR_COLLATERAL_INQUIRY"
+        },
+        {
+          "enum": "99",
+          "description": "OTHER"
+        }
+      ]
     },
     {
       "tag": "947",
